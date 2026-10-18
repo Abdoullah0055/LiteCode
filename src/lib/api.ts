@@ -1,6 +1,7 @@
 import "server-only";
 import { NextResponse, type NextRequest } from "next/server";
 import { supabase, configured, admin } from "./supabase/server";
+import { isSameOrigin } from "./request-origin";
 export class ApiError extends Error {
   constructor(
     message: string,
@@ -10,11 +11,7 @@ export class ApiError extends Error {
   }
 }
 export async function apiContext(request: NextRequest, lessonId: string) {
-  if (
-    request.headers.get("origin") &&
-    request.headers.get("origin") !== request.nextUrl.origin
-  )
-    throw new ApiError("Origine refusée.", 403);
+  if (!isSameOrigin(request)) throw new ApiError("Origine refusée.", 403);
   if (!configured()) throw new ApiError("Supabase non configuré.", 503);
   const db = await supabase();
   const {
