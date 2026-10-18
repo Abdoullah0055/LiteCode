@@ -1,16 +1,17 @@
 import { test, expect } from "@playwright/test";
 import { createClient } from "@supabase/supabase-js";
+import { assertTestProject } from "../helpers/test-project";
 test("real Supabase account, progress, duplicate XP and server verification", async ({
   page,
   request,
 }) => {
   test.skip(
     process.env.LITECODE_E2E_LIVE !== "1",
-    "Requires explicitly enabled disposable local Supabase and runner.",
+    "Requires explicitly enabled dedicated hosted Supabase test project and runner.",
   );
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-  // Never create test accounts against a remote project automatically.
-  expect(["127.0.0.1", "localhost"].includes(new URL(url).hostname)).toBe(true);
+  // Never write to a hosted project without matching its explicitly confirmed ref.
+  assertTestProject(url, process.env.LITECODE_E2E_TEST_PROJECT_REF);
   const db = createClient(url, process.env.SUPABASE_SERVICE_ROLE_KEY!, {
     auth: { persistSession: false },
   });

@@ -56,7 +56,8 @@ No remote project mutation or deployment. No third-party educational bodies impo
 ## Verification commands
 `npm run curriculum:build`, `npm run typecheck`, `npm run lint`, `npm test`,
 `npm run test:e2e`, `npm run test:db`, `npm run build`.
-Database integration must run against a disposable local PostgreSQL/Supabase instance;
+Database integration runs in embedded PostgreSQL (PGlite); authenticated acceptance
+requires a separate hosted Supabase test project explicitly selected by its reference;
 browser tests with empty env can prove public UI and configuration/protection states,
 but cannot prove live Supabase authentication or persistent user journeys.
 
@@ -66,6 +67,6 @@ but cannot prove live Supabase authentication or persistent user journeys.
 npm audit pass. See IMPLEMENTATION_REPORT.md for exact boundaries.
 
 - [ ] Run authenticated end-to-end acceptance after Supabase and runner configuration.
-- [ ] Test the Docker deployment and a physical iPhone after infrastructure setup.
+- [ ] Verify the separate Node.js runner host and a physical iPhone after infrastructure setup.
 
 These gates remain open; this checklist does not assert full Definition of Done.

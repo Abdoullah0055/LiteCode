@@ -54,8 +54,9 @@ Python, SQL et les environnements serveur ne sont pas proposés comme exécutabl
 
 WASM et QuickJS constituent la frontière d’exécution ; un worker apporte une limite de
 durée et de heap, **pas une sandbox système à lui seul**. Le runner doit rester séparé
-de Next.js, sans secrets Supabase, sans volumes hôte et dans un conteneur restreint en
-production. Maintenir Node et QuickJS à jour. Une vulnérabilité du moteur ou de WASM
+de Next.js, sans secrets Supabase, sous un compte système dédié et sans accès aux
+fichiers sensibles. L’hôte doit limiter mémoire, CPU, processus et sorties réseau du
+service. Maintenir Node et QuickJS à jour. Une vulnérabilité du moteur ou de WASM
 reste un risque résiduel ; aucun moteur n’est une preuve d’absence de vulnérabilité.
 
 Les tests déterministes vérifient une solution sur leurs cas, pas sa correction
@@ -63,25 +64,22 @@ mathématique pour toutes les entrées. Le MVP n’est pas une plateforme de cer
 ou une compétition avec anti-triche avancée. Ne pas utiliser ses résultats comme preuve
 formelle de compétence. Le service vérifie des valeurs ; il ne note pas le style du code.
 
-## Conteneur
+## Lancement direct avec Node.js
 
 Depuis la racine du projet :
 
-```sh
-docker build -f runner/Dockerfile -t litecode-runner .
-docker network create --internal litecode-execution
-docker run --rm --name litecode-runner --network litecode-execution \
-  --read-only --cap-drop ALL --security-opt no-new-privileges \
-  --memory 512m --cpus 1 --pids-limit 128 \
-  --tmpfs /tmp:rw,noexec,nosuid,size=16m \
-  -p 127.0.0.1:4001:4001 -e RUNNER_API_KEY litecode-runner
+```powershell
+# Définir RUNNER_API_KEY dans l’environnement, puis :
+npm ci
+npm run runner
 ```
 
-Définir `RUNNER_API_KEY` dans l’environnement du terminal avant cette commande. Le
-Dockerfile utilise l’utilisateur non privilégié `node`. Le réseau interne interdit les
-sorties externes du conteneur ; Next.js sur le même hôte accède au port publié localement.
-Pour un hébergement distinct, utiliser une entrée réseau privée authentifiée.
-La construction et le lancement Docker n’ont pas été testés sur cette machine sans Docker.
+`RUNNER_API_KEY` doit correspondre au secret configuré côté Next.js. Par défaut, le
+service écoute sur `127.0.0.1:4001`. Sur un hôte Node.js distant, lancer
+`node runner/server.mjs` avec `RUNNER_HOST=0.0.0.0` et le `PORT` attribué par l’hôte.
+Exposer une entrée HTTPS authentifiée et définir son adresse dans `RUNNER_URL` sur Vercel.
+L’hébergement doit assurer les restrictions système et la supervision du processus.
+Le lancement distant et ces restrictions restent à vérifier sur l’hôte choisi.
 
 ## Preuves disponibles
 

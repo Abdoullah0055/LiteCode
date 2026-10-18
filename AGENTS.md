@@ -1,3 +1,10 @@
+## Contraintes du projet
+
+- Ne jamais introduire Docker dans LiteCode : aucun Dockerfile, fichier Compose,
+  `.dockerignore`, script ou procédure nécessitant Docker.
+- Utiliser Node.js directement pour le runner et Supabase hébergé pour les services.
+- Les tests PostgreSQL locaux utilisent PGlite.
+
 <!-- BEGIN:nextjs-agent-rules -->
 
 ## This is NOT the Next.js you know

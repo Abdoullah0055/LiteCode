@@ -86,17 +86,18 @@ ordre des sauvegardes de code et contrôle de non-mutation des entrées de `mvp-
 1. **Supabase non configuré** : pas de validation réelle de l’inscription, du courriel,
    de la récupération, du rafraîchissement de session ou de PostgREST. Les tests live
    sont fournis, mais leurs trois déclinaisons iPhone sont explicitement désactivées
-   tant que `LITECODE_E2E_LIVE=1` et l’environnement local ne sont pas configurés.
-2. **Docker absent** : la pile Supabase locale et le Dockerfile du runner n’ont pas
-   été démarrés. Le moteur et le service HTTP ont été exécutés et testés en processus
-   séparés sous Node ; le conteneur de production reste à vérifier sur son hôte.
+   tant que `LITECODE_E2E_LIVE=1`, la référence du projet de test hébergé et les
+   variables de connexion ne sont pas configurés.
+2. **Runner distant non configuré** : le moteur et le service HTTP ont été exécutés
+   et testés en processus séparés sous Node. Le processus Node.js de production et
+   les restrictions système restent à vérifier sur l’hôte choisi.
 3. **Appareil iOS physique et déploiement** : clavier natif, installation PWA, zones
    de sécurité matérielles et réseau de production non testés. Les tests réalisés
    utilisent Chromium avec dimensions et interactions tactiles mobiles.
 
 Pour lever ces blocages : suivre README.md, appliquer migration et seed sur Supabase,
 configurer les cinq variables, lancer le runner, reconstruire Next.js, puis exécuter
-la suite live sur une instance locale jetable. Aucun secret n’est requis dans Git.
+la suite live sur un projet Supabase hébergé dédié aux tests. Aucun secret n’est requis dans Git.
 
 ## Limites explicites du MVP
 

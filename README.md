@@ -10,7 +10,7 @@ Voir [IMPLEMENTATION_REPORT.md](IMPLEMENTATION_REPORT.md) pour la portée des pr
 ## Démarrer
 
 Prérequis : Node.js 22.12+ (Node 24 recommandé), npm et un projet Supabase.
-Docker est nécessaire uniquement pour Supabase local ou le déploiement conteneurisé du runner.
+Le runner se lance directement avec Node.js. La base et l’authentification utilisent Supabase hébergé.
 
 ```powershell
 npm ci
@@ -38,17 +38,18 @@ des variables publiques, qui sont intégrées au build Next.js.
 
 ## Base de données
 
-Pour Supabase local avec Docker installé :
+Depuis le projet, connecter le CLI au projet Supabase hébergé puis appliquer le schéma
+et le contenu initial :
 
 ```powershell
-npx supabase start
-npx supabase db reset
+npx supabase login
+npx supabase projects list
+npx supabase link --project-ref TON_PROJECT_REF
+npx supabase db push --linked --dry-run --skip-vault
+npx supabase db push --linked --include-seed --skip-vault
 ```
 
-`db reset` est réservé à une base locale jetable : il recrée la base et applique la
-migration puis `supabase/seed.sql`. Ne pas l’utiliser sur des données à conserver.
-
-Pour un projet hébergé neuf : exécuter dans l’éditeur SQL Supabase, dans cet ordre :
+Alternative pour un projet neuf : exécuter dans l’éditeur SQL Supabase, dans cet ordre :
 
 1. `supabase/migrations/20261018185124_litecode_core.sql`
 2. `supabase/seed.sql`
@@ -70,7 +71,7 @@ Adapter les liens des modèles de courriel pour le SSR :
 Après récupération, la page Paramètres permet de modifier le mot de passe. Le handler
 accepte aussi un `code` PKCE. Les sessions utilisent des cookies ; le proxy les rafraîchit
 et les accès serveur vérifient `auth.getUser()`. Activer la confirmation de courriel pour
-la production. Le paramétrage local du CLI la désactive pour les tests.
+la production. Les tests authentifiés créent leur compte de test déjà confirmé.
 
 ## Exécution JavaScript
 
@@ -87,7 +88,7 @@ Il écoute sur `127.0.0.1:4001`. Next.js lui envoie le code et les tests privés
 requête authentifiée. Sans runner configuré, les défis signalent l’indisponibilité et
 n’attribuent aucun XP. Les QCM et textes à trous restent évalués côté serveur.
 
-Voir [docs/EXECUTION.md](docs/EXECUTION.md) pour l’isolation, les limites et Docker.
+Voir [docs/EXECUTION.md](docs/EXECUTION.md) pour l’isolation, les limites et le lancement Node.js.
 
 ## Programme et droits
 
@@ -125,15 +126,17 @@ Les tests navigateur construisent la production et la démarrent sur le port dé
 Ils vérifient 375, 390 et 430 px, les écrans publics, les erreurs de configuration et les
 protections. Les captures restent dans `test-results/` (ignoré par Git).
 
-Pour la recette authentifiée sur une **instance Supabase locale jetable** et un runner
+Pour la recette authentifiée sur un **projet Supabase hébergé réservé aux tests** et un runner
 actif, injecter les cinq variables de `.env.example` dans le processus de test, puis :
 
 ```powershell
 $env:LITECODE_E2E_LIVE = '1'
+$env:LITECODE_E2E_TEST_PROJECT_REF = 'REFERENCE_DU_PROJET_DE_TEST'
 npm run test:e2e
 ```
 
-Le test refuse les URLs Supabase distantes et crée/supprime son propre utilisateur.
+Le test exige une URL HTTPS correspondant exactement à la référence de test confirmée,
+puis crée/supprime uniquement son propre utilisateur. Ne pas viser le projet de production.
 Laisser `LITECODE_E2E_LIVE` absent pour la recette publique sans configuration.
 Ces tests live n’ont pas été exécutés lors de la livraison, faute d’instance configurée.
 
@@ -159,11 +162,15 @@ L’objectif quotidien est une préférence de durée, pas un faux chronomètre 
 
 ## Déploiement
 
-Déployer Next.js sur un hôte Node compatible et le runner sur un hôte de conteneurs séparé.
+Next.js est déployé sur Vercel : https://litecode-mu.vercel.app.
+Le runner se déploie séparément comme processus Node.js sur un hôte compatible :
+commande de lancement `node runner/server.mjs`, variable `RUNNER_API_KEY`,
+`RUNNER_HOST=0.0.0.0` si l’hôte exige une écoute réseau et `PORT` selon son attribution.
+Configurer une entrée HTTPS vers le runner et renseigner cette URL dans `RUNNER_URL` sur Vercel.
 Configurer Supabase et les cinq variables avant `npm run build`, puis `npm run start`.
 Configurer les URLs Auth et les modèles de courriel pour le domaine HTTPS final.
 Le manifeste, les icônes iOS et les zones de sécurité sont fournis pour l’ajout à l’écran
 d’accueil ; l’application nécessite une connexion pour les comptes et les leçons.
 Les données privées ne sont pas mises en cache hors ligne.
 
-Aucun déploiement ni changement de projet Supabase distant n’a été effectué.
+Les variables Vercel restent à renseigner par le propriétaire, puis le déploiement à reconstruire.
