@@ -1,2 +1,4 @@
-import {Objectives} from '@/components/onboarding';
-export default function Page(){return <Objectives/>;}
+import { Objectives } from "@/components/onboarding";
+export default function Page() {
+  return <Objectives />;
+}

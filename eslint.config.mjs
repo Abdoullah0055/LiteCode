@@ -1,4 +1,21 @@
-import { defineConfig, globalIgnores } from 'eslint/config';
-import nextVitals from 'eslint-config-next/core-web-vitals';
-import nextTs from 'eslint-config-next/typescript';
-export default defineConfig([...nextVitals, ...nextTs, globalIgnores(['.next/**', 'references/**', '.npm-cache/**', 'test-results/**', 'playwright-report/**'])]);
+import { defineConfig, globalIgnores } from "eslint/config";
+import js from "@eslint/js";
+import ts from "typescript-eslint";
+import hooks from "eslint-plugin-react-hooks";
+export default defineConfig([
+  globalIgnores([
+    ".next/**",
+    "references/**",
+    ".npm-cache/**",
+    "test-results/**",
+    "playwright-report/**",
+  ]),
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    extends: [
+      js.configs.recommended,
+      ...ts.configs.recommended,
+      hooks.configs.flat.recommended,
+    ],
+  },
+]);

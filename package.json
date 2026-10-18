@@ -1,5 +1,6 @@
 {
   "name": "litecode",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +10,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "test": "vitest run",
-    "test:e2e": "playwright test",
+    "test:e2e": "npm run build && playwright test",
     "test:db": "tsx scripts/test-db.ts",
     "curriculum:build": "tsx scripts/build-curriculum.ts",
     "runner": "node runner/server.mjs"
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@electric-sql/pglite": "0.3.14",
+    "@eslint/js": "9.39.2",
     "@playwright/test": "1.58.2",
     "@tailwindcss/postcss": "4.1.18",
     "@types/node": "24.10.1",
@@ -35,10 +37,11 @@
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.2",
-    "eslint-config-next": "16.4.2",
+    "eslint-plugin-react-hooks": "7.1.1",
     "tailwindcss": "4.1.18",
-    "tsx": "4.21.0",
+    "tsx": "4.23.15",
     "typescript": "5.9.3",
+    "typescript-eslint": "8.71.2",
     "vitest": "4.1.12"
   }
 }

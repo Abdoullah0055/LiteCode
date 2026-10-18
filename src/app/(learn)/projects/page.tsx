@@ -1,2 +1,4 @@
-import {ActivityList} from '@/components/activity-list';
-export default function Page(){return <ActivityList projects/>;}
+import { ActivityList } from "@/components/activity-list";
+export default function Page() {
+  return <ActivityList projects />;
+}

@@ -10,7 +10,7 @@ def q(body, example, prompt, choices, answer, why, hint):
     entries.append(dict(body=body, example=example, prompt=prompt, choices=choices, answer=answer, explanation=why, hints=[hint, why]))
 
 def c(body, prompt, starter, solution, cases, hints):
-    entries.append(dict(body=body, example=solution.split('\n')[0], prompt=prompt, starter=starter, solution=solution,
+    entries.append(dict(body=body, example=starter, prompt=prompt, starter=starter, solution=solution,
                         cases=[dict(label=label,args=args,expected=expected) for label,args,expected in cases], hints=hints,
                         explanation='Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.'))
 
@@ -116,6 +116,10 @@ for meta, content in zip(outline['lessons'], entries):
         item['title'] = 'Projet : profil de joueur' if item['id']=='mvp-008' else 'Projet : compteur de fréquences'
     if 'cases' in item:
         item['steps'] = [case['label'] for case in item['cases']]
+        if item['id'] == 'mvp-036':
+            for case in item['cases']:
+                case['preserve_inputs'] = True
+                case['require_new_array'] = True
     lessons.append(item)
 target = root / 'curriculum/original.fr.json'
 target.parent.mkdir(exist_ok=True)

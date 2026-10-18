@@ -1,9 +1,115 @@
-import {notFound} from 'next/navigation';
-import {requireUser,learningData} from '@/lib/data';
-import {ButtonLink} from '@/components/ui';
-import type {Attempt} from '@/lib/types';
-export default async function Result({params}:{params:Promise<{id:string}>}){
- const {id}=await params;const {db,user}=await requireUser();const {data:raw,error}=await db.from('exercise_attempts').select('*').eq('id',id).eq('user_id',user.id).maybeSingle();if(error||!raw)notFound();const attempt=raw as Attempt;const data=await learningData();const l=data.lessons.find(l=>l.id===attempt.lesson_id);if(!l)notFound();
- const {data:reward}=await db.from('user_xp_events').select('amount').eq('attempt_id',id).eq('user_id',user.id).maybeSingle();
- const passed=attempt.status==='passed';const next=data.lessons.find(x=>x.position===l.position+1);return <section className="screen-page"><div className="page-content"><div className="success-art"><span className="confetti" style={{top:12,left:'22%',color:'#ea6bfa'}}>◆</span><span className="confetti" style={{bottom:8,right:'18%',color:'#ffaa10'}}>✦</span><div className={`seal celebrate ${passed?'':'fail'}`}>{passed?'✓':'↻'}</div></div><h1 className="center page-title" style={{fontSize:30}}>{passed?'Excellent ! 🎉':attempt.status==='unavailable'?'Vérification indisponible':'Presque ! On réessaie ?'}</h1><p className="center intro">{passed?'Tu as réussi cette activité.':attempt.status==='failed'?'Observe les résultats et ajuste ta réponse.':'Aucune progression n’a été accordée.'}</p><div className="testlines">{attempt.results.map((r,i)=><div key={i}><div className={`testline ${r.passed?'':'failed'}`}><span className={`okicon ${r.passed?'':'failicon'}`}>{r.passed?'✓':'×'}</span><span>{r.label}</span></div>{!r.passed&&r.error&&<p className="feedback">{r.error}</p>}{!r.passed&&r.actual!==undefined&&<p className="form-help" style={{overflowWrap:'anywhere'}}>Résultat obtenu : {JSON.stringify(r.actual)?.slice(0,500)}</p>}</div>)}</div>{passed?<div className="xp-reward">👑 + {reward?.amount||0} XP ✨</div>:<p className="form-help center">Une erreur est une piste pour apprendre. Les nouvelles tentatives restent disponibles.</p>}{passed&&!reward&&<p className="form-help center">Cette activité a déjà été récompensée.</p>}</div><div className="bottom sticky-action">{passed?<><ButtonLink href={next?`/lesson/${next.id}`:'/profile'}>{next?'Continuer':'Voir ma progression'}</ButtonLink><ButtonLink href="/path" ghost>Mon parcours</ButtonLink></>:<ButtonLink href={`/exercise/${l.id}`}>Retour à l’exercice</ButtonLink>}</div></section>;
+import { notFound } from "next/navigation";
+import { requireUser, learningData } from "@/lib/data";
+import { ButtonLink } from "@/components/ui";
+import type { Attempt } from "@/lib/types";
+export default async function Result({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = await params;
+  const { db, user } = await requireUser();
+  const { data: raw, error } = await db
+    .from("exercise_attempts")
+    .select("*")
+    .eq("id", id)
+    .eq("user_id", user.id)
+    .maybeSingle();
+  if (error || !raw) notFound();
+  const attempt = raw as Attempt;
+  const data = await learningData();
+  const l = data.lessons.find((l) => l.id === attempt.lesson_id);
+  if (!l) notFound();
+  const { data: reward } = await db
+    .from("user_xp_events")
+    .select("amount")
+    .eq("attempt_id", id)
+    .eq("user_id", user.id)
+    .maybeSingle();
+  const passed = attempt.status === "passed";
+  const next = data.lessons.find((x) => x.position === l.position + 1);
+  return (
+    <section className="screen-page">
+      <div className="page-content">
+        <div className="success-art">
+          <span
+            className="confetti"
+            style={{ top: 12, left: "22%", color: "#ea6bfa" }}
+          >
+            ◆
+          </span>
+          <span
+            className="confetti"
+            style={{ bottom: 8, right: "18%", color: "#ffaa10" }}
+          >
+            ✦
+          </span>
+          <div className={`seal celebrate ${passed ? "" : "fail"}`}>
+            {passed ? "✓" : "↻"}
+          </div>
+        </div>
+        <h1 className="center page-title" style={{ fontSize: 30 }}>
+          {passed
+            ? "Excellent ! 🎉"
+            : attempt.status === "unavailable"
+              ? "Vérification indisponible"
+              : "Presque ! On réessaie ?"}
+        </h1>
+        <p className="center intro">
+          {passed
+            ? "Tu as réussi cette activité."
+            : attempt.status === "failed"
+              ? "Observe les résultats et ajuste ta réponse."
+              : "Aucune progression n’a été accordée."}
+        </p>
+        <div className="testlines">
+          {attempt.results.map((r, i) => (
+            <div key={i}>
+              <div className={`testline ${r.passed ? "" : "failed"}`}>
+                <span className={`okicon ${r.passed ? "" : "failicon"}`}>
+                  {r.passed ? "✓" : "×"}
+                </span>
+                <span>{r.label}</span>
+              </div>
+              {!r.passed && r.error && <p className="feedback">{r.error}</p>}
+              {!r.passed && r.actual !== undefined && (
+                <p className="form-help" style={{ overflowWrap: "anywhere" }}>
+                  Résultat obtenu : {JSON.stringify(r.actual)?.slice(0, 500)}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+        {passed ? (
+          <div className="xp-reward">👑 + {reward?.amount || 0} XP ✨</div>
+        ) : (
+          <p className="form-help center">
+            Une erreur est une piste pour apprendre. Les nouvelles tentatives
+            restent disponibles.
+          </p>
+        )}
+        {passed && !reward && (
+          <p className="form-help center">
+            Cette activité a déjà été récompensée.
+          </p>
+        )}
+      </div>
+      <div className="bottom sticky-action">
+        {passed ? (
+          <>
+            <ButtonLink href={next ? `/lesson/${next.id}` : "/profile"}>
+              {next ? "Continuer" : "Voir ma progression"}
+            </ButtonLink>
+            <ButtonLink href="/path" ghost>
+              Mon parcours
+            </ButtonLink>
+          </>
+        ) : (
+          <ButtonLink href={`/exercise/${l.id}`}>
+            Retour à l’exercice
+          </ButtonLink>
+        )}
+      </div>
+    </section>
+  );
 }

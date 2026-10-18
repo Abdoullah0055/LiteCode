@@ -34,7 +34,9 @@ create table public.question_keys (
 );
 create table public.test_cases (
  id text primary key,lesson_id text not null references public.challenges(lesson_id) on delete cascade,
- label text not null,args jsonb not null,expected jsonb not null,position integer not null,unique(lesson_id,position)
+ label text not null,args jsonb not null,expected jsonb not null,position integer not null,
+ preserve_inputs boolean not null default false,require_new_array boolean not null default false,
+ unique(lesson_id,position)
 );
 create table public.hints (
  id text primary key,lesson_id text not null references public.lessons(id) on delete cascade,
