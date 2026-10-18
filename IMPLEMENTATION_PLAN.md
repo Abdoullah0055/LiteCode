@@ -18,39 +18,40 @@ No remote project mutation or deployment. No third-party educational bodies impo
 - [x] Define architecture, implementation order and verification boundaries here.
 
 ## Phase 2 — Foundation
-- [ ] Install pinned dependencies and configure strict TypeScript, lint, Vitest, Playwright.
-- [ ] Create normalized migration, indexes, RLS and transactional completion RPC.
-- [ ] Implement email signup/login, confirmation, refresh, protection and account settings.
-- [ ] Reusable mobile shell, safe-area navigation, buttons, cards and editor.
+- [x] Install pinned dependencies and configure strict TypeScript, lint, Vitest, Playwright.
+- [x] Create normalized migration, indexes, RLS and transactional completion RPC.
+- [x] Implement email signup/login, confirmation, refresh, protection and account settings.
+- [x] Reusable mobile shell, safe-area navigation, buttons, cards and editor.
 
 ## Phase 3 — Screens
-- [ ] Welcome, objectives, languages and authentication.
-- [ ] Home, path, explanation, editor, results, QCM, blanks, debugging, hints, project.
-- [ ] Profile, rankings and preferences. Real empty/loading/error states.
+- [x] Welcome, objectives, languages and authentication.
+- [x] Home, path, explanation, editor, results, QCM, blanks, debugging, hints, project.
+- [x] Profile, rankings and preferences. Real empty/loading/error states.
 
 ## Phase 4 — Curriculum
-- [ ] Author original explanations, examples, questions, distractors and hints for all 80.
-- [ ] Author executable JS tests and reference solutions for code/debug/project activities.
-- [ ] Validate imports, licensing provenance, prerequisite DAG and reproducible SQL seed.
-- [ ] Fetch curriculum dynamically from Supabase; keep grading answers server-only.
+- [x] Author original explanations, examples, questions, distractors and hints for all 80.
+- [x] Author executable JS tests and reference solutions for code/debug/project activities.
+- [x] Validate imports, licensing provenance, prerequisite DAG and reproducible SQL seed.
+- [x] Fetch curriculum dynamically from Supabase; keep grading answers server-only.
 
 ## Phase 5 — Learning
-- [ ] Server quiz/blank grading, isolated JS adapter and runner with resource limits.
-- [ ] Attempts, draft resume, progressive hints and test-driven project steps persist.
-- [ ] Prevent locked submissions, forged passes, duplicate XP and concurrent rewards.
+- [x] Server quiz/blank grading, isolated JS adapter and runner with resource limits.
+- [x] Attempts, draft resume, progressive hints and test-driven project steps persist.
+- [x] Prevent locked submissions, forged passes, duplicate XP and concurrent rewards.
 
 ## Phase 6 — Gamification
-- [ ] Atomic XP/progress, UTC daily streak, event-based achievements and real rankings.
-- [ ] Home resume, profile statistics and repeat attempts reflect stored data.
+- [x] Atomic XP/progress, UTC daily streak, event-based achievements and real rankings.
+- [x] Home resume, profile statistics and repeat attempts reflect stored data.
 
 ## Phase 7 — Verification and handoff
-- [ ] Vitest: import integrity, grading, unlocking, runner success/failure/limits.
-- [ ] PostgreSQL integration: RLS, XP deduplication, persistence and prerequisite checks.
-- [ ] Playwright: navigation/auth gates and overflow at 375/390/430 px.
-- [ ] Compare rendered welcome/onboarding/learning layouts with prototype.
-- [ ] Run lint, typecheck, unit/integration tests and production build; fix failures.
-- [ ] README, empty .env.example, execution architecture and final evidence report.
-- [ ] Commit progressive, reviewed changes; record external checks blocked by empty env.
+- [x] Vitest: import integrity, grading, unlocking, runner success/failure/limits.
+- [x] PostgreSQL integration: RLS, XP deduplication, persistence and prerequisite checks.
+- [x] Playwright: navigation/auth gates and overflow at 375/390/430 px.
+- [x] Compare rendered welcome/onboarding layouts with prototype.
+- [ ] Compare authenticated learning screens with live Supabase data; blocked by empty configuration.
+- [x] Run lint, typecheck, unit/integration tests and production build; fix failures.
+- [x] README, empty .env.example, execution architecture and final evidence report.
+- [x] Commit progressive, reviewed changes; record external checks blocked by empty env.
 
 ## Verification commands
 `npm run curriculum:build`, `npm run typecheck`, `npm run lint`, `npm test`,
@@ -58,3 +59,13 @@ No remote project mutation or deployment. No third-party educational bodies impo
 Database integration must run against a disposable local PostgreSQL/Supabase instance;
 browser tests with empty env can prove public UI and configuration/protection states,
 but cannot prove live Supabase authentication or persistent user journeys.
+
+## Final evidence and remaining gate
+14 Vitest tests and 27 PostgreSQL checks pass. Public browser tests: 12 pass,
+3 authenticated live cases intentionally unexecuted. Typecheck, lint, build and
+npm audit pass. See IMPLEMENTATION_REPORT.md for exact boundaries.
+
+- [ ] Run authenticated end-to-end acceptance after Supabase and runner configuration.
+- [ ] Test the Docker deployment and a physical iPhone after infrastructure setup.
+
+These gates remain open; this checklist does not assert full Definition of Done.
