@@ -1,0 +1,4807 @@
+{
+  "modules": [
+    {
+      "id": "module-01",
+      "title": "Les bases de JavaScript",
+      "referenceBlock": "lecture-introduction-to-javascript"
+    },
+    {
+      "id": "module-02",
+      "title": "Chaînes de caractères et nombres",
+      "referenceBlock": "lecture-working-with-strings-in-javascript"
+    },
+    {
+      "id": "module-03",
+      "title": "Conditions et booléens",
+      "referenceBlock": "lecture-working-with-comparison-and-boolean-operators"
+    },
+    {
+      "id": "module-04",
+      "title": "Fonctions",
+      "referenceBlock": "lecture-working-with-functions"
+    },
+    {
+      "id": "module-05",
+      "title": "Tableaux",
+      "referenceBlock": "lecture-working-with-arrays"
+    },
+    {
+      "id": "module-06",
+      "title": "Boucles et itérations",
+      "referenceBlock": "lecture-working-with-loops"
+    },
+    {
+      "id": "module-07",
+      "title": "Structures de données",
+      "referenceBlock": "lecture-working-with-common-data-structures"
+    },
+    {
+      "id": "module-08",
+      "title": "Algorithmes et entretiens",
+      "referenceBlock": "quiz-data-structures-js"
+    },
+    {
+      "id": "module-09",
+      "title": "Git et travail d'équipe",
+      "referenceBlock": "lecture-introduction-to-git-and-github"
+    },
+    {
+      "id": "module-10",
+      "title": "Web, HTTP et APIs",
+      "referenceBlock": "lecture-understanding-the-http-request-response-model"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "mvp-001",
+      "position": 1,
+      "type": "lesson",
+      "title": "À quoi sert JavaScript ?",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "JavaScript décrit des actions. Dans un navigateur, il peut réagir à un clic, calculer un total ou modifier le texte d'une page. HTML décrit la structure ; CSS règle l'apparence.\nUne instruction est une étape du programme. Exécuter du code signifie demander au moteur JavaScript de suivre ces étapes.",
+      "example": "const total = 4 + 3;",
+      "prompt": "Quelle action correspond à JavaScript ?",
+      "choices": [
+        "Structurer un titre HTML",
+        "Calculer le total du panier",
+        "Choisir la couleur en CSS"
+      ],
+      "answer": "1",
+      "explanation": "JavaScript calcule et réagit aux événements. Le total vaut ici 7.",
+      "hints": [
+        "Cherche une action ou un calcul.",
+        "JavaScript calcule et réagit aux événements. Le total vaut ici 7."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-002",
+      "position": 2,
+      "type": "multiple_choice",
+      "title": "Choisir un type de donnée",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-001"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Chaque valeur a un type. Un nombre sert au calcul ; une chaîne représente du texte ; un booléen vaut true ou false. Les guillemets changent le sens : 42 est un nombre, '42' est du texte.",
+      "example": "typeof 42; // 'number'",
+      "prompt": "Quel est le type de true ?",
+      "choices": [
+        "string",
+        "boolean",
+        "number"
+      ],
+      "answer": "1",
+      "explanation": "true et false sont les deux valeurs booléennes.",
+      "hints": [
+        "Une condition donne une réponse oui ou non.",
+        "true et false sont les deux valeurs booléennes."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-003",
+      "position": 3,
+      "type": "fill_in_the_blank",
+      "title": "Déclarer une variable",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-002"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une déclaration associe un nom à une valeur. const convient à une référence qui ne sera pas réassignée. let permet une nouvelle affectation. Les noms sont sensibles à la casse.",
+      "example": "_____ score = 10;",
+      "prompt": "Complète avec le mot qui permet de réassigner score.",
+      "choices": [
+        "const",
+        "let",
+        "return"
+      ],
+      "answer": "let",
+      "explanation": "let autorise score = 11 ; const interdit cette réaffectation.",
+      "hints": [
+        "La valeur pourra changer après la déclaration.",
+        "let autorise score = 11 ; const interdit cette réaffectation."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-004",
+      "position": 4,
+      "type": "coding_challenge",
+      "title": "Comprendre let et const",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-003"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un programme peut garder une référence fixe et faire évoluer une autre variable. const ne veut pas dire que tous les objets deviennent immuables : cela interdit de remplacer la référence.",
+      "example": "function solve(start) { let score = start; score += 1; return score; }",
+      "prompt": "Écris solve(start) : déclare une variable avec let, augmente-la de 1 et retourne sa valeur.",
+      "starter": "function solve(start) {\n  let score = start;\n  // Augmente score puis retourne-le.\n}",
+      "solution": "function solve(start) { let score = start; score += 1; return score; }",
+      "cases": [
+        {
+          "label": "Départ à zéro",
+          "args": [
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "label": "Score positif",
+          "args": [
+            8
+          ],
+          "expected": 9
+        },
+        {
+          "label": "Score négatif",
+          "args": [
+            -2
+          ],
+          "expected": -1
+        }
+      ],
+      "hints": [
+        "Utilise score += 1.",
+        "Une fonction transmet son résultat avec return."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Départ à zéro",
+        "Score positif",
+        "Score négatif"
+      ]
+    },
+    {
+      "id": "mvp-005",
+      "position": 5,
+      "type": "lesson",
+      "title": "Lire un message de console",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-004"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "console.log affiche une valeur pour aider à comprendre le programme. Ce n'est pas la même chose que return : log produit un message, return transmet la réponse d'une fonction. Dans nos exercices, utilise return pour les résultats testés.",
+      "example": "console.log('Salut');\nconsole.log(2 + 5);",
+      "prompt": "Quel est le deuxième message affiché ?",
+      "choices": [
+        "25",
+        "Salut",
+        "7"
+      ],
+      "answer": "2",
+      "explanation": "2 + 5 additionne deux nombres : le résultat est 7.",
+      "hints": [
+        "Les guillemets indiqueraient du texte.",
+        "2 + 5 additionne deux nombres : le résultat est 7."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-006",
+      "position": 6,
+      "type": "debugging_exercise",
+      "title": "Prédire la valeur d'une variable",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-005"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une variable conserve sa dernière valeur affectée. Lis les instructions dans leur ordre. Une affectation avec = remplace la valeur ; += ajoute à la valeur existante.",
+      "example": "function solve(start) { let score = start; score += 3; return score; }",
+      "prompt": "Corrige solve : après un bonus de 3, elle doit retourner start + 3, sans remplacer le score par 3.",
+      "starter": "function solve(start) {\n  let score = start;\n  score = 3; // Le bonus doit être ajouté.\n  return score;\n}",
+      "solution": "function solve(start) { let score = start; score += 3; return score; }",
+      "cases": [
+        {
+          "label": "Bonus depuis zéro",
+          "args": [
+            0
+          ],
+          "expected": 3
+        },
+        {
+          "label": "Bonus depuis dix",
+          "args": [
+            10
+          ],
+          "expected": 13
+        },
+        {
+          "label": "Bonus depuis moins cinq",
+          "args": [
+            -5
+          ],
+          "expected": -2
+        }
+      ],
+      "hints": [
+        "score = 3 oublie la valeur initiale.",
+        "Remplace = par += pour ajouter le bonus."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Bonus depuis zéro",
+        "Bonus depuis dix",
+        "Bonus depuis moins cinq"
+      ]
+    },
+    {
+      "id": "mvp-007",
+      "position": 7,
+      "type": "multiple_choice",
+      "title": "Repérer une erreur de type",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-006"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "L'opérateur + additionne des nombres, mais concatène lorsqu'une chaîne participe à l'opération. Une conversion explicite avec Number rend l'intention claire. Évite de compter sur une conversion implicite inattendue.",
+      "example": "'4' + 2; // '42'\nNumber('4') + 2; // 6",
+      "prompt": "Comment obtenir le nombre 6 avec text = '4' ?",
+      "choices": [
+        "text + 2",
+        "Number(text) + 2",
+        "String(text) + 2"
+      ],
+      "answer": "1",
+      "explanation": "Number transforme le texte numérique en nombre avant le calcul.",
+      "hints": [
+        "Convertis le type avant de calculer.",
+        "Number transforme le texte numérique en nombre avant le calcul."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-008",
+      "position": 8,
+      "type": "project",
+      "title": "Projet : profil de joueur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-007"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un premier projet assemble plusieurs étapes simples : lire une entrée, calculer une réponse et la retourner. Une fonction pure ne modifie pas les données extérieures ; elle est facile à tester.",
+      "example": "function solve(name, points) { return { message: 'Salut ' + name, total: points + 5 }; }",
+      "prompt": "Crée solve(name, points) qui retourne un objet { message, total } : message vaut 'Salut ' suivi de name et total vaut points + 5.",
+      "starter": "function solve(name, points) {\n  // Prépare le message et ajoute le bonus.\n}",
+      "solution": "function solve(name, points) { return { message: 'Salut ' + name, total: points + 5 }; }",
+      "cases": [
+        {
+          "label": "Préparer le message",
+          "args": [
+            "Lina",
+            0
+          ],
+          "expected": {
+            "message": "Salut Lina",
+            "total": 5
+          }
+        },
+        {
+          "label": "Ajouter un bonus",
+          "args": [
+            "Noé",
+            10
+          ],
+          "expected": {
+            "message": "Salut Noé",
+            "total": 15
+          }
+        },
+        {
+          "label": "Réunir les deux résultats",
+          "args": [
+            "Ada",
+            -5
+          ],
+          "expected": {
+            "message": "Salut Ada",
+            "total": 0
+          }
+        }
+      ],
+      "hints": [
+        "Retourne un objet avec deux clés : message et total.",
+        "Le texte du message commence par 'Salut ' avec un espace."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Préparer le message",
+        "Ajouter un bonus",
+        "Réunir les deux résultats"
+      ]
+    },
+    {
+      "id": "mvp-009",
+      "position": 9,
+      "type": "lesson",
+      "title": "Créer et lire une chaîne",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-008"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une chaîne est une suite de caractères entourée de guillemets. Les guillemets ne font pas partie de sa valeur. On peut utiliser des apostrophes ou des guillemets doubles, en fermant avec le même caractère.",
+      "example": "const ville = 'Laval';\nville.length; // 5",
+      "prompt": "Combien de caractères contient 'code' ?",
+      "choices": [
+        "3",
+        "4",
+        "5"
+      ],
+      "answer": "1",
+      "explanation": "La propriété length compte les caractères de cette chaîne simple.",
+      "hints": [
+        "Compte c, o, d et e.",
+        "La propriété length compte les caractères de cette chaîne simple."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-010",
+      "position": 10,
+      "type": "multiple_choice",
+      "title": "Accéder à un caractère",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-009"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Le premier caractère est à la position 0. L'accès texte[index] ne modifie pas la chaîne. Pour modifier un texte, on construit une nouvelle chaîne.",
+      "example": "const mot = 'code';\nmot[0]; // 'c'",
+      "prompt": "Que vaut 'code'[2] ?",
+      "choices": [
+        "o",
+        "d",
+        "e"
+      ],
+      "answer": "1",
+      "explanation": "Les positions sont 0:c, 1:o, 2:d, 3:e.",
+      "hints": [
+        "Commence le compte à zéro.",
+        "Les positions sont 0:c, 1:o, 2:d, 3:e."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-011",
+      "position": 11,
+      "type": "fill_in_the_blank",
+      "title": "Concaténer deux textes",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-010"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Concaténer veut dire réunir plusieurs textes. Ajoute explicitement un espace lorsqu'il doit apparaître. + ne rajoute aucun séparateur tout seul.",
+      "example": "const nom = 'Ada';\nconst texte = 'Bonjour ' _____ nom;",
+      "prompt": "Quel opérateur réunit les textes ?",
+      "choices": [
+        "+",
+        "*",
+        "==="
+      ],
+      "answer": "+",
+      "explanation": "Le signe + concatène les chaînes.",
+      "hints": [
+        "Utilise le même opérateur que pour une addition.",
+        "Le signe + concatène les chaînes."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-012",
+      "position": 12,
+      "type": "coding_challenge",
+      "title": "Convertir un nombre en texte",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-011"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "String(value) produit une représentation textuelle explicite. Elle fonctionne pour zéro et pour les nombres négatifs. La réponse '12' et le nombre 12 ont des types différents.",
+      "example": "function solve(value) { return String(value); }",
+      "prompt": "Écris solve(value) qui retourne le nombre reçu converti en chaîne.",
+      "starter": "function solve(value) {\n  // Retourne une chaîne.\n}",
+      "solution": "function solve(value) { return String(value); }",
+      "cases": [
+        {
+          "label": "Nombre positif",
+          "args": [
+            12
+          ],
+          "expected": "12"
+        },
+        {
+          "label": "Zéro",
+          "args": [
+            0
+          ],
+          "expected": "0"
+        },
+        {
+          "label": "Nombre négatif",
+          "args": [
+            -8
+          ],
+          "expected": "-8"
+        }
+      ],
+      "hints": [
+        "La fonction globale String effectue la conversion.",
+        "Retourne String(value)."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Nombre positif",
+        "Zéro",
+        "Nombre négatif"
+      ]
+    },
+    {
+      "id": "mvp-013",
+      "position": 13,
+      "type": "lesson",
+      "title": "Calculer une expression",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-012"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "La multiplication et la division sont prioritaires sur l'addition. Les parenthèses imposent un ordre. Écris des expressions faciles à relire, même si le moteur connaît déjà les priorités.",
+      "example": "2 + 3 * 4; // 14\n(2 + 3) * 4; // 20",
+      "prompt": "Que vaut (8 - 2) / 3 ?",
+      "choices": [
+        "2",
+        "6",
+        "4"
+      ],
+      "answer": "0",
+      "explanation": "Les parenthèses donnent 6, puis 6 / 3 donne 2.",
+      "hints": [
+        "Calcule la parenthèse en premier.",
+        "Les parenthèses donnent 6, puis 6 / 3 donne 2."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-014",
+      "position": 14,
+      "type": "debugging_exercise",
+      "title": "Comprendre les opérateurs",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-013"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une moyenne se calcule en additionnant les valeurs, puis en divisant par leur nombre. Une parenthèse oubliée peut produire un résultat valide en syntaxe mais faux en logique.",
+      "example": "function solve(a, b) { return (a + b) / 2; }",
+      "prompt": "Corrige solve(a, b) pour retourner la moyenne des deux nombres.",
+      "starter": "function solve(a, b) {\n  return a + b / 2;\n}",
+      "solution": "function solve(a, b) { return (a + b) / 2; }",
+      "cases": [
+        {
+          "label": "Deux valeurs distinctes",
+          "args": [
+            2,
+            8
+          ],
+          "expected": 5
+        },
+        {
+          "label": "Même valeur",
+          "args": [
+            4,
+            4
+          ],
+          "expected": 4
+        },
+        {
+          "label": "Négatif et positif",
+          "args": [
+            -4,
+            4
+          ],
+          "expected": 0
+        }
+      ],
+      "hints": [
+        "Additionne a et b avant de diviser.",
+        "Entoure a + b de parenthèses."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Deux valeurs distinctes",
+        "Même valeur",
+        "Négatif et positif"
+      ]
+    },
+    {
+      "id": "mvp-015",
+      "position": 15,
+      "type": "multiple_choice",
+      "title": "Corriger une erreur de concaténation",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-014"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un prix reçu sous forme de texte doit être converti avant de lui ajouter une taxe numérique. Une interpolation dans un gabarit de chaîne sert à présenter une valeur, pas à changer son type numérique.",
+      "example": "const prix = '10';",
+      "prompt": "Quelle expression donne 12 comme nombre ?",
+      "choices": [
+        "prix + 2",
+        "Number(prix) + 2",
+        "prix + '2'"
+      ],
+      "answer": "1",
+      "explanation": "Number(prix) vaut 10, donc le résultat numérique est 12.",
+      "hints": [
+        "Évite la concaténation.",
+        "Number(prix) vaut 10, donc le résultat numérique est 12."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-016",
+      "position": 16,
+      "type": "project",
+      "title": "Défi : générer une phrase",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-015"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Les gabarits de chaînes utilisent des accents graves et ${expression}. Ils aident à combiner du texte et des valeurs calculées. La ponctuation et les espaces comptent dans une sortie textuelle.",
+      "example": "function solve(name, count) { return `${name} a ${count} points.`; }",
+      "prompt": "Écris solve(name, count) qui retourne exactement 'Ada a 3 points.' pour les entrées Ada et 3.",
+      "starter": "function solve(name, count) {\n  // Construis la phrase complète.\n}",
+      "solution": "function solve(name, count) { return `${name} a ${count} points.`; }",
+      "cases": [
+        {
+          "label": "Insérer un nom",
+          "args": [
+            "Ada",
+            3
+          ],
+          "expected": "Ada a 3 points."
+        },
+        {
+          "label": "Insérer zéro",
+          "args": [
+            "Lina",
+            0
+          ],
+          "expected": "Lina a 0 points."
+        },
+        {
+          "label": "Garder la ponctuation",
+          "args": [
+            "Max",
+            12
+          ],
+          "expected": "Max a 12 points."
+        }
+      ],
+      "hints": [
+        "Utilise un gabarit de chaîne ou la concaténation.",
+        "Ajoute le point final et les espaces autour de a."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Insérer un nom",
+        "Insérer zéro",
+        "Garder la ponctuation"
+      ]
+    },
+    {
+      "id": "mvp-017",
+      "position": 17,
+      "type": "lesson",
+      "title": "Vrai ou faux ?",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-016"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un booléen vaut true ou false. Une comparaison produit un booléen. Les conditions utilisent ce résultat pour choisir une branche du programme.",
+      "example": "const majeur = 19 >= 18; // true",
+      "prompt": "Quel résultat produit 5 < 2 ?",
+      "choices": [
+        "true",
+        "false",
+        "undefined"
+      ],
+      "answer": "1",
+      "explanation": "5 est plus grand que 2 ; la comparaison est fausse.",
+      "hints": [
+        "Lis < comme est plus petit que.",
+        "5 est plus grand que 2 ; la comparaison est fausse."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-018",
+      "position": 18,
+      "type": "multiple_choice",
+      "title": "Comparer deux valeurs",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-017"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "=== compare la valeur et le type sans convertir les opérandes. Deux valeurs qui s'affichent pareil peuvent avoir des types différents.",
+      "example": "7 === '7'; // false",
+      "prompt": "Que vaut 7 === 7 ?",
+      "choices": [
+        "true",
+        "false",
+        "7"
+      ],
+      "answer": "0",
+      "explanation": "Les deux opérandes sont le même nombre.",
+      "hints": [
+        "Même valeur et même type.",
+        "Les deux opérandes sont le même nombre."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-019",
+      "position": 19,
+      "type": "fill_in_the_blank",
+      "title": "Différencier == et ===",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-018"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "== peut convertir des types avant de comparer. Pour éviter une conversion surprenante, préfère === quand les types doivent correspondre.",
+      "example": "const egal = 4 _____ '4'; // false",
+      "prompt": "Complète avec la comparaison stricte.",
+      "choices": [
+        "==",
+        "===",
+        "="
+      ],
+      "answer": "===",
+      "explanation": "=== ne convertit pas la chaîne en nombre.",
+      "hints": [
+        "Il faut trois signes égal.",
+        "=== ne convertit pas la chaîne en nombre."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-020",
+      "position": 20,
+      "type": "coding_challenge",
+      "title": "Écrire une condition if",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-019"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "if exécute son bloc lorsque sa condition est vraie. return termine la fonction ; il peut donc séparer deux chemins de réponse.",
+      "example": "function solve(age) { if (age >= 18) return true; return false; }",
+      "prompt": "Écris solve(age) qui retourne true si age est au moins 18, sinon false.",
+      "starter": "function solve(age) {\n  // Vérifie la limite de 18 ans.\n}",
+      "solution": "function solve(age) { if (age >= 18) return true; return false; }",
+      "cases": [
+        {
+          "label": "Juste avant la limite",
+          "args": [
+            17
+          ],
+          "expected": false
+        },
+        {
+          "label": "À la limite",
+          "args": [
+            18
+          ],
+          "expected": true
+        },
+        {
+          "label": "Au-delà",
+          "args": [
+            30
+          ],
+          "expected": true
+        }
+      ],
+      "hints": [
+        "Au moins signifie supérieur ou égal.",
+        "Utilise age >= 18."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Juste avant la limite",
+        "À la limite",
+        "Au-delà"
+      ]
+    },
+    {
+      "id": "mvp-021",
+      "position": 21,
+      "type": "lesson",
+      "title": "Ajouter un else",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-020"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "else décrit le chemin suivi quand la condition du if est fausse. Une seule des deux branches est exécutée. Place les cas aux limites dans tes tests.",
+      "example": "if (score >= 10) {\n  resultat = 'validé';\n} else {\n  resultat = 'à revoir';\n}",
+      "prompt": "Quelle branche est exécutée pour score = 9 ?",
+      "choices": [
+        "if",
+        "else",
+        "Les deux"
+      ],
+      "answer": "1",
+      "explanation": "9 >= 10 est faux : la branche else est choisie.",
+      "hints": [
+        "Teste la condition avant de choisir le bloc.",
+        "9 >= 10 est faux : la branche else est choisie."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-022",
+      "position": 22,
+      "type": "debugging_exercise",
+      "title": "Combiner des conditions",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-021"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "&& exige que les deux conditions soient vraies. || exige au moins une condition vraie. Le choix de cet opérateur fait souvent toute la différence.",
+      "example": "function solve(age, hasTicket) { return age >= 18 && hasTicket; }",
+      "prompt": "Corrige solve(age, hasTicket) : une personne entre seulement si elle a au moins 18 ans ET un billet.",
+      "starter": "function solve(age, hasTicket) {\n  return age >= 18 || hasTicket;\n}",
+      "solution": "function solve(age, hasTicket) { return age >= 18 && hasTicket; }",
+      "cases": [
+        {
+          "label": "Adulte avec billet",
+          "args": [
+            18,
+            true
+          ],
+          "expected": true
+        },
+        {
+          "label": "Adulte sans billet",
+          "args": [
+            25,
+            false
+          ],
+          "expected": false
+        },
+        {
+          "label": "Mineur avec billet",
+          "args": [
+            16,
+            true
+          ],
+          "expected": false
+        }
+      ],
+      "hints": [
+        "Les deux critères sont obligatoires.",
+        "Remplace || par &&."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Adulte avec billet",
+        "Adulte sans billet",
+        "Mineur avec billet"
+      ]
+    },
+    {
+      "id": "mvp-023",
+      "position": 23,
+      "type": "multiple_choice",
+      "title": "Déboguer une comparaison",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-022"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "= affecte une valeur ; === compare. Une affectation dans une condition peut modifier une variable et masquer une erreur logique.",
+      "example": "let score = 3;\nif (score === 5) { /* bonus */ }",
+      "prompt": "Comment comparer score au nombre 5 ?",
+      "choices": [
+        "score = 5",
+        "score === 5",
+        "score + 5"
+      ],
+      "answer": "1",
+      "explanation": "=== compare sans changer score.",
+      "hints": [
+        "Cherche la comparaison stricte.",
+        "=== compare sans changer score."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-024",
+      "position": 24,
+      "type": "project",
+      "title": "Défi : calculer une admissibilité",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-023"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un calcul d'admissibilité doit exprimer toutes ses règles et tester les frontières. Sépare les conditions en variables si cela rend l'intention plus lisible.",
+      "example": "function solve(age, score) { return age >= 16 && score >= 60; }",
+      "prompt": "Écris solve(age, score) : retourne true si age >= 16 ET score >= 60, sinon false.",
+      "starter": "function solve(age, score) {\n  // Vérifie les deux critères.\n}",
+      "solution": "function solve(age, score) { return age >= 16 && score >= 60; }",
+      "cases": [
+        {
+          "label": "Deux seuils atteints",
+          "args": [
+            16,
+            60
+          ],
+          "expected": true
+        },
+        {
+          "label": "Score insuffisant",
+          "args": [
+            20,
+            59
+          ],
+          "expected": false
+        },
+        {
+          "label": "Âge insuffisant",
+          "args": [
+            15,
+            100
+          ],
+          "expected": false
+        }
+      ],
+      "hints": [
+        "Calcule deux comparaisons.",
+        "Combine les comparaisons avec &&."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Deux seuils atteints",
+        "Score insuffisant",
+        "Âge insuffisant"
+      ]
+    },
+    {
+      "id": "mvp-025",
+      "position": 25,
+      "type": "lesson",
+      "title": "Déclarer une fonction",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-024"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une fonction regroupe des instructions sous un nom. On la déclare une fois puis on l'appelle. Les parenthèses de l'appel contiennent les arguments.",
+      "example": "function doubler(n) { return n * 2; }\ndoubler(4); // 8",
+      "prompt": "Quelle expression appelle la fonction ?",
+      "choices": [
+        "doubler",
+        "doubler(4)",
+        "function doubler"
+      ],
+      "answer": "1",
+      "explanation": "Les parenthèses réalisent un appel avec un argument.",
+      "hints": [
+        "Le nom seul désigne la fonction.",
+        "Les parenthèses réalisent un appel avec un argument."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-026",
+      "position": 26,
+      "type": "multiple_choice",
+      "title": "Passer un paramètre",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-025"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un paramètre est un nom local dans la déclaration. Un argument est une valeur fournie à l'appel. Chaque appel peut utiliser une valeur différente.",
+      "example": "function carre(n) { return n * n; }\ncarre(3);",
+      "prompt": "Quelle valeur reçoit n dans cet appel ?",
+      "choices": [
+        "9",
+        "3",
+        "n"
+      ],
+      "answer": "1",
+      "explanation": "L’argument 3 est affecté au paramètre n.",
+      "hints": [
+        "Lis la valeur entre parenthèses à l’appel.",
+        "L’argument 3 est affecté au paramètre n."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-027",
+      "position": 27,
+      "type": "fill_in_the_blank",
+      "title": "Retourner une valeur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-026"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "return transmet une valeur à l'appelant et termine l'exécution de la fonction. Sans return explicite, une fonction ordinaire retourne undefined.",
+      "example": "function triple(n) {\n  _____ n * 3;\n}",
+      "prompt": "Quel mot transmet le résultat ?",
+      "choices": [
+        "return",
+        "console",
+        "let"
+      ],
+      "answer": "return",
+      "explanation": "return n * 3 renvoie le produit.",
+      "hints": [
+        "Afficher et retourner sont deux opérations différentes.",
+        "return n * 3 renvoie le produit."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-028",
+      "position": 28,
+      "type": "coding_challenge",
+      "title": "Réutiliser une fonction",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-027"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Réutiliser une fonction évite de répéter un calcul. Une petite fonction peut appeler une autre fonction pour construire un résultat.",
+      "example": "function doubler(n) { return n * 2; } function solve(n) { return doubler(doubler(n)); }",
+      "prompt": "Écris solve(n) qui appelle une fonction doubler puis retourne deux fois le double de n.",
+      "starter": "function doubler(n) { return n * 2; }\nfunction solve(n) {\n  // Réutilise doubler.\n}",
+      "solution": "function doubler(n) { return n * 2; } function solve(n) { return doubler(doubler(n)); }",
+      "cases": [
+        {
+          "label": "Valeur positive",
+          "args": [
+            3
+          ],
+          "expected": 12
+        },
+        {
+          "label": "Zéro",
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "label": "Valeur négative",
+          "args": [
+            -2
+          ],
+          "expected": -8
+        }
+      ],
+      "hints": [
+        "Appliquer doubler deux fois multiplie par quatre.",
+        "Utilise doubler(doubler(n))."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Valeur positive",
+        "Zéro",
+        "Valeur négative"
+      ]
+    },
+    {
+      "id": "mvp-029",
+      "position": 29,
+      "type": "lesson",
+      "title": "Lire la portée d'une variable",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-028"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une variable déclarée avec let ou const dans un bloc reste dans ce bloc. Un paramètre appartient à sa fonction. Cela évite les collisions entre noms.",
+      "example": "function lire() {\n  const secret = 8;\n  return secret;\n}",
+      "prompt": "Où secret est-elle accessible ?",
+      "choices": [
+        "Partout",
+        "Dans lire seulement",
+        "Dans tous les fichiers"
+      ],
+      "answer": "1",
+      "explanation": "secret est locale au bloc de la fonction lire.",
+      "hints": [
+        "Regarde les accolades qui entourent la déclaration.",
+        "secret est locale au bloc de la fonction lire."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-030",
+      "position": 30,
+      "type": "debugging_exercise",
+      "title": "Compléter une fonction",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-029"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Calculer une expression ne suffit pas à la retourner. Le résultat d'une fonction doit être explicitement transmis à l'appelant.",
+      "example": "function solve(n) { return n * n; }",
+      "prompt": "Répare solve(n) pour retourner le carré de n.",
+      "starter": "function solve(n) {\n  n * n;\n}",
+      "solution": "function solve(n) { return n * n; }",
+      "cases": [
+        {
+          "label": "Carré positif",
+          "args": [
+            4
+          ],
+          "expected": 16
+        },
+        {
+          "label": "Carré négatif",
+          "args": [
+            -3
+          ],
+          "expected": 9
+        },
+        {
+          "label": "Carré de zéro",
+          "args": [
+            0
+          ],
+          "expected": 0
+        }
+      ],
+      "hints": [
+        "La multiplication est correcte.",
+        "Il manque return devant n * n."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Carré positif",
+        "Carré négatif",
+        "Carré de zéro"
+      ]
+    },
+    {
+      "id": "mvp-031",
+      "position": 31,
+      "type": "multiple_choice",
+      "title": "Réparer un return manquant",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-030"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "console.log aide au diagnostic ; return fournit le résultat du calcul. Les tests de fonction comparent la valeur retournée.",
+      "example": "function ajouter(a, b) { console.log(a + b); }",
+      "prompt": "Que retourne cette fonction sans return ?",
+      "choices": [
+        "La somme",
+        "undefined",
+        "true"
+      ],
+      "answer": "1",
+      "explanation": "Un affichage ne remplace pas la valeur de retour.",
+      "hints": [
+        "Le moteur retourne une valeur par défaut.",
+        "Un affichage ne remplace pas la valeur de retour."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-032",
+      "position": 32,
+      "type": "project",
+      "title": "Défi : créer un convertisseur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-031"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un convertisseur isole une formule et son unité d'entrée. Pour Celsius vers Fahrenheit, multiplie par 9/5 puis ajoute 32. Teste des valeurs connues et le zéro.",
+      "example": "function solve(celsius) { return celsius * 9 / 5 + 32; }",
+      "prompt": "Écris solve(celsius) qui retourne la température Fahrenheit, sans arrondi.",
+      "starter": "function solve(celsius) {\n  // Applique la formule.\n}",
+      "solution": "function solve(celsius) { return celsius * 9 / 5 + 32; }",
+      "cases": [
+        {
+          "label": "Point de congélation",
+          "args": [
+            0
+          ],
+          "expected": 32
+        },
+        {
+          "label": "Point d’ébullition",
+          "args": [
+            100
+          ],
+          "expected": 212
+        },
+        {
+          "label": "Point commun aux échelles",
+          "args": [
+            -40
+          ],
+          "expected": -40
+        }
+      ],
+      "hints": [
+        "La formule est celsius × 9 ÷ 5 + 32.",
+        "Respecte les unités et retourne le nombre."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Point de congélation",
+        "Point d’ébullition",
+        "Point commun aux échelles"
+      ]
+    },
+    {
+      "id": "mvp-033",
+      "position": 33,
+      "type": "lesson",
+      "title": "Créer un tableau",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-032"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un tableau regroupe plusieurs valeurs dans un ordre. On le crée avec des crochets ; les éléments sont séparés par des virgules. Son premier index est 0.",
+      "example": "const fruits = ['pomme', 'banane', 'orange'];",
+      "prompt": "Quelle écriture crée un tableau ?",
+      "choices": [
+        "{1, 2}",
+        "[1, 2]",
+        "(1, 2)"
+      ],
+      "answer": "1",
+      "explanation": "Les crochets créent un tableau JavaScript.",
+      "hints": [
+        "Cherche les crochets carrés.",
+        "Les crochets créent un tableau JavaScript."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-034",
+      "position": 34,
+      "type": "multiple_choice",
+      "title": "Lire un index",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-033"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "L'index repère une position, pas une valeur. Pour n éléments, les index vont de 0 à n - 1. Un index absent donne undefined.",
+      "example": "const villes = ['Laval', 'Québec', 'Montréal'];",
+      "prompt": "Que vaut villes[1] ?",
+      "choices": [
+        "Laval",
+        "Québec",
+        "Montréal"
+      ],
+      "answer": "1",
+      "explanation": "Le deuxième élément est à l’index 1.",
+      "hints": [
+        "Commence à zéro.",
+        "Le deuxième élément est à l’index 1."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-035",
+      "position": 35,
+      "type": "fill_in_the_blank",
+      "title": "Modifier un élément",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-034"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "On remplace un élément en affectant sa position. Une variable const peut désigner un tableau dont les éléments changent ; on ne remplace pas la référence du tableau.",
+      "example": "const valeurs = [4, 5];\nvaleurs[_____] = 9; // [4, 9]",
+      "prompt": "Quel index remplace le deuxième élément ?",
+      "choices": [
+        "0",
+        "1",
+        "2"
+      ],
+      "answer": "1",
+      "explanation": "La deuxième position a l’index 1.",
+      "hints": [
+        "Un index de 2 désignerait un nouvel élément.",
+        "La deuxième position a l’index 1."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-036",
+      "position": 36,
+      "type": "coding_challenge",
+      "title": "Ajouter une valeur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-035"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "push ajoute un élément à la fin. Pour garder l'entrée intacte, on peut créer une copie avec [...items], puis modifier cette copie.",
+      "example": "function solve(items, value) { return [...items, value]; }",
+      "prompt": "Écris solve(items, value) qui retourne un nouveau tableau contenant items puis value, sans modifier items.",
+      "starter": "function solve(items, value) {\n  // Copie puis ajoute la valeur.\n}",
+      "solution": "function solve(items, value) { return [...items, value]; }",
+      "cases": [
+        {
+          "label": "Ajouter à une liste",
+          "args": [
+            [
+              1,
+              2
+            ],
+            3
+          ],
+          "expected": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "label": "Liste vide",
+          "args": [
+            [],
+            4
+          ],
+          "expected": [
+            4
+          ]
+        },
+        {
+          "label": "Texte",
+          "args": [
+            [
+              "a"
+            ],
+            "b"
+          ],
+          "expected": [
+            "a",
+            "b"
+          ]
+        }
+      ],
+      "hints": [
+        "La syntaxe [...items] copie les éléments.",
+        "Retourne [...items, value]."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Ajouter à une liste",
+        "Liste vide",
+        "Texte"
+      ]
+    },
+    {
+      "id": "mvp-037",
+      "position": 37,
+      "type": "lesson",
+      "title": "Supprimer un élément",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-036"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "pop retire et retourne le dernier élément. shift retire le premier. Ces méthodes modifient le tableau ; il faut en tenir compte lorsqu'il est partagé.",
+      "example": "const nombres = [2, 4, 6];\nconst dernier = nombres.pop();",
+      "prompt": "Quelle est la valeur de dernier ?",
+      "choices": [
+        "2",
+        "6",
+        "[2, 4]"
+      ],
+      "answer": "1",
+      "explanation": "pop retourne l’élément retiré, ici 6.",
+      "hints": [
+        "Il s’agit du dernier élément.",
+        "pop retourne l’élément retiré, ici 6."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-038",
+      "position": 38,
+      "type": "debugging_exercise",
+      "title": "Connaître la longueur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-037"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "length compte les éléments. Le dernier index est length - 1. Confondre longueur et index provoque souvent un accès hors limites.",
+      "example": "function solve(items) { if (items.length === 0) return null; return items[items.length - 1]; }",
+      "prompt": "Corrige solve(items) pour retourner le dernier élément, ou null si le tableau est vide.",
+      "starter": "function solve(items) {\n  if (items.length === 0) return null;\n  return items[items.length];\n}",
+      "solution": "function solve(items) { if (items.length === 0) return null; return items[items.length - 1]; }",
+      "cases": [
+        {
+          "label": "Trois éléments",
+          "args": [
+            [
+              4,
+              5,
+              6
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "label": "Un seul élément",
+          "args": [
+            [
+              9
+            ]
+          ],
+          "expected": 9
+        },
+        {
+          "label": "Aucun élément",
+          "args": [
+            []
+          ],
+          "expected": null
+        }
+      ],
+      "hints": [
+        "Le dernier index est inférieur à la longueur.",
+        "Soustrais 1 à items.length."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Trois éléments",
+        "Un seul élément",
+        "Aucun élément"
+      ]
+    },
+    {
+      "id": "mvp-039",
+      "position": 39,
+      "type": "multiple_choice",
+      "title": "Déboguer un index hors limites",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-038"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un accès hors limites ne lance pas toujours une exception : un tableau retourne undefined pour une position absente. Cela peut ensuite contaminer un calcul.",
+      "example": "const valeurs = [10, 20, 30];",
+      "prompt": "Quel accès lit 30 ?",
+      "choices": [
+        "valeurs[3]",
+        "valeurs[2]",
+        "valeurs[-1]"
+      ],
+      "answer": "1",
+      "explanation": "Le troisième élément est à l’index 2.",
+      "hints": [
+        "La longueur vaut 3, le dernier index vaut 2.",
+        "Le troisième élément est à l’index 2."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-040",
+      "position": 40,
+      "type": "project",
+      "title": "Défi : calculer une moyenne",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-039"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une moyenne de tableau additionne les éléments puis divise par leur nombre. Le tableau vide doit avoir une règle explicite ; ici la moyenne est null.",
+      "example": "function solve(numbers) { if (!numbers.length) return null; return numbers.reduce((s,n) => s+n, 0) / numbers.length; }",
+      "prompt": "Écris solve(numbers) qui retourne la moyenne, ou null pour un tableau vide.",
+      "starter": "function solve(numbers) {\n  // Additionne puis divise.\n}",
+      "solution": "function solve(numbers) { if (!numbers.length) return null; return numbers.reduce((s,n) => s+n, 0) / numbers.length; }",
+      "cases": [
+        {
+          "label": "Calculer une somme",
+          "args": [
+            [
+              2,
+              4,
+              6
+            ]
+          ],
+          "expected": 4
+        },
+        {
+          "label": "Gérer un élément",
+          "args": [
+            [
+              7
+            ]
+          ],
+          "expected": 7
+        },
+        {
+          "label": "Gérer le vide",
+          "args": [
+            []
+          ],
+          "expected": null
+        }
+      ],
+      "hints": [
+        "Tu peux parcourir le tableau ou utiliser reduce.",
+        "Teste la longueur avant de diviser."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Calculer une somme",
+        "Gérer un élément",
+        "Gérer le vide"
+      ]
+    },
+    {
+      "id": "mvp-041",
+      "position": 41,
+      "type": "lesson",
+      "title": "Comprendre l'itération",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-040"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Itérer signifie répéter une opération sur plusieurs éléments ou plusieurs étapes. Une boucle doit avoir une condition d'arrêt qui finit par devenir fausse.",
+      "example": "for (let i = 0; i < 3; i++) { /* travail */ }",
+      "prompt": "Combien de fois le corps est-il exécuté ?",
+      "choices": [
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "1",
+      "explanation": "i prend successivement 0, 1 et 2.",
+      "hints": [
+        "La valeur 3 est exclue par i < 3.",
+        "i prend successivement 0, 1 et 2."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-042",
+      "position": 42,
+      "type": "multiple_choice",
+      "title": "Créer une boucle for",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-041"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "La boucle for réunit initialisation, condition et mise à jour. La condition est vérifiée avant chaque tour.",
+      "example": "for (let i = 1; i <= 3; i++) { /* ... */ }",
+      "prompt": "Quelle est la dernière valeur de i dans le corps ?",
+      "choices": [
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": "1",
+      "explanation": "<= inclut la valeur 3.",
+      "hints": [
+        "Lis le signe égal dans la comparaison.",
+        "<= inclut la valeur 3."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-043",
+      "position": 43,
+      "type": "fill_in_the_blank",
+      "title": "Utiliser une boucle while",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-042"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "while répète un bloc tant que sa condition est vraie. Le corps doit faire progresser un état vers l'arrêt.",
+      "example": "let n = 0;\nwhile (n < 3) {\n  n_____;\n}",
+      "prompt": "Complète pour incrémenter n.",
+      "choices": [
+        "++",
+        "--",
+        "==="
+      ],
+      "answer": "++",
+      "explanation": "++ augmente n de 1 à chaque tour.",
+      "hints": [
+        "n doit se rapprocher de 3.",
+        "++ augmente n de 1 à chaque tour."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-044",
+      "position": 44,
+      "type": "coding_challenge",
+      "title": "Itérer sur un tableau",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-043"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "for...of visite les valeurs d'un tableau dans leur ordre. Une variable accumulateur conserve un résultat entre les tours.",
+      "example": "function solve(numbers) { let total=0; for (const n of numbers) total+=n; return total; }",
+      "prompt": "Écris solve(numbers) qui retourne la somme des éléments. Le tableau vide vaut 0.",
+      "starter": "function solve(numbers) {\n  let total = 0;\n  // Parcours les valeurs.\n}",
+      "solution": "function solve(numbers) { let total=0; for (const n of numbers) total+=n; return total; }",
+      "cases": [
+        {
+          "label": "Plusieurs nombres",
+          "args": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": 6
+        },
+        {
+          "label": "Vide",
+          "args": [
+            []
+          ],
+          "expected": 0
+        },
+        {
+          "label": "Signes mélangés",
+          "args": [
+            [
+              -2,
+              5
+            ]
+          ],
+          "expected": 3
+        }
+      ],
+      "hints": [
+        "Ajoute chaque valeur à total.",
+        "N’oublie pas return total après la boucle."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Plusieurs nombres",
+        "Vide",
+        "Signes mélangés"
+      ]
+    },
+    {
+      "id": "mvp-045",
+      "position": 45,
+      "type": "lesson",
+      "title": "Utiliser break",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-044"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "break termine immédiatement la boucle courante. Il est utile lorsque l'objectif est atteint et que les tours suivants n'apportent rien.",
+      "example": "for (const n of [1, 2, 3]) {\n  if (n === 2) break;\n  console.log(n);\n}",
+      "prompt": "Quelle valeur est affichée ?",
+      "choices": [
+        "1 seulement",
+        "1 et 2",
+        "1, 2 et 3"
+      ],
+      "answer": "0",
+      "explanation": "La boucle s’arrête avant le log de 2.",
+      "hints": [
+        "Observe l’ordre du if et du log.",
+        "La boucle s’arrête avant le log de 2."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-046",
+      "position": 46,
+      "type": "debugging_exercise",
+      "title": "Identifier une boucle infinie",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-045"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une condition d'arrêt incorrecte peut bloquer un programme. Nos exercices interrompent les calculs trop longs, mais la bonne correction est de rendre la progression explicite.",
+      "example": "function solve(n) { let i=0; while(i<n) i++; return i; }",
+      "prompt": "Répare solve(n), pour n entier positif ou nul, qui compte de 0 à n - 1 puis retourne n.",
+      "starter": "function solve(n) {\n  let i = 0;\n  while (i < n) { i--; }\n  return i;\n}",
+      "solution": "function solve(n) { let i=0; while(i<n) i++; return i; }",
+      "cases": [
+        {
+          "label": "Plusieurs tours",
+          "args": [
+            4
+          ],
+          "expected": 4
+        },
+        {
+          "label": "Aucun tour",
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "label": "Un tour",
+          "args": [
+            1
+          ],
+          "expected": 1
+        }
+      ],
+      "hints": [
+        "i-- éloigne i de la limite.",
+        "Utilise i++ pour avancer vers n."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Plusieurs tours",
+        "Aucun tour",
+        "Un tour"
+      ]
+    },
+    {
+      "id": "mvp-047",
+      "position": 47,
+      "type": "multiple_choice",
+      "title": "Déboguer une condition d'arrêt",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-046"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Pour parcourir les index d'un tableau, utilise i < length. i <= length ajoute un tour hors limites.",
+      "example": "const a = [5, 6];\nfor (let i = 0; i < a.length; i++) { /* ... */ }",
+      "prompt": "Quels index sont visités ?",
+      "choices": [
+        "0 et 1",
+        "0, 1 et 2",
+        "1 et 2"
+      ],
+      "answer": "0",
+      "explanation": "La longueur est 2 ; l’index 2 est exclu.",
+      "hints": [
+        "Le premier index est zéro.",
+        "La longueur est 2 ; l’index 2 est exclu."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-048",
+      "position": 48,
+      "type": "project",
+      "title": "Défi : filtrer des valeurs",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-047"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Filtrer garde seulement les éléments qui respectent une condition. Le résultat conserve l'ordre d'origine. Un élément exclu n'est pas remplacé par un trou.",
+      "example": "function solve(numbers) { return numbers.filter(n => n > 0); }",
+      "prompt": "Écris solve(numbers) qui retourne les valeurs strictement positives, dans le même ordre.",
+      "starter": "function solve(numbers) {\n  // Construis le tableau filtré.\n}",
+      "solution": "function solve(numbers) { return numbers.filter(n => n > 0); }",
+      "cases": [
+        {
+          "label": "Filtrer les signes",
+          "args": [
+            [
+              -2,
+              0,
+              3,
+              1
+            ]
+          ],
+          "expected": [
+            3,
+            1
+          ]
+        },
+        {
+          "label": "Rien à garder",
+          "args": [
+            [
+              -1,
+              0
+            ]
+          ],
+          "expected": []
+        },
+        {
+          "label": "Entrée vide",
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "hints": [
+        "Le zéro n’est pas strictement positif.",
+        "Utilise filter avec n > 0 ou une boucle et push."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Filtrer les signes",
+        "Rien à garder",
+        "Entrée vide"
+      ]
+    },
+    {
+      "id": "mvp-049",
+      "position": 49,
+      "type": "lesson",
+      "title": "Tableau ou liste chaînée ?",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-048"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un tableau offre un accès direct par index. Une liste chaînée relie des nœuds ; pour atteindre un nœud éloigné, on suit les liens. Choisir une structure dépend des opérations fréquentes.",
+      "example": "const node = { value: 3, next: null };",
+      "prompt": "Quelle structure permet un accès direct par index ?",
+      "choices": [
+        "Liste chaînée",
+        "Tableau",
+        "Aucune"
+      ],
+      "answer": "1",
+      "explanation": "Un tableau peut lire son élément à une position sans suivre une chaîne de liens.",
+      "hints": [
+        "Pense à items[10].",
+        "Un tableau peut lire son élément à une position sans suivre une chaîne de liens."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-050",
+      "position": 50,
+      "type": "multiple_choice",
+      "title": "Comprendre la pile LIFO",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-049"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une pile suit LIFO : dernier entré, premier sorti. Les opérations push et pop d'un tableau peuvent représenter une pile.",
+      "example": "const pile = [];\npile.push('A');\npile.push('B');",
+      "prompt": "Que retourne pile.pop() ?",
+      "choices": [
+        "A",
+        "B",
+        "Les deux"
+      ],
+      "answer": "1",
+      "explanation": "B a été ajouté en dernier.",
+      "hints": [
+        "Imagine une pile d’assiettes.",
+        "B a été ajouté en dernier."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-051",
+      "position": 51,
+      "type": "fill_in_the_blank",
+      "title": "Comprendre la file FIFO",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-050"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une file suit FIFO : premier entré, premier sorti. Sur un petit tableau, push ajoute à la fin et shift retire au début. Pour de grandes files, on préférera éviter les décalages coûteux.",
+      "example": "const file = ['A', 'B'];\nfile._____(); // retire A",
+      "prompt": "Quelle méthode retire le premier ?",
+      "choices": [
+        "pop",
+        "shift",
+        "push"
+      ],
+      "answer": "shift",
+      "explanation": "shift enlève le premier élément.",
+      "hints": [
+        "pop enlèverait B.",
+        "shift enlève le premier élément."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-052",
+      "position": 52,
+      "type": "coding_challenge",
+      "title": "Découvrir les ensembles",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-051"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un Set garde des valeurs uniques. Transformer un tableau en Set supprime les répétitions. L'ordre de première apparition est conservé lors de la conversion inverse.",
+      "example": "function solve(values) { return [...new Set(values)]; }",
+      "prompt": "Écris solve(values) qui retourne le tableau sans doublons dans l’ordre de première apparition.",
+      "starter": "function solve(values) {\n  // Utilise un ensemble.\n}",
+      "solution": "function solve(values) { return [...new Set(values)]; }",
+      "cases": [
+        {
+          "label": "Doublons",
+          "args": [
+            [
+              2,
+              1,
+              2,
+              3
+            ]
+          ],
+          "expected": [
+            2,
+            1,
+            3
+          ]
+        },
+        {
+          "label": "Tout identique",
+          "args": [
+            [
+              4,
+              4,
+              4
+            ]
+          ],
+          "expected": [
+            4
+          ]
+        },
+        {
+          "label": "Vide",
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "hints": [
+        "new Set(values) garde chaque valeur une fois.",
+        "Déplie le Set avec [...ensemble]."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Doublons",
+        "Tout identique",
+        "Vide"
+      ]
+    },
+    {
+      "id": "mvp-053",
+      "position": 53,
+      "type": "lesson",
+      "title": "Découvrir les maps",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-052"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une Map associe des clés à des valeurs. set écrit une association ; get lit sa valeur ; has vérifie l'existence de la clé.",
+      "example": "const scores = new Map();\nscores.set('Ada', 12);",
+      "prompt": "Comment lire le score d’Ada ?",
+      "choices": [
+        "scores['Ada']",
+        "scores.get('Ada')",
+        "scores.pop('Ada')"
+      ],
+      "answer": "1",
+      "explanation": "get consulte la valeur associée à une clé de Map.",
+      "hints": [
+        "Les méthodes de Map sont set, get et has.",
+        "get consulte la valeur associée à une clé de Map."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-054",
+      "position": 54,
+      "type": "debugging_exercise",
+      "title": "Rechercher un élément",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-053"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "indexOf retourne le premier index d'une valeur, ou -1 si elle est absente. L'index 0 est un résultat valide et ne doit pas être confondu avec une absence.",
+      "example": "function solve(values, target) { return values.indexOf(target) >= 0; }",
+      "prompt": "Corrige solve(values, target) pour retourner true si target apparaît, y compris à l’index 0.",
+      "starter": "function solve(values, target) {\n  return values.indexOf(target) > 0;\n}",
+      "solution": "function solve(values, target) { return values.indexOf(target) >= 0; }",
+      "cases": [
+        {
+          "label": "Premier élément",
+          "args": [
+            [
+              3,
+              4
+            ],
+            3
+          ],
+          "expected": true
+        },
+        {
+          "label": "Élément absent",
+          "args": [
+            [
+              3,
+              4
+            ],
+            9
+          ],
+          "expected": false
+        },
+        {
+          "label": "Deuxième élément",
+          "args": [
+            [
+              3,
+              4
+            ],
+            4
+          ],
+          "expected": true
+        }
+      ],
+      "hints": [
+        "0 est le premier index, pas une absence.",
+        "Compare l’index à -1 ou utilise >= 0."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Premier élément",
+        "Élément absent",
+        "Deuxième élément"
+      ]
+    },
+    {
+      "id": "mvp-055",
+      "position": 55,
+      "type": "multiple_choice",
+      "title": "Notion de complexité Big O",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-054"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Big O décrit comment le coût grandit avec la taille de l'entrée. Un parcours qui visite chaque élément une fois est linéaire : O(n). On ne mesure pas ici un temps exact en secondes.",
+      "example": "for (const item of items) { /* coût constant */ }",
+      "prompt": "Quelle complexité correspond à ce parcours ?",
+      "choices": [
+        "O(1)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "answer": "1",
+      "explanation": "Doubler le nombre d’éléments double approximativement le travail.",
+      "hints": [
+        "Chaque élément est visité une fois.",
+        "Doubler le nombre d’éléments double approximativement le travail."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-056",
+      "position": 56,
+      "type": "project",
+      "title": "Projet : compteur de fréquences",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-055"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un compteur de fréquences associe une valeur au nombre de ses apparitions. Une Map évite les conflits avec les propriétés spéciales d'un objet. Le résultat demandé ici est un tableau de paires.",
+      "example": "function solve(words) { const counts=new Map(); for(const w of words) counts.set(w,(counts.get(w)||0)+1); return [...counts]; }",
+      "prompt": "Écris solve(words) : retourne les paires [mot, nombre], dans l’ordre de première apparition.",
+      "starter": "function solve(words) {\n  // Accumule les occurrences dans une Map.\n}",
+      "solution": "function solve(words) { const counts=new Map(); for(const w of words) counts.set(w,(counts.get(w)||0)+1); return [...counts]; }",
+      "cases": [
+        {
+          "label": "Créer les clés",
+          "args": [
+            [
+              "a",
+              "b"
+            ]
+          ],
+          "expected": [
+            [
+              "a",
+              1
+            ],
+            [
+              "b",
+              1
+            ]
+          ]
+        },
+        {
+          "label": "Compter les répétitions",
+          "args": [
+            [
+              "a",
+              "b",
+              "a"
+            ]
+          ],
+          "expected": [
+            [
+              "a",
+              2
+            ],
+            [
+              "b",
+              1
+            ]
+          ]
+        },
+        {
+          "label": "Gérer le vide",
+          "args": [
+            []
+          ],
+          "expected": []
+        }
+      ],
+      "hints": [
+        "Lis le compteur existant ou zéro.",
+        "Ajoute 1 puis retourne [...counts]."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Créer les clés",
+        "Compter les répétitions",
+        "Gérer le vide"
+      ]
+    },
+    {
+      "id": "mvp-057",
+      "position": 57,
+      "type": "lesson",
+      "title": "Découper un problème",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-056"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Avant de coder, précise les entrées, la sortie et les cas limites. Décompose ensuite le travail en étapes vérifiables. Un exemple ne remplace pas un contrat général.",
+      "example": "Entrée : liste de nombres\nSortie : plus grand nombre ou null si vide",
+      "prompt": "Quelle question faut-il trancher avant de coder ?",
+      "choices": [
+        "Le comportement pour une liste vide",
+        "La couleur du bouton",
+        "Le nombre de caractères du fichier"
+      ],
+      "answer": "0",
+      "explanation": "Le cas vide fait partie du contrat de la fonction.",
+      "hints": [
+        "Pense aux données d’entrée limites.",
+        "Le cas vide fait partie du contrat de la fonction."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-058",
+      "position": 58,
+      "type": "multiple_choice",
+      "title": "Tracer un algorithme",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-057"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Tracer un algorithme consiste à suivre ses variables étape par étape. C'est une méthode de diagnostic utile même sans exécuter le programme.",
+      "example": "let total = 0;\nfor (const n of [2, 3]) total += n;",
+      "prompt": "Quelle est la valeur finale de total ?",
+      "choices": [
+        "2",
+        "3",
+        "5"
+      ],
+      "answer": "2",
+      "explanation": "Le total passe de 0 à 2, puis de 2 à 5.",
+      "hints": [
+        "Additionne chaque élément une seule fois.",
+        "Le total passe de 0 à 2, puis de 2 à 5."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-059",
+      "position": 59,
+      "type": "fill_in_the_blank",
+      "title": "Trouver le maximum d'une liste",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-058"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Pour un maximum, compare chaque nouvelle valeur au meilleur résultat connu. Initialiser à zéro serait faux pour une liste entièrement négative.",
+      "example": "const max = Math._____(...[-8, -2, -4]);",
+      "prompt": "Quel nom appelle la fonction de maximum ?",
+      "choices": [
+        "min",
+        "max",
+        "round"
+      ],
+      "answer": "max",
+      "explanation": "Math.max retourne la plus grande valeur.",
+      "hints": [
+        "On cherche -2, pas 0.",
+        "Math.max retourne la plus grande valeur."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-060",
+      "position": 60,
+      "type": "coding_challenge",
+      "title": "Inverser une chaîne",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-059"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Pour inverser une chaîne de caractères simples, décompose-la en caractères, inverse le tableau puis réunis les éléments. Array.from traite aussi les points de code comme les emoji simples.",
+      "example": "function solve(text) { return Array.from(text).reverse().join(''); }",
+      "prompt": "Écris solve(text) qui retourne les caractères dans l’ordre inverse.",
+      "starter": "function solve(text) {\n  // Décompose, inverse et réunis.\n}",
+      "solution": "function solve(text) { return Array.from(text).reverse().join(''); }",
+      "cases": [
+        {
+          "label": "Texte simple",
+          "args": [
+            "code"
+          ],
+          "expected": "edoc"
+        },
+        {
+          "label": "Vide",
+          "args": [
+            ""
+          ],
+          "expected": ""
+        },
+        {
+          "label": "Emoji simple",
+          "args": [
+            "a🙂"
+          ],
+          "expected": "🙂a"
+        }
+      ],
+      "hints": [
+        "Array.from(text) crée le tableau de caractères.",
+        "reverse inverse ; join('') réunit sans séparateur."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Texte simple",
+        "Vide",
+        "Emoji simple"
+      ]
+    },
+    {
+      "id": "mvp-061",
+      "position": 61,
+      "type": "lesson",
+      "title": "Détecter les doublons",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-060"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un Set permet de comparer le nombre d'éléments uniques à la longueur originale. Une taille plus petite signifie qu'au moins une valeur est répétée.",
+      "example": "const values = [1, 2, 1];\nnew Set(values).size; // 2",
+      "prompt": "Pourquoi sait-on qu’il existe un doublon ?",
+      "choices": [
+        "La taille du Set est inférieure à la longueur",
+        "Le premier élément vaut 1",
+        "Le tableau est trié"
+      ],
+      "answer": "0",
+      "explanation": "Trois éléments mais seulement deux valeurs uniques : une répétition existe.",
+      "hints": [
+        "Compare 2 et 3.",
+        "Trois éléments mais seulement deux valeurs uniques : une répétition existe."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-062",
+      "position": 62,
+      "type": "debugging_exercise",
+      "title": "Utiliser une recherche linéaire",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-061"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une recherche linéaire examine les éléments dans l'ordre. Elle retourne dès qu'elle trouve la cible. Renvoyer -1 trop tôt empêche d'examiner les éléments suivants.",
+      "example": "function solve(values, target) { for(let i=0;i<values.length;i++) if(values[i]===target) return i; return -1; }",
+      "prompt": "Répare solve(values, target) pour retourner le premier index trouvé, ou -1.",
+      "starter": "function solve(values, target) {\n  for (let i=0; i<values.length; i++) {\n    if (values[i] === target) return i;\n    return -1;\n  }\n}",
+      "solution": "function solve(values, target) { for(let i=0;i<values.length;i++) if(values[i]===target) return i; return -1; }",
+      "cases": [
+        {
+          "label": "Cible tardive",
+          "args": [
+            [
+              4,
+              5,
+              6
+            ],
+            6
+          ],
+          "expected": 2
+        },
+        {
+          "label": "Absence",
+          "args": [
+            [
+              4,
+              5
+            ],
+            7
+          ],
+          "expected": -1
+        },
+        {
+          "label": "Vide",
+          "args": [
+            [],
+            1
+          ],
+          "expected": -1
+        }
+      ],
+      "hints": [
+        "-1 est justifié après tout le parcours.",
+        "Déplace return -1 après la boucle."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Cible tardive",
+        "Absence",
+        "Vide"
+      ]
+    },
+    {
+      "id": "mvp-063",
+      "position": 63,
+      "type": "multiple_choice",
+      "title": "Comprendre la recherche binaire",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-062"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une recherche binaire élimine environ la moitié de l'intervalle à chaque étape. Elle exige des données triées selon le même ordre que les comparaisons.",
+      "example": "const sorted = [2, 5, 9, 14, 20];",
+      "prompt": "Quel prérequis est indispensable ?",
+      "choices": [
+        "Des données triées",
+        "Des nombres tous pairs",
+        "Un nombre pair d’éléments"
+      ],
+      "answer": "0",
+      "explanation": "Sans tri, éliminer une moitié peut éliminer la cible.",
+      "hints": [
+        "La comparaison au milieu doit permettre de choisir une moitié.",
+        "Sans tri, éliminer une moitié peut éliminer la cible."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-064",
+      "position": 64,
+      "type": "project",
+      "title": "Défi : résoudre et tester une solution",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-063"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un algorithme de maximum doit traiter les nombres négatifs, le tableau vide et les doublons. Ces cas sont plus informatifs qu'un seul exemple positif.",
+      "example": "function solve(values) { return values.length ? Math.max(...values) : null; }",
+      "prompt": "Écris solve(values) qui retourne le maximum ou null si le tableau est vide.",
+      "starter": "function solve(values) {\n  // Définis un résultat initial correct.\n}",
+      "solution": "function solve(values) { return values.length ? Math.max(...values) : null; }",
+      "cases": [
+        {
+          "label": "Comparer des valeurs",
+          "args": [
+            [
+              1,
+              9,
+              3
+            ]
+          ],
+          "expected": 9
+        },
+        {
+          "label": "Ne pas initialiser à zéro",
+          "args": [
+            [
+              -7,
+              -2,
+              -8
+            ]
+          ],
+          "expected": -2
+        },
+        {
+          "label": "Gérer le vide",
+          "args": [
+            []
+          ],
+          "expected": null
+        }
+      ],
+      "hints": [
+        "Le premier élément peut servir de maximum initial.",
+        "Vérifie le vide avant de calculer."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Comparer des valeurs",
+        "Ne pas initialiser à zéro",
+        "Gérer le vide"
+      ]
+    },
+    {
+      "id": "mvp-065",
+      "position": 65,
+      "type": "lesson",
+      "title": "Pourquoi utiliser Git ?",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-064"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Git conserve l'historique de fichiers sous forme de commits. Il permet de comparer des versions et de travailler sur des branches. Un dépôt distant partage l'historique, mais Git fonctionne aussi localement.",
+      "example": "git status\ngit log --oneline",
+      "prompt": "À quoi sert principalement Git ?",
+      "choices": [
+        "Versionner des fichiers",
+        "Exécuter JavaScript",
+        "Héberger automatiquement un site"
+      ],
+      "answer": "0",
+      "explanation": "Git suit les changements et leur historique.",
+      "hints": [
+        "Pense aux versions du travail.",
+        "Git suit les changements et leur historique."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-066",
+      "position": 66,
+      "type": "multiple_choice",
+      "title": "Créer un commit",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-065"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un commit enregistre les changements préparés dans l'index. git add prépare des fichiers ; git commit enregistre cet état avec un message.",
+      "example": "git add app.js\ngit commit -m 'Corriger le total'",
+      "prompt": "Quelle commande enregistre le commit ?",
+      "choices": [
+        "git status",
+        "git commit",
+        "git diff"
+      ],
+      "answer": "1",
+      "explanation": "commit crée un point d’historique local.",
+      "hints": [
+        "add prépare, commit enregistre.",
+        "commit crée un point d’historique local."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-067",
+      "position": 67,
+      "type": "fill_in_the_blank",
+      "title": "Lire un diff",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-066"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "git diff présente les changements sous forme de lignes ajoutées et retirées. Lis le contexte pour comprendre leur effet, pas seulement le nombre de lignes.",
+      "example": "git _____",
+      "prompt": "Complète la commande qui montre les différences non indexées.",
+      "choices": [
+        "log",
+        "diff",
+        "push"
+      ],
+      "answer": "diff",
+      "explanation": "git diff compare le travail non indexé à l’index.",
+      "hints": [
+        "Le mot signifie différence.",
+        "git diff compare le travail non indexé à l’index."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-068",
+      "position": 68,
+      "type": "coding_challenge",
+      "title": "Créer une branche",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-067"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une branche est un nom mobile qui désigne un commit. Ici on modélise une commande Git sous forme de texte en JavaScript : aucun shell n'est exécuté.",
+      "example": "function solve(name) { return 'git switch -c ' + name; }",
+      "prompt": "Écris solve(name) qui retourne la commande 'git switch -c ' suivie du nom reçu.",
+      "starter": "function solve(name) {\n  // Retourne une commande sous forme de texte.\n}",
+      "solution": "function solve(name) { return 'git switch -c ' + name; }",
+      "cases": [
+        {
+          "label": "Nom simple",
+          "args": [
+            "feature"
+          ],
+          "expected": "git switch -c feature"
+        },
+        {
+          "label": "Nom descriptif",
+          "args": [
+            "fix-total"
+          ],
+          "expected": "git switch -c fix-total"
+        },
+        {
+          "label": "Nom hiérarchique",
+          "args": [
+            "feat/api"
+          ],
+          "expected": "git switch -c feat/api"
+        }
+      ],
+      "hints": [
+        "Le drapeau -c crée la branche.",
+        "Conserve un espace avant le nom."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Nom simple",
+        "Nom descriptif",
+        "Nom hiérarchique"
+      ]
+    },
+    {
+      "id": "mvp-069",
+      "position": 69,
+      "type": "lesson",
+      "title": "Comprendre une pull request",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-068"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une pull request propose de fusionner une branche. Elle expose le diff, les échanges et les vérifications. L'ouverture d'une PR ne signifie pas que la fusion a eu lieu.",
+      "example": "branche → pull request → revue → fusion",
+      "prompt": "Que permet une pull request ?",
+      "choices": [
+        "Relire une modification avant fusion",
+        "Effacer tout l’historique",
+        "Remplacer les tests"
+      ],
+      "answer": "0",
+      "explanation": "Elle rend une modification visible pour discussion et validation.",
+      "hints": [
+        "La revue précède la fusion.",
+        "Elle rend une modification visible pour discussion et validation."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-070",
+      "position": 70,
+      "type": "debugging_exercise",
+      "title": "Expliquer un conflit de merge",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-069"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un conflit signale que Git ne peut pas combiner automatiquement certains changements. Il faut comprendre les deux versions puis décider du résultat. Les marqueurs de conflit ne doivent pas rester dans le fichier final.",
+      "example": "function solve(text) { return text.includes('<<<<<<<'); }",
+      "prompt": "Répare solve(text) : retourne true si le texte contient un marqueur de conflit <<<<<<<, sinon false.",
+      "starter": "function solve(text) {\n  return text.includes('=======') && false;\n}",
+      "solution": "function solve(text) { return text.includes('<<<<<<<'); }",
+      "cases": [
+        {
+          "label": "Conflit présent",
+          "args": [
+            "<<<<<<< HEAD\na\n=======\nb\n>>>>>>> branch"
+          ],
+          "expected": true
+        },
+        {
+          "label": "Texte résolu",
+          "args": [
+            "const a = 1;"
+          ],
+          "expected": false
+        },
+        {
+          "label": "Vide",
+          "args": [
+            ""
+          ],
+          "expected": false
+        }
+      ],
+      "hints": [
+        "Le contrat demande de repérer <<<<<<<.",
+        "Utilise text.includes avec ce marqueur."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Conflit présent",
+        "Texte résolu",
+        "Vide"
+      ]
+    },
+    {
+      "id": "mvp-071",
+      "position": 71,
+      "type": "multiple_choice",
+      "title": "Relire une modification",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-070"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une bonne revue vérifie le contrat, les cas limites et la lisibilité. Les tests automatiques apportent une preuve utile, sans remplacer la compréhension du changement.",
+      "example": "Changement : division par items.length",
+      "prompt": "Quel commentaire de revue est le plus utile ?",
+      "choices": [
+        "Que se passe-t-il si le tableau est vide ?",
+        "Le fichier est trop court",
+        "Ajoute un emoji au nom"
+      ],
+      "answer": "0",
+      "explanation": "Le tableau vide révèle un risque de division par zéro.",
+      "hints": [
+        "Cherche un défaut concret et vérifiable.",
+        "Le tableau vide révèle un risque de division par zéro."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-072",
+      "position": 72,
+      "type": "project",
+      "title": "Mini-projet : workflow d'équipe",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-071"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un workflow simple prépare, enregistre puis partage. L'intégration continue exécute les contrôles sur les changements proposés. Ce projet construit les étapes comme des données, sans lancer Git.",
+      "example": "function solve(file) { return ['git add '+file, 'git commit -m \"Mettre à jour\"', 'git push']; }",
+      "prompt": "Écris solve(file) qui retourne ['git add '+file, 'git commit -m \"Mettre à jour\"', 'git push'] dans cet ordre.",
+      "starter": "function solve(file) {\n  // Retourne les trois étapes.\n}",
+      "solution": "function solve(file) { return ['git add '+file, 'git commit -m \"Mettre à jour\"', 'git push']; }",
+      "cases": [
+        {
+          "label": "Préparer le fichier",
+          "args": [
+            "app.js"
+          ],
+          "expected": [
+            "git add app.js",
+            "git commit -m \"Mettre à jour\"",
+            "git push"
+          ]
+        },
+        {
+          "label": "Garder l’ordre",
+          "args": [
+            "test.js"
+          ],
+          "expected": [
+            "git add test.js",
+            "git commit -m \"Mettre à jour\"",
+            "git push"
+          ]
+        },
+        {
+          "label": "Chemin de fichier",
+          "args": [
+            "src/index.js"
+          ],
+          "expected": [
+            "git add src/index.js",
+            "git commit -m \"Mettre à jour\"",
+            "git push"
+          ]
+        }
+      ],
+      "hints": [
+        "Le résultat est un tableau de trois chaînes.",
+        "add vient avant commit, puis push."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Préparer le fichier",
+        "Garder l’ordre",
+        "Chemin de fichier"
+      ]
+    },
+    {
+      "id": "mvp-073",
+      "position": 73,
+      "type": "lesson",
+      "title": "Client et serveur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-072"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un client envoie une requête ; un serveur traite cette demande et renvoie une réponse. Une API définit les échanges permis. Le client ne doit pas décider seul des droits d'accès aux données.",
+      "example": "client → requête HTTP → serveur\nclient ← réponse HTTP ← serveur",
+      "prompt": "Qui renvoie la réponse HTTP ?",
+      "choices": [
+        "Le serveur",
+        "Le fichier CSS",
+        "Le clavier"
+      ],
+      "answer": "0",
+      "explanation": "Le serveur reçoit et traite la requête.",
+      "hints": [
+        "Suis les flèches du schéma.",
+        "Le serveur reçoit et traite la requête."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-074",
+      "position": 74,
+      "type": "multiple_choice",
+      "title": "Comprendre une requête HTTP",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-073"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une requête contient une méthode, un chemin, des en-têtes et parfois un corps. La méthode exprime l'intention de l'opération, pas son succès.",
+      "example": "GET /api/lessons HTTP/1.1",
+      "prompt": "Quelle est la méthode de cette requête ?",
+      "choices": [
+        "/api/lessons",
+        "GET",
+        "HTTP/1.1"
+      ],
+      "answer": "1",
+      "explanation": "GET est la méthode ; /api/lessons est le chemin.",
+      "hints": [
+        "Lis le premier mot.",
+        "GET est la méthode ; /api/lessons est le chemin."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-075",
+      "position": 75,
+      "type": "fill_in_the_blank",
+      "title": "Choisir GET ou POST",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-074"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "GET sert à lire une ressource. POST soumet généralement une nouvelle donnée ou déclenche une opération. Les deux nécessitent des règles d'autorisation adaptées.",
+      "example": "fetch('/api/attempts', { method: '_____', body: data });",
+      "prompt": "Quelle méthode convient pour envoyer une tentative ?",
+      "choices": [
+        "GET",
+        "POST",
+        "READ"
+      ],
+      "answer": "POST",
+      "explanation": "POST transmet une nouvelle tentative au serveur.",
+      "hints": [
+        "Une lecture ne doit pas créer de tentative.",
+        "POST transmet une nouvelle tentative au serveur."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-076",
+      "position": 76,
+      "type": "coding_challenge",
+      "title": "Comprendre les codes HTTP",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-075"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Un statut 2xx indique un succès HTTP. 4xx signale un problème lié à la requête et 5xx un problème côté serveur. Un succès HTTP ne garantit pas que le contenu métier attendu est correct.",
+      "example": "function solve(status) { return status >= 200 && status < 300; }",
+      "prompt": "Écris solve(status) qui retourne true pour les codes de 200 inclus à 300 exclus, sinon false.",
+      "starter": "function solve(status) {\n  // Vérifie les deux bornes.\n}",
+      "solution": "function solve(status) { return status >= 200 && status < 300; }",
+      "cases": [
+        {
+          "label": "Succès",
+          "args": [
+            200
+          ],
+          "expected": true
+        },
+        {
+          "label": "Fin de plage",
+          "args": [
+            299
+          ],
+          "expected": true
+        },
+        {
+          "label": "Redirection",
+          "args": [
+            300
+          ],
+          "expected": false
+        },
+        {
+          "label": "Erreur",
+          "args": [
+            404
+          ],
+          "expected": false
+        }
+      ],
+      "hints": [
+        "Les deux bornes ont des inclusions différentes.",
+        "Combine status >= 200 et status < 300 avec &&."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Succès",
+        "Fin de plage",
+        "Redirection",
+        "Erreur"
+      ]
+    },
+    {
+      "id": "mvp-077",
+      "position": 77,
+      "type": "lesson",
+      "title": "Lire du JSON",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-076"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "JSON transporte des données : objets, tableaux, chaînes, nombres, booléens et null. Les clés d'objet sont entre guillemets doubles. JSON.parse transforme du texte JSON en valeur JavaScript.",
+      "example": "const data = JSON.parse('{\"score\":12}');\ndata.score; // 12",
+      "prompt": "Quelle expression lit le score ?",
+      "choices": [
+        "data.score",
+        "data[12]",
+        "JSON.score"
+      ],
+      "answer": "0",
+      "explanation": "data est un objet dont la propriété score vaut 12.",
+      "hints": [
+        "On lit la propriété de l’objet retourné.",
+        "data est un objet dont la propriété score vaut 12."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-078",
+      "position": 78,
+      "type": "debugging_exercise",
+      "title": "Découvrir les APIs REST",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-077"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une ressource REST peut être représentée par un objet JSON. Il faut distinguer le texte brut de l'objet obtenu après analyse. Une chaîne n'expose pas directement les champs du JSON qu'elle contient.",
+      "example": "function solve(json) { return JSON.parse(json).name; }",
+      "prompt": "Corrige solve(json) pour analyser le texte JSON puis retourner sa propriété name.",
+      "starter": "function solve(json) {\n  return json.name;\n}",
+      "solution": "function solve(json) { return JSON.parse(json).name; }",
+      "cases": [
+        {
+          "label": "Objet simple",
+          "args": [
+            "{\"name\":\"Ada\"}"
+          ],
+          "expected": "Ada"
+        },
+        {
+          "label": "Autre valeur",
+          "args": [
+            "{\"name\":\"Lina\",\"id\":2}"
+          ],
+          "expected": "Lina"
+        },
+        {
+          "label": "Chaîne vide comme valeur",
+          "args": [
+            "{\"name\":\"\"}"
+          ],
+          "expected": ""
+        }
+      ],
+      "hints": [
+        "Le paramètre est du texte JSON.",
+        "Utilise JSON.parse(json) avant de lire name."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Objet simple",
+        "Autre valeur",
+        "Chaîne vide comme valeur"
+      ]
+    },
+    {
+      "id": "mvp-079",
+      "position": 79,
+      "type": "multiple_choice",
+      "title": "Comprendre CORS",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-078"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "CORS est un mécanisme du navigateur qui limite la lecture de réponses entre origines. Le serveur autorise les origines voulues avec ses en-têtes. CORS ne remplace ni l'authentification ni l'autorisation serveur.",
+      "example": "Access-Control-Allow-Origin: https://app.example",
+      "prompt": "Qui décide quelles origines peuvent lire la réponse dans le navigateur ?",
+      "choices": [
+        "Le serveur via ses en-têtes",
+        "Le texte du bouton",
+        "Le nom de la variable"
+      ],
+      "answer": "0",
+      "explanation": "Le navigateur applique les autorisations annoncées par le serveur.",
+      "hints": [
+        "Une origine comprend protocole, hôte et port.",
+        "Le navigateur applique les autorisations annoncées par le serveur."
+      ],
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-080",
+      "position": 80,
+      "type": "project",
+      "title": "Défi : déboguer une requête API",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-079"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code",
+      "body": "Une réponse API peut échouer ou contenir des données inattendues. Un petit adaptateur doit vérifier le statut avant de consommer la réponse, et définir un résultat pour les erreurs.",
+      "example": "function solve(response) { return response.status >= 200 && response.status < 300 && Array.isArray(response.body?.items) ? response.body.items.length : 0; }",
+      "prompt": "Écris solve(response) : si status est 2xx et body.items est un tableau, retourne sa longueur ; sinon retourne 0.",
+      "starter": "function solve(response) {\n  // Vérifie le statut puis la structure du corps.\n}",
+      "solution": "function solve(response) { return response.status >= 200 && response.status < 300 && Array.isArray(response.body?.items) ? response.body.items.length : 0; }",
+      "cases": [
+        {
+          "label": "Lire une réponse valide",
+          "args": [
+            {
+              "status": 200,
+              "body": {
+                "items": [
+                  1,
+                  2,
+                  3
+                ]
+              }
+            }
+          ],
+          "expected": 3
+        },
+        {
+          "label": "Refuser une erreur",
+          "args": [
+            {
+              "status": 500,
+              "body": {
+                "items": [
+                  1
+                ]
+              }
+            }
+          ],
+          "expected": 0
+        },
+        {
+          "label": "Vérifier le schéma",
+          "args": [
+            {
+              "status": 200,
+              "body": {}
+            }
+          ],
+          "expected": 0
+        },
+        {
+          "label": "Gérer le vide",
+          "args": [
+            {
+              "status": 204,
+              "body": {
+                "items": []
+              }
+            }
+          ],
+          "expected": 0
+        }
+      ],
+      "hints": [
+        "Valide d’abord la plage 2xx.",
+        "Utilise Array.isArray avant de lire length."
+      ],
+      "explanation": "Compare le résultat attendu et le résultat obtenu. Vérifie aussi les cas limites : valeur vide, zéro et dernière position.",
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ],
+      "steps": [
+        "Lire une réponse valide",
+        "Refuser une erreur",
+        "Vérifier le schéma",
+        "Gérer le vide"
+      ]
+    }
+  ]
+}

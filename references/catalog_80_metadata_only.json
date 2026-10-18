@@ -1,0 +1,3843 @@
+{
+  "status": "Metadonnées vérifiées sur GitHub à la date de l’inspection. Aucun texte de cours copié.",
+  "count": 80,
+  "sourceRef": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+  "records": [
+    {
+      "id": "fcc-672d26385dbe73203c4dac81",
+      "externalId": "672d26385dbe73203c4dac81",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-introduction-to-javascript",
+      "title": "What Is JavaScript, and How Does It Work with HTML and CSS?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-javascript/672d26385dbe73203c4dac81.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-javascript/672d26385dbe73203c4dac81.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-javascript.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-javascript.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-672d496eca926b5df8176a67",
+      "externalId": "672d496eca926b5df8176a67",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-introduction-to-javascript",
+      "title": "What Is a Data Type, and What Are the Different Data Types in JavaScript?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d26385dbe73203c4dac81"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-javascript/672d496eca926b5df8176a67.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-javascript/672d496eca926b5df8176a67.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-javascript.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-javascript.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-672d497cb1a1675e47bf7ea1",
+      "externalId": "672d497cb1a1675e47bf7ea1",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-introduction-to-javascript",
+      "title": "What Are Variables, and What Are Guidelines for Naming JavaScript Variables?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d496eca926b5df8176a67"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-javascript/672d497cb1a1675e47bf7ea1.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-javascript/672d497cb1a1675e47bf7ea1.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-javascript.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-javascript.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-672d49959621885e9d3e672c",
+      "externalId": "672d49959621885e9d3e672c",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-introduction-to-javascript",
+      "title": "How Do let and const Work Differently When It Comes to Variable Declaration, Assignment, and Reassignment?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d497cb1a1675e47bf7ea1"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-javascript/672d49959621885e9d3e672c.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-javascript/672d49959621885e9d3e672c.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-javascript.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-javascript.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-672d49a5cf43945ee09e5fba",
+      "externalId": "672d49a5cf43945ee09e5fba",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-introduction-to-strings",
+      "title": "What Is a String in JavaScript, and What Is String Immutability?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-strings/672d49a5cf43945ee09e5fba.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-strings/672d49a5cf43945ee09e5fba.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-strings.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-strings.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-672d49b2fb76df5f1d6117af",
+      "externalId": "672d49b2fb76df5f1d6117af",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-introduction-to-strings",
+      "title": "What Is String Concatenation, and How Can You Concatenate Strings with Variables?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d49a5cf43945ee09e5fba"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-strings/672d49b2fb76df5f1d6117af.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-strings/672d49b2fb76df5f1d6117af.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-strings.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-strings.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-672d49c4e899345f5b33c24c",
+      "externalId": "672d49c4e899345f5b33c24c",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-introduction-to-strings",
+      "title": "What Is console.log Used For, and How Does It Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d49b2fb76df5f1d6117af"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-strings/672d49c4e899345f5b33c24c.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-strings/672d49c4e899345f5b33c24c.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-strings.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-strings.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-672d264645e289208e562f10",
+      "externalId": "672d264645e289208e562f10",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-data-types",
+      "title": "What Is Dynamic Typing in JavaScript, and How Does It Differ from Statically Typed Languages?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-data-types/672d264645e289208e562f10.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-data-types/672d264645e289208e562f10.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-data-types.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-data-types.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-6732518a8627876f4fcd18a4",
+      "externalId": "6732518a8627876f4fcd18a4",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-data-types",
+      "title": "How Does the typeof Operator Work, and What Is the typeof null Bug in JavaScript?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d264645e289208e562f10"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-data-types/6732518a8627876f4fcd18a4.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-data-types/6732518a8627876f4fcd18a4.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-data-types.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-data-types.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-66edc25ae5ea80bf6f785552",
+      "externalId": "66edc25ae5ea80bf6f785552",
+      "type": "quiz",
+      "course": "JavaScript",
+      "module": "quiz-javascript-variables-and-data-types",
+      "title": "JavaScript Variables and Data Types Quiz",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/quiz-javascript-variables-and-data-types/66edc25ae5ea80bf6f785552.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/quiz-javascript-variables-and-data-types/66edc25ae5ea80bf6f785552.md",
+        "structureFile": "curriculum/structure/blocks/quiz-javascript-variables-and-data-types.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/quiz-javascript-variables-and-data-types.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-66ad8294a0ad902f1b31b612",
+      "externalId": "66ad8294a0ad902f1b31b612",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-greeting-bot",
+      "title": "Step 1",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-greeting-bot/66ad8294a0ad902f1b31b612.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-greeting-bot/66ad8294a0ad902f1b31b612.md",
+        "structureFile": "curriculum/structure/blocks/workshop-greeting-bot.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-greeting-bot.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-66ad8ab945d266383f318cbf",
+      "externalId": "66ad8ab945d266383f318cbf",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-greeting-bot",
+      "title": "Step 2",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-66ad8294a0ad902f1b31b612"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-greeting-bot/66ad8ab945d266383f318cbf.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-greeting-bot/66ad8ab945d266383f318cbf.md",
+        "structureFile": "curriculum/structure/blocks/workshop-greeting-bot.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-greeting-bot.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-66ad8d150264db3926eccfeb",
+      "externalId": "66ad8d150264db3926eccfeb",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-greeting-bot",
+      "title": "Step 3",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-66ad8ab945d266383f318cbf"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-greeting-bot/66ad8d150264db3926eccfeb.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-greeting-bot/66ad8d150264db3926eccfeb.md",
+        "structureFile": "curriculum/structure/blocks/workshop-greeting-bot.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-greeting-bot.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-66ad984e92ce213a66f7e51c",
+      "externalId": "66ad984e92ce213a66f7e51c",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-greeting-bot",
+      "title": "Step 4",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-66ad8d150264db3926eccfeb"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-greeting-bot/66ad984e92ce213a66f7e51c.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-greeting-bot/66ad984e92ce213a66f7e51c.md",
+        "structureFile": "curriculum/structure/blocks/workshop-greeting-bot.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-greeting-bot.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-66ad998285df023b23dacdd3",
+      "externalId": "66ad998285df023b23dacdd3",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-greeting-bot",
+      "title": "Step 5",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-66ad984e92ce213a66f7e51c"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-greeting-bot/66ad998285df023b23dacdd3.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-greeting-bot/66ad998285df023b23dacdd3.md",
+        "structureFile": "curriculum/structure/blocks/workshop-greeting-bot.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-greeting-bot.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 4
+    },
+    {
+      "id": "fcc-66ad9c633fa26d3c1475eae3",
+      "externalId": "66ad9c633fa26d3c1475eae3",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-greeting-bot",
+      "title": "Step 6",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-66ad998285df023b23dacdd3"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-greeting-bot/66ad9c633fa26d3c1475eae3.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-greeting-bot/66ad9c633fa26d3c1475eae3.md",
+        "structureFile": "curriculum/structure/blocks/workshop-greeting-bot.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-greeting-bot.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 5
+    },
+    {
+      "id": "fcc-66ada3f46945763dd97f43f8",
+      "externalId": "66ada3f46945763dd97f43f8",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-greeting-bot",
+      "title": "Step 7",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-66ad9c633fa26d3c1475eae3"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-greeting-bot/66ada3f46945763dd97f43f8.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-greeting-bot/66ada3f46945763dd97f43f8.md",
+        "structureFile": "curriculum/structure/blocks/workshop-greeting-bot.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-greeting-bot.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 6
+    },
+    {
+      "id": "fcc-672d2654f78cbf20e0ba4501",
+      "externalId": "672d2654f78cbf20e0ba4501",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-strings-in-javascript",
+      "title": "What Is Bracket Notation, and How Do You Access Characters from a String?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/672d2654f78cbf20e0ba4501.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/672d2654f78cbf20e0ba4501.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-673263df0eb568a7b450f2fc",
+      "externalId": "673263df0eb568a7b450f2fc",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-strings-in-javascript",
+      "title": "How Do You Create a Newline in Strings and Escape Strings?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d2654f78cbf20e0ba4501"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/673263df0eb568a7b450f2fc.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/673263df0eb568a7b450f2fc.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-673263d58da27ea7809963bf",
+      "externalId": "673263d58da27ea7809963bf",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-strings-in-javascript",
+      "title": "What Are Template Literals, and What Is String Interpolation?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-673263df0eb568a7b450f2fc"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/673263d58da27ea7809963bf.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/673263d58da27ea7809963bf.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-673263e80dd43da7df3ae565",
+      "externalId": "673263e80dd43da7df3ae565",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-strings-in-javascript",
+      "title": "How Can You Find the Position of a Substring in a String?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-673263d58da27ea7809963bf"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/673263e80dd43da7df3ae565.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/673263e80dd43da7df3ae565.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-673263f4a5899da8124542fd",
+      "externalId": "673263f4a5899da8124542fd",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-strings-in-javascript",
+      "title": "What Is the Prompt Method, and How Does It Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-673263e80dd43da7df3ae565"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/673263f4a5899da8124542fd.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript/673263f4a5899da8124542fd.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-strings-in-javascript.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 4
+    },
+    {
+      "id": "fcc-672d266e014ef8216df987d2",
+      "externalId": "672d266e014ef8216df987d2",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-numbers-and-arithmetic-operators",
+      "title": "What Is the Number Type in JavaScript, and What Are the Different Types of Numbers Available?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-numbers-and-arithmetic-operators/672d266e014ef8216df987d2.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-numbers-and-arithmetic-operators/672d266e014ef8216df987d2.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-numbers-and-arithmetic-operators.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-numbers-and-arithmetic-operators.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-673271884bf678d8b9c64f56",
+      "externalId": "673271884bf678d8b9c64f56",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-numbers-and-arithmetic-operators",
+      "title": "What Are the Different Arithmetic Operators in JavaScript?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d266e014ef8216df987d2"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-numbers-and-arithmetic-operators/673271884bf678d8b9c64f56.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-numbers-and-arithmetic-operators/673271884bf678d8b9c64f56.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-numbers-and-arithmetic-operators.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-numbers-and-arithmetic-operators.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-67327195e77b1bd90bdd49d7",
+      "externalId": "67327195e77b1bd90bdd49d7",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-numbers-and-arithmetic-operators",
+      "title": "What Happens When You Try to Do Calculations with Numbers and Strings?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-673271884bf678d8b9c64f56"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-numbers-and-arithmetic-operators/67327195e77b1bd90bdd49d7.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-numbers-and-arithmetic-operators/67327195e77b1bd90bdd49d7.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-numbers-and-arithmetic-operators.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-numbers-and-arithmetic-operators.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-673271c7581a27d9dd78f6d6",
+      "externalId": "673271c7581a27d9dd78f6d6",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-comparison-and-boolean-operators",
+      "title": "What Are Booleans, and How Do They Work with Equality and Inequality Operators?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators/673271c7581a27d9dd78f6d6.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators/673271c7581a27d9dd78f6d6.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-comparison-and-boolean-operators.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-comparison-and-boolean-operators.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-673271dffbc34fda31da9515",
+      "externalId": "673271dffbc34fda31da9515",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-comparison-and-boolean-operators",
+      "title": "What Are Comparison Operators, and How Do They Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-673271c7581a27d9dd78f6d6"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators/673271dffbc34fda31da9515.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators/673271dffbc34fda31da9515.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-comparison-and-boolean-operators.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-comparison-and-boolean-operators.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-672d26917a8ab3220c038a42",
+      "externalId": "672d26917a8ab3220c038a42",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-understanding-comparisons-and-conditionals",
+      "title": "How Do Comparisons Work with Null and Undefined Data Types?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-understanding-comparisons-and-conditionals/672d26917a8ab3220c038a42.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-understanding-comparisons-and-conditionals/672d26917a8ab3220c038a42.md",
+        "structureFile": "curriculum/structure/blocks/lecture-understanding-comparisons-and-conditionals.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-understanding-comparisons-and-conditionals.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-673282bea35dbf129efb63d6",
+      "externalId": "673282bea35dbf129efb63d6",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-understanding-comparisons-and-conditionals",
+      "title": "What Are Switch Statements and How Do They Differ from If/Else Chains?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d26917a8ab3220c038a42"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-understanding-comparisons-and-conditionals/673282bea35dbf129efb63d6.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-understanding-comparisons-and-conditionals/673282bea35dbf129efb63d6.md",
+        "structureFile": "curriculum/structure/blocks/lecture-understanding-comparisons-and-conditionals.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-understanding-comparisons-and-conditionals.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-66edc47c11492ac5cf258ad9",
+      "externalId": "66edc47c11492ac5cf258ad9",
+      "type": "quiz",
+      "course": "JavaScript",
+      "module": "quiz-javascript-comparisons-and-conditionals",
+      "title": "JavaScript Comparisons and Conditionals Quiz",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/quiz-javascript-comparisons-and-conditionals/66edc47c11492ac5cf258ad9.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/quiz-javascript-comparisons-and-conditionals/66edc47c11492ac5cf258ad9.md",
+        "structureFile": "curriculum/structure/blocks/quiz-javascript-comparisons-and-conditionals.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/quiz-javascript-comparisons-and-conditionals.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-672d269da46786225e3fe3fd",
+      "externalId": "672d269da46786225e3fe3fd",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-functions",
+      "title": "What Is the Purpose of Functions, and How Do They Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-functions/672d269da46786225e3fe3fd.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-functions/672d269da46786225e3fe3fd.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-functions.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-functions.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-673284d5e52ef81a2169b097",
+      "externalId": "673284d5e52ef81a2169b097",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-functions",
+      "title": "What Are Arrow Functions, and How Do They Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-672d269da46786225e3fe3fd"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-functions/673284d5e52ef81a2169b097.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-functions/673284d5e52ef81a2169b097.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-functions.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-functions.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-673284e7244c0c1a649121b9",
+      "externalId": "673284e7244c0c1a649121b9",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-functions",
+      "title": "What Is Scope in Programming, and How Does Global, Local, and Block Scope Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-673284d5e52ef81a2169b097"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-functions/673284e7244c0c1a649121b9.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-functions/673284e7244c0c1a649121b9.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-functions.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-functions.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-67329f508a6ec45b046700b3",
+      "externalId": "67329f508a6ec45b046700b3",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-arrays",
+      "title": "What Are the Key Characteristics of JavaScript Arrays?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-arrays/67329f508a6ec45b046700b3.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-arrays/67329f508a6ec45b046700b3.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-6732aebaa8abb9086a9bb17a",
+      "externalId": "6732aebaa8abb9086a9bb17a",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-arrays",
+      "title": "How Do You Access and Update Elements in an Array?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-67329f508a6ec45b046700b3"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-arrays/6732aebaa8abb9086a9bb17a.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-arrays/6732aebaa8abb9086a9bb17a.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-6732aec982904608b637716b",
+      "externalId": "6732aec982904608b637716b",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-arrays",
+      "title": "How Do You Add and Remove Elements from the Beginning and End of an Array?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6732aebaa8abb9086a9bb17a"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-arrays/6732aec982904608b637716b.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-arrays/6732aec982904608b637716b.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-6732aed2ac3d3c08f6149dd6",
+      "externalId": "6732aed2ac3d3c08f6149dd6",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-arrays",
+      "title": "What Is the Difference Between One-Dimensional and Two-Dimensional Arrays?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6732aec982904608b637716b"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-arrays/6732aed2ac3d3c08f6149dd6.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-arrays/6732aed2ac3d3c08f6149dd6.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-6732aedd2d92e30923b9bc24",
+      "externalId": "6732aedd2d92e30923b9bc24",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-arrays",
+      "title": "What Is Array Destructuring, and How Does It Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6732aed2ac3d3c08f6149dd6"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-arrays/6732aedd2d92e30923b9bc24.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-arrays/6732aedd2d92e30923b9bc24.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 4
+    },
+    {
+      "id": "fcc-6732b2a6de5a1c15edf05b75",
+      "externalId": "6732b2a6de5a1c15edf05b75",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-arrays",
+      "title": "How Can You Use String and Array Methods to Reverse a String?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6732aedd2d92e30923b9bc24"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-arrays/6732b2a6de5a1c15edf05b75.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-arrays/6732b2a6de5a1c15edf05b75.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 5
+    },
+    {
+      "id": "fcc-67329f7f3d1bd75c17896c66",
+      "externalId": "67329f7f3d1bd75c17896c66",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-loops",
+      "title": "How Do Loops and Iteration Work in JavaScript?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-loops/67329f7f3d1bd75c17896c66.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-loops/67329f7f3d1bd75c17896c66.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-loops.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-loops.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-6732c04638420641dcca2e6e",
+      "externalId": "6732c04638420641dcca2e6e",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-loops",
+      "title": "How Does the For...of Loop Work, and When Should You Use It?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-67329f7f3d1bd75c17896c66"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-loops/6732c04638420641dcca2e6e.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-loops/6732c04638420641dcca2e6e.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-loops.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-loops.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-6732c05595ca7d422b9e55ff",
+      "externalId": "6732c05595ca7d422b9e55ff",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-loops",
+      "title": "What Is the For...in Loop, and When Should You Use It?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6732c04638420641dcca2e6e"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-loops/6732c05595ca7d422b9e55ff.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-loops/6732c05595ca7d422b9e55ff.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-loops.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-loops.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-6732c06654ea3442724284fe",
+      "externalId": "6732c06654ea3442724284fe",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-loops",
+      "title": "What Is a While Loop, and How Does It Differ from the Do...while Loop?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6732c05595ca7d422b9e55ff"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-loops/6732c06654ea3442724284fe.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-loops/6732c06654ea3442724284fe.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-loops.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-loops.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-6732c07238355642a9781dfb",
+      "externalId": "6732c07238355642a9781dfb",
+      "type": "lesson",
+      "course": "JavaScript",
+      "module": "lecture-working-with-loops",
+      "title": "What Are the Break and Continue Statements Used for in Loops?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6732c06654ea3442724284fe"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-loops/6732c07238355642a9781dfb.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-loops/6732c07238355642a9781dfb.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-loops.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-loops.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 4
+    },
+    {
+      "id": "fcc-68e51d8f163d3f8b70f9c4e5",
+      "externalId": "68e51d8f163d3f8b70f9c4e5",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-string-inspector",
+      "title": "Step 1",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-string-inspector/68e51d8f163d3f8b70f9c4e5.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-string-inspector/68e51d8f163d3f8b70f9c4e5.md",
+        "structureFile": "curriculum/structure/blocks/workshop-string-inspector.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-string-inspector.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-68ef6e42fa6e8a9a18a401fa",
+      "externalId": "68ef6e42fa6e8a9a18a401fa",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-string-inspector",
+      "title": "Step 2",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68e51d8f163d3f8b70f9c4e5"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-string-inspector/68ef6e42fa6e8a9a18a401fa.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-string-inspector/68ef6e42fa6e8a9a18a401fa.md",
+        "structureFile": "curriculum/structure/blocks/workshop-string-inspector.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-string-inspector.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-68e6172875008fea742a63c9",
+      "externalId": "68e6172875008fea742a63c9",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-string-inspector",
+      "title": "Step 3",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68ef6e42fa6e8a9a18a401fa"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-string-inspector/68e6172875008fea742a63c9.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-string-inspector/68e6172875008fea742a63c9.md",
+        "structureFile": "curriculum/structure/blocks/workshop-string-inspector.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-string-inspector.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-68e6172975008fea742a63ca",
+      "externalId": "68e6172975008fea742a63ca",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-string-inspector",
+      "title": "Step 4",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68e6172875008fea742a63c9"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-string-inspector/68e6172975008fea742a63ca.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-string-inspector/68e6172975008fea742a63ca.md",
+        "structureFile": "curriculum/structure/blocks/workshop-string-inspector.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-string-inspector.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-68e6172975008fea742a63cb",
+      "externalId": "68e6172975008fea742a63cb",
+      "type": "coding_challenge",
+      "course": "JavaScript",
+      "module": "workshop-string-inspector",
+      "title": "Step 5",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 12,
+      "durationSource": "estimate",
+      "xp": 25,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68e6172975008fea742a63ca"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/workshop-string-inspector/68e6172975008fea742a63cb.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/workshop-string-inspector/68e6172975008fea742a63cb.md",
+        "structureFile": "curriculum/structure/blocks/workshop-string-inspector.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/workshop-string-inspector.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 4
+    },
+    {
+      "id": "fcc-66edcd875b0d91de1fbbb492",
+      "externalId": "66edcd875b0d91de1fbbb492",
+      "type": "quiz",
+      "course": "JavaScript",
+      "module": "quiz-javascript-fundamentals",
+      "title": "JavaScript Fundamentals Quiz",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/quiz-javascript-fundamentals/66edcd875b0d91de1fbbb492.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/quiz-javascript-fundamentals/66edcd875b0d91de1fbbb492.md",
+        "structureFile": "curriculum/structure/blocks/quiz-javascript-fundamentals.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/quiz-javascript-fundamentals.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-699c6f4d4e468a10d3ae25ff",
+      "externalId": "699c6f4d4e468a10d3ae25ff",
+      "type": "quiz",
+      "course": "JavaScript",
+      "module": "quiz-data-structures-js",
+      "title": "Data Structures Quiz",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/quiz-data-structures-js/699c6f4d4e468a10d3ae25ff.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/quiz-data-structures-js/699c6f4d4e468a10d3ae25ff.md",
+        "structureFile": "curriculum/structure/blocks/quiz-data-structures-js.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/quiz-data-structures-js.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-699a068cfe9bb7bccf2b7ec0",
+      "externalId": "699a068cfe9bb7bccf2b7ec0",
+      "type": "quiz",
+      "course": "JavaScript",
+      "module": "quiz-dynamic-programming-js",
+      "title": "Dynamic Programming Quiz",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/quiz-dynamic-programming-js/699a068cfe9bb7bccf2b7ec0.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/quiz-dynamic-programming-js/699a068cfe9bb7bccf2b7ec0.md",
+        "structureFile": "curriculum/structure/blocks/quiz-dynamic-programming-js.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/quiz-dynamic-programming-js.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-68420c314cdf5c6863ca8330",
+      "externalId": "68420c314cdf5c6863ca8330",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-common-data-structures",
+      "title": "What Is an Algorithm and How Does Big O Notation Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/68420c314cdf5c6863ca8330.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/68420c314cdf5c6863ca8330.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-6895d06b5968736797c408e3",
+      "externalId": "6895d06b5968736797c408e3",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-common-data-structures",
+      "title": "What Are Good Problem-Solving Techniques and Ways to Approach Algorithmic Challenges?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68420c314cdf5c6863ca8330"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e3.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e3.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-6895d06b5968736797c408e4",
+      "externalId": "6895d06b5968736797c408e4",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-common-data-structures",
+      "title": "How Do Dynamic Arrays Differ From Static Arrays?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6895d06b5968736797c408e3"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e4.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e4.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-6895d06b5968736797c408e5",
+      "externalId": "6895d06b5968736797c408e5",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-common-data-structures",
+      "title": "How Do Stacks and Queues Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6895d06b5968736797c408e4"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e5.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e5.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-6895d06b5968736797c408e6",
+      "externalId": "6895d06b5968736797c408e6",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-common-data-structures",
+      "title": "How Do Singly Linked Lists Work and How Do They Differ From Doubly Linked List?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6895d06b5968736797c408e5"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e6.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e6.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 4
+    },
+    {
+      "id": "fcc-6895d06b5968736797c408e7",
+      "externalId": "6895d06b5968736797c408e7",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-common-data-structures",
+      "title": "How Do Maps, Hash Maps and Sets Work?",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "javascript",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6895d06b5968736797c408e6"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e7.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures/6895d06b5968736797c408e7.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-common-data-structures.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 5
+    },
+    {
+      "id": "fcc-698dd14c7932b3cc4b19c92c",
+      "externalId": "698dd14c7932b3cc4b19c92c",
+      "type": "lesson",
+      "course": "General",
+      "module": "introduction-to-arrays",
+      "title": "Introduction to Data Structures",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/introduction-to-arrays/introduction-to-data-structures-video.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/introduction-to-arrays/introduction-to-data-structures-video.md",
+        "structureFile": "curriculum/structure/blocks/introduction-to-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/introduction-to-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED",
+        "VIDEO_MEDIA_AND_TRANSCRIPT_RIGHTS_REVIEW"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-698dd3547932b3cc4b19c92d",
+      "externalId": "698dd3547932b3cc4b19c92d",
+      "type": "lesson",
+      "course": "General",
+      "module": "introduction-to-arrays",
+      "title": "Array Basics",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-698dd14c7932b3cc4b19c92c"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/introduction-to-arrays/array-basics-video.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/introduction-to-arrays/array-basics-video.md",
+        "structureFile": "curriculum/structure/blocks/introduction-to-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/introduction-to-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED",
+        "VIDEO_MEDIA_AND_TRANSCRIPT_RIGHTS_REVIEW"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-698dd3ea7932b3cc4b19c92e",
+      "externalId": "698dd3ea7932b3cc4b19c92e",
+      "type": "lesson",
+      "course": "General",
+      "module": "introduction-to-arrays",
+      "title": "Accessing a Value in an Array",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-698dd3547932b3cc4b19c92d"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/introduction-to-arrays/accessing-a-value-in-an-array-video.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/introduction-to-arrays/accessing-a-value-in-an-array-video.md",
+        "structureFile": "curriculum/structure/blocks/introduction-to-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/introduction-to-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED",
+        "VIDEO_MEDIA_AND_TRANSCRIPT_RIGHTS_REVIEW"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-698dd4cd7932b3cc4b19c92f",
+      "externalId": "698dd4cd7932b3cc4b19c92f",
+      "type": "lesson",
+      "course": "General",
+      "module": "introduction-to-arrays",
+      "title": "Array Search, Insert and Delete",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-698dd3ea7932b3cc4b19c92e"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/introduction-to-arrays/array-search-insert-delete-video.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/introduction-to-arrays/array-search-insert-delete-video.md",
+        "structureFile": "curriculum/structure/blocks/introduction-to-arrays.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/introduction-to-arrays.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED",
+        "VIDEO_MEDIA_AND_TRANSCRIPT_RIGHTS_REVIEW"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-698dd5a27932b3cc4b19c930",
+      "externalId": "698dd5a27932b3cc4b19c930",
+      "type": "lesson",
+      "course": "General",
+      "module": "introduction-to-linked-lists",
+      "title": "What is a Linked List?",
+      "language": "general",
+      "difficulty": "intermediate",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/introduction-to-linked-lists/what-is-linked-list-video.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/introduction-to-linked-lists/what-is-linked-list-video.md",
+        "structureFile": "curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED",
+        "VIDEO_MEDIA_AND_TRANSCRIPT_RIGHTS_REVIEW"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-698dd6627932b3cc4b19c931",
+      "externalId": "698dd6627932b3cc4b19c931",
+      "type": "lesson",
+      "course": "General",
+      "module": "introduction-to-linked-lists",
+      "title": "Adding Nodes to a Linked List",
+      "language": "general",
+      "difficulty": "intermediate",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-698dd5a27932b3cc4b19c930"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/introduction-to-linked-lists/adding-nodes-to-a-linked-list-video.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/introduction-to-linked-lists/adding-nodes-to-a-linked-list-video.md",
+        "structureFile": "curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED",
+        "VIDEO_MEDIA_AND_TRANSCRIPT_RIGHTS_REVIEW"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-698dd7f67932b3cc4b19c932",
+      "externalId": "698dd7f67932b3cc4b19c932",
+      "type": "lesson",
+      "course": "General",
+      "module": "introduction-to-linked-lists",
+      "title": "Implementing Search",
+      "language": "general",
+      "difficulty": "intermediate",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-698dd6627932b3cc4b19c931"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/introduction-to-linked-lists/implementing-search-video.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/introduction-to-linked-lists/implementing-search-video.md",
+        "structureFile": "curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED",
+        "VIDEO_MEDIA_AND_TRANSCRIPT_RIGHTS_REVIEW"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-698dd8b47932b3cc4b19c933",
+      "externalId": "698dd8b47932b3cc4b19c933",
+      "type": "lesson",
+      "course": "General",
+      "module": "introduction-to-linked-lists",
+      "title": "Inserting a Node",
+      "language": "general",
+      "difficulty": "intermediate",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-698dd7f67932b3cc4b19c932"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/introduction-to-linked-lists/inserting-a-node-video.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/introduction-to-linked-lists/inserting-a-node-video.md",
+        "structureFile": "curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED",
+        "VIDEO_MEDIA_AND_TRANSCRIPT_RIGHTS_REVIEW"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-698dd9817932b3cc4b19c934",
+      "externalId": "698dd9817932b3cc4b19c934",
+      "type": "lesson",
+      "course": "General",
+      "module": "introduction-to-linked-lists",
+      "title": "Removing a Node",
+      "language": "general",
+      "difficulty": "intermediate",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "data-structures"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-698dd8b47932b3cc4b19c933"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/introduction-to-linked-lists/removing-a-node-video.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/introduction-to-linked-lists/removing-a-node-video.md",
+        "structureFile": "curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/introduction-to-linked-lists.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED",
+        "VIDEO_MEDIA_AND_TRANSCRIPT_RIGHTS_REVIEW"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 4
+    },
+    {
+      "id": "fcc-68dd96cf8084504ca0322e98",
+      "externalId": "68dd96cf8084504ca0322e98",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-understanding-the-http-request-response-model",
+      "title": "What Is the HTTP Request-Response Model?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "http"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model/68dd96cf8084504ca0322e98.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model/68dd96cf8084504ca0322e98.md",
+        "structureFile": "curriculum/structure/blocks/lecture-understanding-the-http-request-response-model.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-understanding-the-http-request-response-model.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-68dd97fbd18ede5ae983e342",
+      "externalId": "68dd97fbd18ede5ae983e342",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-understanding-the-http-request-response-model",
+      "title": "What Are the Different Kinds of Assets That Are Returned in an HTTP Response?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "http"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68dd96cf8084504ca0322e98"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model/68dd97fbd18ede5ae983e342.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model/68dd97fbd18ede5ae983e342.md",
+        "structureFile": "curriculum/structure/blocks/lecture-understanding-the-http-request-response-model.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-understanding-the-http-request-response-model.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-68dd97fbd18ede5ae983e343",
+      "externalId": "68dd97fbd18ede5ae983e343",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-understanding-the-http-request-response-model",
+      "title": "What Happens When a Form Is Submitted and How Do the Different Form Submissions Work?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "http"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68dd97fbd18ede5ae983e342"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model/68dd97fbd18ede5ae983e343.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model/68dd97fbd18ede5ae983e343.md",
+        "structureFile": "curriculum/structure/blocks/lecture-understanding-the-http-request-response-model.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-understanding-the-http-request-response-model.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-6a02e90ad969a6287d1b4f87",
+      "externalId": "6a02e90ad969a6287d1b4f87",
+      "type": "quiz",
+      "course": "General",
+      "module": "quiz-http-and-the-web-standards-model",
+      "title": "HTTP and the Web Standards Model Quiz",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "http"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/quiz-http-and-the-web-standards-model/6a02e90ad969a6287d1b4f87.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/quiz-http-and-the-web-standards-model/6a02e90ad969a6287d1b4f87.md",
+        "structureFile": "curriculum/structure/blocks/quiz-http-and-the-web-standards-model.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/quiz-http-and-the-web-standards-model.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-68828e965f70137025ec5031",
+      "externalId": "68828e965f70137025ec5031",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-introduction-to-git-and-github",
+      "title": "What Is Version Control, and Why Are These Systems Necessary?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "version-control"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/68828e965f70137025ec5031.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/68828e965f70137025ec5031.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-688290189fecfe7206d22833",
+      "externalId": "688290189fecfe7206d22833",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-introduction-to-git-and-github",
+      "title": "What Is the Purpose of Sites Like GitHub and GitLab, and What Are Some Benefits of Using Them?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "version-control"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68828e965f70137025ec5031"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/688290189fecfe7206d22833.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/688290189fecfe7206d22833.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-6882902bc844b1723da7eb13",
+      "externalId": "6882902bc844b1723da7eb13",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-introduction-to-git-and-github",
+      "title": "How Do You Install and Set Up Git?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "version-control"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-688290189fecfe7206d22833"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/6882902bc844b1723da7eb13.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/6882902bc844b1723da7eb13.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-68829061f03543726ea6f318",
+      "externalId": "68829061f03543726ea6f318",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-introduction-to-git-and-github",
+      "title": "What Is a Repository, and How Do You Create One?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "version-control"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-6882902bc844b1723da7eb13"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/68829061f03543726ea6f318.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/68829061f03543726ea6f318.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    },
+    {
+      "id": "fcc-6882904fd7063f7258c0aef3",
+      "externalId": "6882904fd7063f7258c0aef3",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-introduction-to-git-and-github",
+      "title": "How Do You Handle Security Requirements Like SSH and GPG Keys?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "version-control"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68829061f03543726ea6f318"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/6882904fd7063f7258c0aef3.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github/6882904fd7063f7258c0aef3.md",
+        "structureFile": "curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-introduction-to-git-and-github.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 4
+    },
+    {
+      "id": "fcc-688290ef85c79973321a23af",
+      "externalId": "688290ef85c79973321a23af",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-code-reviews-branching-deployment-and-ci-cd",
+      "title": "What Does a Typical Code Review Process Look Like for Projects?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "version-control"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd/688290ef85c79973321a23af.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd/688290ef85c79973321a23af.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 0
+    },
+    {
+      "id": "fcc-68829101d909657350cd80af",
+      "externalId": "68829101d909657350cd80af",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-code-reviews-branching-deployment-and-ci-cd",
+      "title": "How Do You Use GitHub Pages to Deploy a Project?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "version-control"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-688290ef85c79973321a23af"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd/68829101d909657350cd80af.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd/68829101d909657350cd80af.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 1
+    },
+    {
+      "id": "fcc-68829116a80ecd73681261b1",
+      "externalId": "68829116a80ecd73681261b1",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-code-reviews-branching-deployment-and-ci-cd",
+      "title": "What Are Good Practices for Remaining in Sync with Your Remote Counterparts?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "version-control"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68829101d909657350cd80af"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd/68829116a80ecd73681261b1.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd/68829116a80ecd73681261b1.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 2
+    },
+    {
+      "id": "fcc-6882913b2b58c2738eaaa2d1",
+      "externalId": "6882913b2b58c2738eaaa2d1",
+      "type": "lesson",
+      "course": "General",
+      "module": "lecture-working-with-code-reviews-branching-deployment-and-ci-cd",
+      "title": "What Is a .gitignore File, and What Are Some Items That Should Be Included Inside It?",
+      "language": "general",
+      "difficulty": "beginner",
+      "difficultySource": "heuristic-unreviewed",
+      "estimatedDurationMinutes": 8,
+      "durationSource": "estimate",
+      "xp": 15,
+      "xpSource": "app-defined",
+      "tags": [
+        "general",
+        "version-control"
+      ],
+      "lessonContent": null,
+      "instructions": null,
+      "starterCode": null,
+      "tests": [],
+      "hints": [],
+      "explanation": null,
+      "prerequisites": [
+        "fcc-68829116a80ecd73681261b1"
+      ],
+      "multipleChoice": [],
+      "project": null,
+      "solutions": [],
+      "source": {
+        "repository": "freeCodeCamp/freeCodeCamp",
+        "ref": "2557ee7935f64d90dd72bf53837fb05cd928f136",
+        "file": "curriculum/challenges/english/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd/6882913b2b58c2738eaaa2d1.md",
+        "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/challenges/english/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd/6882913b2b58c2738eaaa2d1.md",
+        "structureFile": "curriculum/structure/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd.json",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/blob/2557ee7935f64d90dd72bf53837fb05cd928f136/curriculum/structure/blocks/lecture-working-with-code-reviews-branching-deployment-and-ci-cd.json",
+        "license": "UNVERIFIED_CURRICULUM_RIGHTS",
+        "attribution": "freeCodeCamp.org contributors; © freeCodeCamp.org (rights require verification)"
+      },
+      "modifications": [
+        "Reorganized metadata as a mobile app catalog entry; no lesson text reproduced"
+      ],
+      "editorialFlags": [
+        "RIGHTS_REVIEW_REQUIRED"
+      ],
+      "redistributionApproved": false,
+      "orderInBlock": 3
+    }
+  ]
+}

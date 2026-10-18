@@ -1,0 +1,2376 @@
+{
+  "purpose": "80 proposed ORIGINAL micro-learning activities; no copyright-protected lesson bodies included",
+  "count": 80,
+  "modules": [
+    {
+      "id": "module-01",
+      "title": "Les bases de JavaScript",
+      "referenceBlock": "lecture-introduction-to-javascript"
+    },
+    {
+      "id": "module-02",
+      "title": "Chaînes de caractères et nombres",
+      "referenceBlock": "lecture-working-with-strings-in-javascript"
+    },
+    {
+      "id": "module-03",
+      "title": "Conditions et booléens",
+      "referenceBlock": "lecture-working-with-comparison-and-boolean-operators"
+    },
+    {
+      "id": "module-04",
+      "title": "Fonctions",
+      "referenceBlock": "lecture-working-with-functions"
+    },
+    {
+      "id": "module-05",
+      "title": "Tableaux",
+      "referenceBlock": "lecture-working-with-arrays"
+    },
+    {
+      "id": "module-06",
+      "title": "Boucles et itérations",
+      "referenceBlock": "lecture-working-with-loops"
+    },
+    {
+      "id": "module-07",
+      "title": "Structures de données",
+      "referenceBlock": "lecture-working-with-common-data-structures"
+    },
+    {
+      "id": "module-08",
+      "title": "Algorithmes et entretiens",
+      "referenceBlock": "quiz-data-structures-js"
+    },
+    {
+      "id": "module-09",
+      "title": "Git et travail d'équipe",
+      "referenceBlock": "lecture-introduction-to-git-and-github"
+    },
+    {
+      "id": "module-10",
+      "title": "Web, HTTP et APIs",
+      "referenceBlock": "lecture-understanding-the-http-request-response-model"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "mvp-001",
+      "position": 1,
+      "type": "lesson",
+      "title": "À quoi sert JavaScript ?",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-002",
+      "position": 2,
+      "type": "multiple_choice",
+      "title": "Choisir un type de donnée",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-001"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-003",
+      "position": 3,
+      "type": "fill_in_the_blank",
+      "title": "Déclarer une variable",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-002"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-004",
+      "position": 4,
+      "type": "coding_challenge",
+      "title": "Comprendre let et const",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-003"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-005",
+      "position": 5,
+      "type": "lesson",
+      "title": "Lire un message de console",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-004"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-006",
+      "position": 6,
+      "type": "debugging_exercise",
+      "title": "Prédire la valeur d'une variable",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-005"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-007",
+      "position": 7,
+      "type": "multiple_choice",
+      "title": "Repérer une erreur de type",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-006"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-008",
+      "position": 8,
+      "type": "project",
+      "title": "Mini-quiz : premiers concepts",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-01",
+      "module": "Les bases de JavaScript",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-007"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-009",
+      "position": 9,
+      "type": "lesson",
+      "title": "Créer et lire une chaîne",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-008"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-010",
+      "position": 10,
+      "type": "multiple_choice",
+      "title": "Accéder à un caractère",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-009"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-011",
+      "position": 11,
+      "type": "fill_in_the_blank",
+      "title": "Concaténer deux textes",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-010"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-012",
+      "position": 12,
+      "type": "coding_challenge",
+      "title": "Convertir un nombre en texte",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-011"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-013",
+      "position": 13,
+      "type": "lesson",
+      "title": "Calculer une expression",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-012"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-014",
+      "position": 14,
+      "type": "debugging_exercise",
+      "title": "Comprendre les opérateurs",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-013"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-015",
+      "position": 15,
+      "type": "multiple_choice",
+      "title": "Corriger une erreur de concaténation",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-014"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-016",
+      "position": 16,
+      "type": "project",
+      "title": "Défi : générer une phrase",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-02",
+      "module": "Chaînes de caractères et nombres",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-015"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-017",
+      "position": 17,
+      "type": "lesson",
+      "title": "Vrai ou faux ?",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-016"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-018",
+      "position": 18,
+      "type": "multiple_choice",
+      "title": "Comparer deux valeurs",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-017"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-019",
+      "position": 19,
+      "type": "fill_in_the_blank",
+      "title": "Différencier == et ===",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-018"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-020",
+      "position": 20,
+      "type": "coding_challenge",
+      "title": "Écrire une condition if",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-019"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-021",
+      "position": 21,
+      "type": "lesson",
+      "title": "Ajouter un else",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-020"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-022",
+      "position": 22,
+      "type": "debugging_exercise",
+      "title": "Combiner des conditions",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-021"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-023",
+      "position": 23,
+      "type": "multiple_choice",
+      "title": "Déboguer une comparaison",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-022"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-024",
+      "position": 24,
+      "type": "project",
+      "title": "Défi : calculer une admissibilité",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-03",
+      "module": "Conditions et booléens",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-023"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-025",
+      "position": 25,
+      "type": "lesson",
+      "title": "Déclarer une fonction",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-024"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-026",
+      "position": 26,
+      "type": "multiple_choice",
+      "title": "Passer un paramètre",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-025"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-027",
+      "position": 27,
+      "type": "fill_in_the_blank",
+      "title": "Retourner une valeur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-026"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-028",
+      "position": 28,
+      "type": "coding_challenge",
+      "title": "Réutiliser une fonction",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-027"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-029",
+      "position": 29,
+      "type": "lesson",
+      "title": "Lire la portée d'une variable",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-028"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-030",
+      "position": 30,
+      "type": "debugging_exercise",
+      "title": "Compléter une fonction",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-029"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-031",
+      "position": 31,
+      "type": "multiple_choice",
+      "title": "Réparer un return manquant",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-030"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-032",
+      "position": 32,
+      "type": "project",
+      "title": "Défi : créer un convertisseur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-04",
+      "module": "Fonctions",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-031"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-033",
+      "position": 33,
+      "type": "lesson",
+      "title": "Créer un tableau",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-032"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-034",
+      "position": 34,
+      "type": "multiple_choice",
+      "title": "Lire un index",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-033"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-035",
+      "position": 35,
+      "type": "fill_in_the_blank",
+      "title": "Modifier un élément",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-034"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-036",
+      "position": 36,
+      "type": "coding_challenge",
+      "title": "Ajouter une valeur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-035"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-037",
+      "position": 37,
+      "type": "lesson",
+      "title": "Supprimer un élément",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-036"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-038",
+      "position": 38,
+      "type": "debugging_exercise",
+      "title": "Connaître la longueur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-037"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-039",
+      "position": 39,
+      "type": "multiple_choice",
+      "title": "Déboguer un index hors limites",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-038"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-040",
+      "position": 40,
+      "type": "project",
+      "title": "Défi : calculer une moyenne",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-05",
+      "module": "Tableaux",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-039"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-041",
+      "position": 41,
+      "type": "lesson",
+      "title": "Comprendre l'itération",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-040"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-042",
+      "position": 42,
+      "type": "multiple_choice",
+      "title": "Créer une boucle for",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-041"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-043",
+      "position": 43,
+      "type": "fill_in_the_blank",
+      "title": "Utiliser une boucle while",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-042"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-044",
+      "position": 44,
+      "type": "coding_challenge",
+      "title": "Itérer sur un tableau",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-043"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-045",
+      "position": 45,
+      "type": "lesson",
+      "title": "Utiliser break",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-044"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-046",
+      "position": 46,
+      "type": "debugging_exercise",
+      "title": "Identifier une boucle infinie",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-045"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-047",
+      "position": 47,
+      "type": "multiple_choice",
+      "title": "Déboguer une condition d'arrêt",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-046"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-048",
+      "position": 48,
+      "type": "project",
+      "title": "Défi : filtrer des valeurs",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-06",
+      "module": "Boucles et itérations",
+      "language": "javascript",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-047"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-049",
+      "position": 49,
+      "type": "lesson",
+      "title": "Tableau ou liste chaînée ?",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-048"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-050",
+      "position": 50,
+      "type": "multiple_choice",
+      "title": "Comprendre la pile LIFO",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-049"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-051",
+      "position": 51,
+      "type": "fill_in_the_blank",
+      "title": "Comprendre la file FIFO",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-050"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-052",
+      "position": 52,
+      "type": "coding_challenge",
+      "title": "Découvrir les ensembles",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-051"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-053",
+      "position": 53,
+      "type": "lesson",
+      "title": "Découvrir les maps",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-052"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-054",
+      "position": 54,
+      "type": "debugging_exercise",
+      "title": "Rechercher un élément",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-053"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-055",
+      "position": 55,
+      "type": "multiple_choice",
+      "title": "Notion de complexité Big O",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-054"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-056",
+      "position": 56,
+      "type": "project",
+      "title": "Quiz : choisir la bonne structure",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-07",
+      "module": "Structures de données",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-055"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-057",
+      "position": 57,
+      "type": "lesson",
+      "title": "Découper un problème",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-056"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-058",
+      "position": 58,
+      "type": "multiple_choice",
+      "title": "Tracer un algorithme",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-057"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-059",
+      "position": 59,
+      "type": "fill_in_the_blank",
+      "title": "Trouver le maximum d'une liste",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-058"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-060",
+      "position": 60,
+      "type": "coding_challenge",
+      "title": "Inverser une chaîne",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-059"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-061",
+      "position": 61,
+      "type": "lesson",
+      "title": "Détecter les doublons",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-060"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-062",
+      "position": 62,
+      "type": "debugging_exercise",
+      "title": "Utiliser une recherche linéaire",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-061"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-063",
+      "position": 63,
+      "type": "multiple_choice",
+      "title": "Comprendre la recherche binaire",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-062"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-064",
+      "position": 64,
+      "type": "project",
+      "title": "Défi : résoudre et tester une solution",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-08",
+      "module": "Algorithmes et entretiens",
+      "language": "javascript",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-063"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-065",
+      "position": 65,
+      "type": "lesson",
+      "title": "Pourquoi utiliser Git ?",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-064"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-066",
+      "position": 66,
+      "type": "multiple_choice",
+      "title": "Créer un commit",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-065"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-067",
+      "position": 67,
+      "type": "fill_in_the_blank",
+      "title": "Lire un diff",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-066"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-068",
+      "position": 68,
+      "type": "coding_challenge",
+      "title": "Créer une branche",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-067"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-069",
+      "position": 69,
+      "type": "lesson",
+      "title": "Comprendre une pull request",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-068"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-070",
+      "position": 70,
+      "type": "debugging_exercise",
+      "title": "Expliquer un conflit de merge",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-069"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-071",
+      "position": 71,
+      "type": "multiple_choice",
+      "title": "Relire une modification",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-070"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-072",
+      "position": 72,
+      "type": "project",
+      "title": "Mini-projet : workflow d'équipe",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-09",
+      "module": "Git et travail d'équipe",
+      "language": "general",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-071"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-073",
+      "position": 73,
+      "type": "lesson",
+      "title": "Client et serveur",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-072"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-074",
+      "position": 74,
+      "type": "multiple_choice",
+      "title": "Comprendre une requête HTTP",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-073"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-075",
+      "position": 75,
+      "type": "fill_in_the_blank",
+      "title": "Choisir GET ou POST",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-074"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-076",
+      "position": 76,
+      "type": "coding_challenge",
+      "title": "Comprendre les codes HTTP",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-075"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-077",
+      "position": 77,
+      "type": "lesson",
+      "title": "Lire du JSON",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-076"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-078",
+      "position": 78,
+      "type": "debugging_exercise",
+      "title": "Découvrir les APIs REST",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-077"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-079",
+      "position": 79,
+      "type": "multiple_choice",
+      "title": "Comprendre CORS",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-078"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "author_new_no_fcc_equivalent_verified",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    },
+    {
+      "id": "mvp-080",
+      "position": 80,
+      "type": "project",
+      "title": "Défi : déboguer une requête API",
+      "course": "programmation-mobile-mvp",
+      "moduleId": "module-10",
+      "module": "Web, HTTP et APIs",
+      "language": "general",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-079"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "origin": "original_outline_inspired_by_topic",
+      "rights": "Original lesson title/plan only; must write fresh instructional text and code"
+    }
+  ]
+}
