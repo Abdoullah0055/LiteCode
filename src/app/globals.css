@@ -1156,13 +1156,17 @@ button {
 .classification-zone { min-width: 0; padding: 10px; border: 1px dashed #9ebcaf; border-radius: 14px; background: #f4faf6; }
 .zone-tokens { margin-top: 8px; }
 .assigned-token { justify-content: space-between; padding: 8px 10px; }
-.zone-drop { width: 100%; min-height: 42px; border: 1px dashed #9ebcaf; border-radius: 10px; background: transparent; color: #426454; font: inherit; font-size: .8rem; font-weight: 750; }
+.zone-drop { width: 100%; min-height: 44px; border: 1px dashed #9ebcaf; border-radius: 10px; background: transparent; color: #426454; font: inherit; font-size: .8rem; font-weight: 750; }
 .zone-drop:disabled { opacity: .45; }
 .order-list,.debug-lines { margin: 0; padding: 0; display: grid; gap: 8px; list-style: none; }
 .order-card { justify-content: space-between; }
+.order-drag-handle { flex: 0 0 44px; width: 44px; height: 44px; min-height: 44px; display: grid; place-items: center; border: 1px solid #dce9e5; border-radius: 10px; background: #fff; color: #536f7d; cursor: grab; touch-action: none; }
+.order-drag-handle:active { cursor: grabbing; }
+.order-card.is-dragging { border-color: #49a77c; box-shadow: 0 0 0 2px #49a77c33; }
+.order-label { flex: 1; min-width: 0; }
 .order-number { width: 27px; height: 27px; flex: 0 0 27px; display: grid; place-items: center; border-radius: 50%; background: #e8f3ed; color: #258b63; font-weight: 900; }
 .order-controls { display: flex; gap: 5px; }
-.order-controls button { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid #dce9e5; border-radius: 10px; background: #fff; color: #25485a; }
+.order-controls button { width: 44px; height: 44px; min-height: 44px; display: grid; place-items: center; border: 1px solid #dce9e5; border-radius: 10px; background: #fff; color: #25485a; }
 .short-answer-card { min-width: 0; display: grid; gap: 7px; padding: 12px; border: 1px solid #dce9e5; border-radius: 13px; background: #f9fcfb; }
 .short-answer-card > label,.short-answer-card > p { margin: 0; color: #284759; font-weight: 700; }
 .short-answer-card input { width: 100%; min-height: 46px; border: 1px solid #b9cdc4; border-radius: 10px; padding: 10px 12px; font: inherit; }
@@ -1199,6 +1203,7 @@ button {
 .dark-app .interaction-feedback { border-color: #65c596; background: #1b3c39; color: #d4eee2; }
 .dark-app .pair-remove { color: #c1d8ca; }
 .dark-app .learning-interaction > h2,.dark-app .short-answer-card > label,.dark-app .short-answer-card > p { color: #e4eff9; }
+.dark-app .order-drag-handle { border-color: #385166; background: #203a4f; color: #e4eff9; }
 .dark-app .interaction-widget > legend,.dark-app .pair-column h3,.dark-app .classification-zone h3 { color: #b4c8d7; }
 .dark-app .answer-card,.dark-app .token-card,.dark-app .assigned-token,.dark-app .order-card,.dark-app .debug-line,.dark-app .order-controls button { border-color: #385166; background: #203a4f; color: #e4eff9; }
 .dark-app .answer-card.is-selected,.dark-app .token-card.is-selected,.dark-app .assigned-token.is-selected,.dark-app .debug-line.is-selected { border-color: #65c596; background: #28533f; }

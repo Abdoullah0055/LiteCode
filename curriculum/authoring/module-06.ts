@@ -17,7 +17,7 @@ export const module06: AuthorInput[] = [
   ], grading: [
     { interactionId: "regle", key: { kind: "classify", accepted: [{ moins2: "ecarte", zero: "ecarte", trois: "garde", cinq: "garde" }] }, explanation: "Seuls 3 et 5 sont strictement supérieurs à zéro.", feedback: { incorrect: "Strictement positif exclut les valeurs égales à zéro." } },
     { interactionId: "ordre", key: { kind: "ordering", accepted: [["parcourt", "test", "ajoute"]] }, explanation: "On lit une valeur, on la teste, puis on l’ajoute si elle passe le filtre.", feedback: { incorrect: "La valeur doit être lue avant d’être testée ou ajoutée." } },
-    { interactionId: "trace", key: { kind: "trace", accepted: { valeurs: ["3, 5", "3,5", "[3, 5]"] } }, explanation: "Le filtre écarte -2 et 0, et garde 3 puis 5 dans cet ordre.", feedback: { incorrect: "Teste chaque valeur avec `> 0` et conserve l’ordre initial." } },
+    { interactionId: "trace", key: { kind: "trace", accepted: { valeurs: ["3, 5", "3,5", "[3, 5]", "[3,5]"] } }, explanation: "Le filtre écarte -2 et 0, et garde 3 puis 5 dans cet ordre.", feedback: { incorrect: "Teste chaque valeur avec `> 0` et conserve l’ordre initial." } },
     { interactionId: "validation", key: { kind: "choice", accepted: [["strict"]] }, explanation: "L’inégalité est stricte; zéro n’est pas supérieur à zéro.", feedback: { incorrect: "Lis le signe de comparaison sans le remplacer par une autre règle." } },
   ], xp: 20 }),
 ];

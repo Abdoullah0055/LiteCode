@@ -2,6 +2,7 @@ import { expect, it } from "vitest";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { TheoryContent } from "../src/components/theory-content";
+import { InlineCodeText } from "../src/components/inline-code-text";
 
 it("renders structured text safely with headings, emphasis, code and output", () => {
   const html = renderToStaticMarkup(React.createElement(TheoryContent, { blocks: [
@@ -16,6 +17,15 @@ it("renders structured text safely with headings, emphasis, code and output", ()
   expect(html).not.toContain("<img src=x>");
   expect(html).toContain("aria-label=\"Code, texte\"");
   expect(html).toContain("aria-label=\"Résultat\"");
+});
+
+it("renders bounded backtick terms as escaped inline code", () => {
+  const html = renderToStaticMarkup(React.createElement(InlineCodeText, { text: "Utilise `const <x>` puis `true`. <img src=x>" }));
+  expect(html).toContain("<code>const &lt;x&gt;</code>");
+  expect(html).toContain("<code>true</code>");
+  expect(html).toContain("&lt;img src=x&gt;");
+  expect(html).not.toContain("<img src=x>");
+  expect(html).not.toContain("`true`");
 });
 
 it("highlights JavaScript while keeping text examples escaped", () => {

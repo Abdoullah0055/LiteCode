@@ -12,5 +12,20 @@ export default defineConfig({
     url: "http://127.0.0.1:3107",
     reuseExistingServer: false,
     timeout: 120000,
+    env: process.env.LITECODE_E2E_LIVE === "1" ? {
+      NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL ?? "",
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ?? "",
+      SUPABASE_SERVICE_ROLE_KEY: process.env.SUPABASE_SERVICE_ROLE_KEY ?? "",
+      NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL ?? "",
+      LITECODE_E2E_LIVE: "1",
+      LITECODE_E2E_TEST_PROJECT_REF: process.env.LITECODE_E2E_TEST_PROJECT_REF ?? "",
+    } : {
+      NEXT_PUBLIC_SUPABASE_URL: "",
+      NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: "",
+      SUPABASE_SERVICE_ROLE_KEY: "",
+      NEXT_PUBLIC_SITE_URL: "",
+      LITECODE_E2E_LIVE: "",
+      LITECODE_E2E_TEST_PROJECT_REF: "",
+    },
   },
 });

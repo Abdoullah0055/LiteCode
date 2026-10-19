@@ -11,8 +11,16 @@ import { Taskbar } from "@/components/ui";
 import { TheoryContent } from "@/components/theory-content";
 import { CodeBlock } from "@/components/code-block";
 import { InteractionWidget } from "@/components/learning/interaction";
+import { InlineCodeText } from "@/components/inline-code-text";
 
 type SavedStep = { position: number; submission: { version: number; answers: Record<string, InteractionAnswer> }; passed: boolean };
+function stableAnswer(value: unknown): string {
+  return JSON.stringify(value, (_key, nested: unknown) => {
+    if (nested && typeof nested === "object" && !Array.isArray(nested))
+      return Object.fromEntries(Object.entries(nested).sort(([left], [right]) => left.localeCompare(right)));
+    return nested;
+  }) ?? "";
+}
 
 export function LearningExercise({ activity, position, hearts, sound, draft, savedSteps = [] }: {
   activity: PublicActivity; position: number; hearts: number; sound: boolean;
@@ -21,10 +29,20 @@ export function LearningExercise({ activity, position, hearts, sound, draft, sav
   const router = useRouter();
   const isProject = Boolean(activity.project);
   const steps = useMemo(() => activity.project?.steps || activity.interactions.map(({ id }) => id), [activity]);
-  const [answers, setAnswers] = useState<Record<string, DraftInteractionAnswer>>(draft?.answers || Object.assign({}, ...savedSteps.map((step) => step.submission.answers)));
-  const [activeStep, setActiveStep] = useState(Math.min(steps.length - 1, Math.max(0, steps.indexOf(draft?.currentStep || ""))));
-  const [passedSteps, setPassedSteps] = useState(() => new Set(savedSteps.filter((step) => step.passed).map((step) => step.position - 1)));
-  const [changedSteps, setChangedSteps] = useState(() => new Set<number>());
+  const [answers, setAnswers] = useState<Record<string, DraftInteractionAnswer>>(() => ({
+    ...Object.assign({}, ...savedSteps.map((step) => step.submission.answers)),
+    ...draft?.answers,
+  }));
+  const changedSavedSteps = savedSteps.filter((step) => {
+    const stepId = steps[step.position - 1];
+    return stepId && draft?.answers && Object.hasOwn(draft.answers, stepId)
+      && stableAnswer(draft.answers[stepId]) !== stableAnswer(step.submission.answers[stepId]);
+  }).map((step) => step.position - 1);
+  const earliestSavedChange = changedSavedSteps.length ? Math.min(...changedSavedSteps) : steps.length;
+  const draftStep = Math.max(0, steps.indexOf(draft?.currentStep || ""));
+  const [activeStep, setActiveStep] = useState(Math.min(steps.length - 1, draftStep, earliestSavedChange));
+  const [passedSteps, setPassedSteps] = useState(() => new Set(savedSteps.filter((step) => step.passed && step.position - 1 < earliestSavedChange).map((step) => step.position - 1)));
+  const [changedSteps, setChangedSteps] = useState(() => new Set(changedSavedSteps));
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
@@ -155,14 +173,14 @@ export function LearningExercise({ activity, position, hearts, sound, draft, sav
           </button>;
         })}</nav>}
         {visibleInteractions.map((interaction) => <article className="learning-interaction" key={interaction.id}>
-          <h2>{interaction.prompt}</h2>
+          <h2><InlineCodeText text={interaction.prompt} /></h2>
           {interaction.context && <TheoryContent blocks={interaction.context} />}
           {interaction.code && <CodeBlock code={interaction.code.code} language={interaction.code.language} />}
           <InteractionWidget definition={interaction.definition} answer={answers[interaction.id]} onChange={(answer) => updateAnswer(interaction.id, answer)} disabled={busy} />
         </article>)}
         <div className="learning-actions"><button ref={hintButtonRef} type="button" className="inline-link" onClick={() => setShowHints(true)}><Lightbulb size={16} /> Besoin d’un indice ?</button><a href={`/lesson/${activity.id}`} className="inline-link">Revoir la leçon</a></div>
         <p className="save-status" role="status">{busy ? "Vérification…" : notice}</p>
-        {resultFeedback && <p className="interaction-feedback" role="status">{resultFeedback}</p>}
+        {resultFeedback && <p className="interaction-feedback" role="status"><InlineCodeText text={resultFeedback} /></p>}
         {error && <p className="error-notice" role="alert">{error}</p>}
       </div>
     </div>

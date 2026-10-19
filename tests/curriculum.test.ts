@@ -113,10 +113,32 @@ it("validates the complete version 2 curriculum, history, order, XP and projects
 it("parses every theory block announced as JavaScript without executing it", () => {
   const data = validateCurriculum(curriculum);
   for (const lesson of data.lessons) {
+    let examplesWithResults = 0;
     for (const block of lesson.activity.public.theory) {
-      if (block.type === "code" && block.language === "javascript") {
-        expect(() => new Script(block.code), `${lesson.id}: ${block.code}`).not.toThrow();
+      if (block.type === "code") {
+        if (block.output !== undefined) examplesWithResults++;
+        if (block.language === "javascript") {
+          expect(() => new Script(block.code), `${lesson.id}: ${block.code}`).not.toThrow();
+        }
       }
+    }
+    expect(examplesWithResults, `${lesson.id} needs a theory code example with an output`).toBeGreaterThan(0);
+  }
+});
+
+it("accepts common comma and bracket formatting for the two trace lists", () => {
+  const data = validateCurriculum(curriculum);
+  for (const [lessonId, interactionId, values] of [
+    ["mvp-048", "trace", ["3, 5", "3,5", "[3, 5]", "[3,5]"]],
+    ["mvp-063", "reduction", ["16, 20, 24", "16,20,24", "[16, 20, 24]", "[16,20,24]", "[16, 20,24]"]],
+  ] as const) {
+    const activity = authoredActivitySchema.parse(data.lessons.find(({ id }) => id === lessonId)!.activity);
+    const item = activity.public.interactions.find(({ id }) => id === interactionId)!;
+    const key = activity.grading.find(({ interactionId: id }) => id === interactionId)!.key;
+    if (item.definition.kind !== "trace" || key.kind !== "trace") throw new Error("Expected trace");
+    for (const value of values) {
+      const answer = { kind: "trace" as const, values: Object.fromEntries(item.definition.cells.map(({ id }) => [id, id === (lessonId === "mvp-048" ? "valeurs" : "reste") ? value : key.accepted[id][0]])) };
+      expect(gradeInteraction(item.definition, key, answer), `${lessonId}: ${value}`).toEqual({ passed: true });
     }
   }
 });

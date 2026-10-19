@@ -8249,7 +8249,8 @@
                 "valeurs": [
                   "3, 5",
                   "3,5",
-                  "[3, 5]"
+                  "[3, 5]",
+                  "[3,5]"
                 ]
               }
             },
@@ -9465,9 +9466,9 @@
             },
             {
               "type": "code",
-              "language": "text",
-              "code": "Accès à tableau[0] : 1 lecture.\nRecherche séquentielle : jusqu’à n lectures.",
-              "output": "Si la liste double, l’accès direct reste à 1; le parcours peut doubler."
+              "language": "javascript",
+              "code": "const tailles = [100, 200];\nconst lecturesDirectes = tailles.map(() => 1);\nconst parcoursJusquAuDernier = tailles;\nconsole.log(lecturesDirectes);\nconsole.log(parcoursJusquAuDernier);",
+              "output": "[1, 1]\n[100, 200]"
             },
             {
               "type": "paragraph",
@@ -10887,7 +10888,9 @@
                 "reste": [
                   "16, 20, 24",
                   "16,20,24",
-                  "[16, 20, 24]"
+                  "[16, 20, 24]",
+                  "[16,20,24]",
+                  "[16, 20,24]"
                 ],
                 "milieu2": [
                   "5"

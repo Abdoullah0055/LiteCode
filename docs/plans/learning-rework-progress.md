@@ -10,7 +10,7 @@ Suivi des huit étapes du plan [2026-10-18-learning-rework.md](2026-10-18-learni
 | 4. Contenu et migration | 80 activités, seed/migration additive, état existant conservé | Terminée | Revue +nouveau Luna correctif :80activités/111interactions/160indices. Root confirme45tests,39contrôlesPGlite,lint,build(typecheckinclus). Voir step-04-report.md et step-04-fix-report.md. |
 | 5. Auth et onboarding | Signup/confirmation, objectifs, langues, finish, appareil mémorisé | Terminée | Revue root +routage d'erreur corrigé :65tests/17fichiers,45contrôlesPGlite,lint,build. Auth hébergée non testée; rendu final à revoirétape7. Voir step-05-report.md. |
 | 6. Retrait du runner | Retrait des éditeurs libres et parcours d’exécution | Terminée | Root confirme58tests/15fichiers,45contrôlesPGlite,lint,build; audit imports/env/routes sans reste actif. Voir step-06-report.md. |
-| 7. Revue | Sécurité, comportement, accessibilité, rendu mobile | En cours | Nouveau Luna high; brief step-07-brief.md, incluant geste tactile et recette375/390/430+desktop. |
+| 7. Revue | Sécurité, comportement, accessibilité, rendu mobile | Terminée | Revue root :64tests/16fichiers,45contrôlesPGlite,20testsUI,19E2Epublics/5skips,lint,typecheck,build. Captures390 examinées; cloud/Safari réel non testés. Voir step-07-report.md. |
 | 8. Documentation et rapport | Documentation et rapport des preuves de validation | En attente | À compléter après revue. |
 
 ## Validation de la baseline

@@ -26,7 +26,7 @@ test("welcome routes new learners to signup without overflow", async ({
   await page.getByLabel("Courriel").fill("learner@example.test");
   await page.getByLabel("Mot de passe", { exact: true }).fill("Learning-123");
   await page.getByLabel("Confirmer le mot de passe").fill("Different-123");
-  await page.getByRole("button", { name: "Créer mon compte" }).click();
+  await expect(page.getByRole("button", { name: "Créer mon compte" })).toBeDisabled();
   expect(await page.getByLabel("Confirmer le mot de passe").evaluate((input) => (input as HTMLInputElement).validity.customError)).toBe(true);
   await expect(page).toHaveURL(/\/auth\?mode=signup$/);
 });
@@ -101,7 +101,7 @@ test("onboarding routes require a confirmed signed-in account", async ({ page })
 test("capture the supplied prototype for visual comparison", async ({
   page,
 }, testInfo) => {
-  if (testInfo.project.name !== "iphone-390") return;
+  test.skip(testInfo.project.name !== "iphone-390", "Prototype captures are scoped to 390 px.");
   await page.setContent(
     readFileSync("references/prototype_mobile_16_ecrans.html", "utf8"),
   );

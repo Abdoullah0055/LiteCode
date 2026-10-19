@@ -1,6 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
+import { InlineCodeText } from "@/components/inline-code-text";
 export function HintPanel({
   id,
   onClose,
@@ -69,7 +70,7 @@ export function HintPanel({
       {hints.length ? (
         hints.map((h, i) => (
           <p key={i}>
-            <strong>Indice {i + 1}.</strong> {h}
+            <><strong>Indice {i + 1}.</strong> <InlineCodeText text={h} /></>
           </p>
         ))
       ) : (

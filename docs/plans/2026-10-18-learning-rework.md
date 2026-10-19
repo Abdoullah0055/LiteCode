@@ -71,9 +71,9 @@ Checklist des huit étapes, actualisée après revue du contrôleur; les preuves
 
 ### Étape 7 — revue
 
-- [ ] Examiner flux client/API/correction privée, réponses, indices, brouillons et conflits de version.
-- [ ] Examiner sécurité, accessibilité clavier, erreurs et affichage mobile.
-- [ ] Vérifier IDs, progression et XP avant migration.
+- [x] Examiner flux client/API/correction privée, réponses, indices, brouillons et conflits de version.
+- [x] Examiner sécurité, accessibilité clavier, erreurs et affichage mobile (Chromium émulé; Safari physique non testé).
+- [x] Vérifier IDs, progression et XP localement avant migration; recette cloud non exécutée.
 
 ### Étape 8 — documentation et rapport
 
