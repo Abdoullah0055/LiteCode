@@ -8,12 +8,14 @@ async function main() {
 create schema auth; create table auth.users(id uuid primary key);
 create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;
 grant usage on schema public,auth to anon,authenticated,service_role; grant execute on function auth.uid() to authenticated;`);
-  await db.exec(
-    readFileSync(
-      "supabase/migrations/20261018185124_litecode_core.sql",
-      "utf8",
-    ),
-  );
+  const migrations = [
+    "20261018185124_litecode_core.sql",
+    "20261018193000_learning_versions.sql",
+    "20261019013608_learning_runtime.sql",
+    "20261019022914_learning_curriculum_v2.sql",
+  ];
+  for (const migration of migrations)
+    await db.exec(readFileSync(`supabase/migrations/${migration}`, "utf8"));
   await db.exec(readFileSync("supabase/seed.sql", "utf8"));
   const u1 = "00000000-0000-4000-8000-000000000001",
     u2 = "00000000-0000-4000-8000-000000000002";
@@ -53,9 +55,13 @@ grant usage on schema public,auth to anon,authenticated,service_role; grant exec
   await db.exec("reset role;set role service_role");
   await denied(`select public.begin_attempt('${u1}','mvp-002','{}')`);
   async function attempt(user: string, id: string, status: string) {
+    const version = await db.query<{ id: string }>(
+      "select id from public.lesson_versions where lesson_id=$1 and is_active",
+      [id],
+    );
     const begin = await db.query<{ id: string }>(
-      "select public.begin_attempt($1,$2,$3) as id",
-      [user, id, {}],
+      "select public.begin_learning_attempt($1,$2,$3,$4) as id",
+      [user, id, version.rows[0].id, { version: 2, answers: {} }],
     );
     const aid = begin.rows[0].id;
     const result = await db.query<{ r: { xp: number } }>(
@@ -78,6 +84,16 @@ grant usage on schema public,auth to anon,authenticated,service_role; grant exec
   assert.equal((await attempt(u1, "mvp-001", "passed")).xp, 0);
   checks++;
   assert.equal((await attempt(u1, "mvp-002", "passed")).xp, 10);
+  checks++;
+  assert.equal((await db.query("select * from public.lesson_versions where version=2 and is_active")).rows.length, 80);
+  checks++;
+  assert.equal((await db.query("select * from public.interaction_definitions")).rows.length, 111);
+  checks++;
+  assert.equal((await db.query("select * from public.interaction_keys")).rows.length, 111);
+  checks++;
+  assert.equal((await db.query("select * from public.guided_projects")).rows.length, 10);
+  checks++;
+  assert.equal((await db.query("select * from public.achievements")).rows.length, 4);
   checks++;
   assert.equal(
     (
@@ -131,6 +147,20 @@ grant usage on schema public,auth to anon,authenticated,service_role; grant exec
   );
   assert.equal(missing.rows.length, 0);
   checks++;
+  await db.exec("set role service_role");
+  await denied("update public.lesson_versions set public_content='{}' where lesson_id='mvp-001' and version=2");
+  await denied("update public.interaction_keys set answer_key='{}' where definition_id=(select id from public.interaction_definitions where interaction_id='roles' and version_id=(select id from public.lesson_versions where lesson_id='mvp-001' and version=2))");
+  await db.exec("insert into public.lesson_versions(lesson_id,version,public_content) select lesson_id,3,public_content from public.lesson_versions where lesson_id='mvp-001' and version=2");
+  await denied("update public.interaction_definitions set version_id=(select id from public.lesson_versions where lesson_id='mvp-001' and version=3) where interaction_id='roles' and version_id=(select id from public.lesson_versions where lesson_id='mvp-001' and version=2)");
+  await db.exec("update public.lesson_versions set is_active=false where lesson_id='mvp-080' and version=2");
+  await denied("update public.lesson_versions set public_content='{}' where lesson_id='mvp-080' and version=2");
+  await denied("delete from public.lesson_versions where lesson_id='mvp-080' and version=2");
+  await db.exec("insert into public.lesson_versions(lesson_id,version,public_content,is_active) select lesson_id,3,public_content,true from public.lesson_versions where lesson_id='mvp-080' and version=2");
+  assert.equal((await db.query<{ ever_published: boolean }>("select ever_published from public.lesson_versions where lesson_id='mvp-080' and version=3")).rows[0].ever_published, true);
+  checks++;
+  await db.exec("update public.lesson_versions set is_active=false where lesson_id='mvp-080' and version=3");
+  await denied("delete from public.lesson_versions where lesson_id='mvp-080' and version=3");
+  await db.exec("reset role");
   // Seed replay must preserve actual learner records.
   await db.exec(readFileSync("supabase/seed.sql", "utf8"));
   assert.equal(

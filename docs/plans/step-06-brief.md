@@ -5,6 +5,7 @@ Après étapes2à5 revues, lire AGENTS.md, les rapports et l’état réel avant
 ## Nettoyage fonctionnel
 
 - Toutes les80activités utilisent maintenant le moteur structuré; retirer les branches de code libre, executeCode, l’import dynamique du runner, les routes/schémas de soumissionv1 de code et l’ancien éditeur.
+- Aligner ActivityType, icônes du parcours, libellés de cours et liens sur les types de publication v2 (`exercise` et `project`) et les familles structurées. Ne pas laisser tous les exercices afficher un ancien libellé « écrire du code ».
 - Supprimer les fichiers suivis du dossier runner/ et src/lib/execution.ts. Retirer quickjs-emscripten et react-simple-code-editor, script npm runner, types inutilisés; conserver Prism et CodeBlock nécessaires aux extraits. Mettre package-lock à jour sans mise à niveau des dépendances restantes, avec audit/fund/scripts désactivés pour cette opération.
 - Retirer RUNNER_URL/RUNNER_API_KEY de .env.example (garder les trois clés Supabase vides); ne jamais ouvrir ou modifier .env.local. Les variables distantes ne sont pas touchées.
 - Mettre à jour AGENTS.md : remplacer l’ancienne consigne Nodepourrunner par gradingdéterministe côtéserveur; conserver sansmodificationla règle jamaisDocker et blocgéréNext.

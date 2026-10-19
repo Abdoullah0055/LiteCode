@@ -1,6 +1,7 @@
 import { beforeEach, expect, it, vi } from "vitest";
 import { NextRequest } from "next/server";
-import pilot from "../curriculum/pilot-mvp-004.json";
+import curriculum from "../curriculum/original.fr.json";
+const pilot = curriculum.lessons.find((lesson) => lesson.id === "mvp-004")!.activity;
 
 const mocks = vi.hoisted(() => ({
   user: { id: "00000000-0000-4000-8000-000000000101" } as { id: string } | null,
@@ -44,28 +45,28 @@ function request(path: string, body: unknown, method = "POST") {
 
 it("requires a real authenticated user before loading correction data", async () => {
   mocks.user = null;
-  expect((await attempt(request("attempt", { version: 1, answers: {} }), params())).status).toBe(401);
+  expect((await attempt(request("attempt", { version: 2, answers: {} }), params())).status).toBe(401);
   expect(mocks.load).not.toHaveBeenCalled();
   expect(mocks.rpc).not.toHaveBeenCalled();
 });
 
 it("rejects client XP and pass claims without creating an attempt", async () => {
-  expect((await attempt(request("attempt", { version: 1, answers: {}, xp: 999, passed: true }), params())).status).toBe(400);
+  expect((await attempt(request("attempt", { version: 2, answers: {}, xp: 999, passed: true }), params())).status).toBe(400);
   expect(mocks.rpc).not.toHaveBeenCalled();
 });
 
 it("returns 409 for stale submissions before creating an attempt", async () => {
-  expect((await attempt(request("attempt", { version: 2, answers: {} }), params())).status).toBe(409);
+  expect((await attempt(request("attempt", { version: 1, answers: {} }), params())).status).toBe(409);
   expect(mocks.rpc).not.toHaveBeenCalled();
 });
 
 it("returns 409 for a stale draft without overwriting stored answers", async () => {
-  expect((await draft(request("draft", { version: 2, answers: {} }, "PUT"), params())).status).toBe(409);
+  expect((await draft(request("draft", { version: 1, answers: {} }, "PUT"), params())).status).toBe(409);
   expect(mocks.rpc).not.toHaveBeenCalled();
 });
 
 it("refuses another origin before exposing corrections", async () => {
-  const req = request("attempt", { version: 1, answers: {} });
+  const req = request("attempt", { version: 2, answers: {} });
   req.headers.set("Origin", "https://attacker.invalid");
   expect((await attempt(req, params())).status).toBe(403);
   expect(mocks.load).not.toHaveBeenCalled();
@@ -75,7 +76,7 @@ it("refuses another origin before exposing corrections", async () => {
 it("grades answers on the server and returns the stored reward without keys", async () => {
   mocks.rpc.mockResolvedValueOnce({ data: "attempt-test", error: null })
     .mockResolvedValueOnce({ data: { xp: 20 }, error: null });
-  const response = await attempt(request("attempt", { version: 1, answers: {
+  const response = await attempt(request("attempt", { version: 2, answers: {
     "variable-roles": { kind: "classify", assignments: { prenom: "fixed", score: "changes" } },
     "score-trace": { kind: "trace", values: { start: "2", bonus: "5" } },
     "const-intention": { kind: "choice", selected: ["const"] },

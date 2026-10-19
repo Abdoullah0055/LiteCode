@@ -12,6 +12,7 @@
     "test": "vitest run",
     "test:e2e": "npm run build && playwright test",
     "test:db": "tsx scripts/test-db.ts",
+    "curriculum:author": "tsx scripts/compile-curriculum-authoring.ts",
     "curriculum:build": "tsx scripts/build-curriculum.ts",
     "runner": "node runner/server.mjs"
   },

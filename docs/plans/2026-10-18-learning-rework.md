@@ -26,7 +26,7 @@ Les clés et corrections restent côté serveur. Le client transmet les réponse
 
 ## Plan et checklist
 
-Checklist des huit étapes. À cette étape, seule la création du plan et du ledger est faite.
+Checklist des huit étapes, actualisée après revue du contrôleur; les preuves sont dans le ledger et les rapports de chaque étape.
 
 ### Étape 1 — plan pédagogique
 
@@ -51,9 +51,9 @@ Checklist des huit étapes. À cette étape, seule la création du plan et du le
 
 ### Étape 4 — contenu et migration
 
-- [ ] Rédiger les 80 activités selon la matrice; vérifier texte, prérequis, versions, clés privées, correction et indices.
-- [ ] Ajouter migration de contenu et seed reproductibles, sans toucher à la migration initiale ni réinitialiser l’état.
-- [ ] Préserver IDs, XP, complétions, tentatives et leur lisibilité.
+- [x] Rédiger les 80 activités selon la matrice; vérifier texte, prérequis, versions, clés privées, correction et indices.
+- [x] Ajouter migration de contenu et seed reproductibles, sans toucher à la migration initiale ni réinitialiser l’état.
+- [x] Préserver IDs, XP, complétions, tentatives et leur lisibilité.
 
 ### Étape 5 — inscription, onboarding et finish
 

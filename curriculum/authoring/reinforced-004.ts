@@ -1,7 +1,9 @@
-{
+import type { AuthorInput } from "./helpers";
+
+export const reviewedPilot: AuthorInput = {
   "public": {
     "id": "mvp-004",
-    "version": 1,
+    "version": 2,
     "title": "Comprendre let et const",
     "theory": [
       {
@@ -254,4 +256,4 @@
     }
   ],
   "xp": 20
-}
+};

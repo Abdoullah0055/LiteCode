@@ -1,5 +1,5 @@
 import { expect, it } from "vitest";
-import { readFileSync } from "node:fs";
+import curriculum from "../curriculum/original.fr.json";
 import {
   authoredActivitySchema,
   versionedDraftSchema,
@@ -9,9 +9,7 @@ import {
 import { gradeActivitySubmission, gradeInteraction } from "../src/lib/learning-grading";
 import { gradeProjectCompletion, gradeProjectStep } from "../src/lib/learning-workflow";
 
-const pilot = JSON.parse(
-  readFileSync("curriculum/pilot-mvp-004.json", "utf8"),
-);
+const pilot = authoredActivitySchema.parse(curriculum.lessons.find((lesson) => lesson.id === "mvp-004")!.activity);
 
 it("accepts the pilot as authored content while keeping the public DTO key-free", () => {
   expect(authoredActivitySchema.parse(pilot).public.id).toBe("mvp-004");
@@ -75,14 +73,18 @@ it("grades debug line and replacement together and rejects incomplete or unknown
 
 it("rejects malformed interaction definitions and oversized answers", () => {
   const duplicate = structuredClone(pilot);
-  duplicate.public.interactions[2].definition.options[1].id = "const";
+  const choice = duplicate.public.interactions[2].definition;
+  if (choice.kind !== "choice") throw new Error("Expected choice interaction");
+  choice.options[1].id = "const";
   expect(() => authoredActivitySchema.parse(duplicate)).toThrow();
   expect(gradeInteraction({ kind: "choice", mode: "single", options: [{ id: "a", label: "A" }, { id: "b", label: "B" }] }, { kind: "choice", accepted: [["a"]] }, { kind: "choice", selected: ["a"], extra: "x".repeat(5000) }).passed).toBe(false);
 });
 
 it("rejects author keys outside declared IDs and requires complete project step coverage", () => {
   const invalidKey = structuredClone(pilot);
-  invalidKey.grading[0].key.accepted[0].score = "not-a-category";
+  const classification = invalidKey.grading[0].key;
+  if (classification.kind !== "classify") throw new Error("Expected classification key");
+  classification.accepted[0].score = "not-a-category";
   expect(() => authoredActivitySchema.parse(invalidKey)).toThrow();
   const invalidProject = structuredClone(pilot);
   invalidProject.public.project = { steps: ["variable-roles", "score-trace"] };
@@ -97,7 +99,7 @@ it("defines a strict versioned answer envelope for the step 3 API", () => {
 });
 
 it("returns private explanations per submitted interaction and identifies stale versions", () => {
-  const result = gradeActivitySubmission(pilot, { version: 1, answers: {
+  const result = gradeActivitySubmission(pilot, { version: 2, answers: {
     "variable-roles": { kind: "classify", assignments: { prenom: "fixed", score: "changes" } },
     "score-trace": { kind: "trace", values: { start: "2", bonus: "5" } },
     "const-intention": { kind: "choice", selected: ["const"] },
@@ -105,13 +107,13 @@ it("returns private explanations per submitted interaction and identifies stale 
   expect(result.passed).toBe(true);
   expect(result.results.every((item) => item.explanation)).toBe(true);
   expect(JSON.stringify(result)).not.toContain("accepted");
-  expect(gradeActivitySubmission(pilot, { version: 2, answers: {} }).error).toBe("version_mismatch");
-  expect(gradeActivitySubmission(pilot, { version: 1, answers: { "variable-roles": { kind: "classify", assignments: { prenom: "fixed", score: "changes" } } } }).passed).toBe(false);
+  expect(gradeActivitySubmission(pilot, { version: 1, answers: {} }).error).toBe("version_mismatch");
+  expect(gradeActivitySubmission(pilot, { version: 2, answers: { "variable-roles": { kind: "classify", assignments: { prenom: "fixed", score: "changes" } } } }).passed).toBe(false);
 });
 
 it("accepts bounded incomplete versioned drafts without accepting incomplete submissions", () => {
   const draft = versionedDraftSchema.parse({
-    version: 1,
+    version: 2,
     currentStep: "variable-roles",
     answers: {
       "variable-roles": { kind: "classify", assignments: { prenom: "fixed" } },
@@ -121,7 +123,7 @@ it("accepts bounded incomplete versioned drafts without accepting incomplete sub
   });
   expect(draft.currentStep).toBe("variable-roles");
   expect(gradeActivitySubmission(pilot, {
-    version: 1,
+    version: 2,
     answers: { "variable-roles": { kind: "classify", assignments: { prenom: "fixed" } } },
   }).error).toBe("invalid_submission");
   expect(() => versionedDraftSchema.parse({ version: 1, answers: {}, passed: true })).toThrow();
@@ -130,13 +132,13 @@ it("accepts bounded incomplete versioned drafts without accepting incomplete sub
 it("grades one project step without an activity pass or reward and rechecks all saved steps", () => {
   const activity = structuredClone(pilot);
   activity.public.project = { steps: ["variable-roles", "score-trace", "const-intention"] };
-  const first = { version: 1, answers: {
+  const first = { version: 2, answers: {
     "variable-roles": { kind: "classify", assignments: { prenom: "fixed", score: "changes" } },
   } };
-  const second = { version: 1, answers: {
+  const second = { version: 2, answers: {
     "score-trace": { kind: "trace", values: { start: "2", bonus: "5" } },
   } };
-  const third = { version: 1, answers: {
+  const third = { version: 2, answers: {
     "const-intention": { kind: "choice", selected: ["const"] },
   } };
   const step = gradeProjectStep(activity, "variable-roles", first);
@@ -145,8 +147,8 @@ it("grades one project step without an activity pass or reward and rechecks all 
   expect(gradeProjectStep(activity, "unknown-step", first).error).toBe("invalid_step");
   expect(gradeProjectCompletion(activity, [first, second, third])).toMatchObject({ passed: true });
   expect(gradeProjectCompletion(activity, [first, second])).toMatchObject({ passed: false, error: "incomplete_project" });
-  expect(gradeProjectCompletion(activity, [first, { ...second, version: 2 }, third])).toMatchObject({ passed: false, error: "invalid_submission" });
-  expect(gradeProjectCompletion(activity, [first, second, { version: 1, answers: {
+  expect(gradeProjectCompletion(activity, [first, { ...second, version: 1 }, third])).toMatchObject({ passed: false, error: "invalid_submission" });
+  expect(gradeProjectCompletion(activity, [first, second, { version: 2, answers: {
     "const-intention": { kind: "choice", selected: ["let"] },
   } }])).toMatchObject({ passed: false });
 });

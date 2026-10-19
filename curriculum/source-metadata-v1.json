@@ -1,0 +1,2214 @@
+{
+  "modules": [
+    {
+      "id": "module-01",
+      "title": "Les bases de JavaScript",
+      "referenceBlock": "lecture-introduction-to-javascript"
+    },
+    {
+      "id": "module-02",
+      "title": "Chaînes de caractères et nombres",
+      "referenceBlock": "lecture-working-with-strings-in-javascript"
+    },
+    {
+      "id": "module-03",
+      "title": "Conditions et booléens",
+      "referenceBlock": "lecture-working-with-comparison-and-boolean-operators"
+    },
+    {
+      "id": "module-04",
+      "title": "Fonctions",
+      "referenceBlock": "lecture-working-with-functions"
+    },
+    {
+      "id": "module-05",
+      "title": "Tableaux",
+      "referenceBlock": "lecture-working-with-arrays"
+    },
+    {
+      "id": "module-06",
+      "title": "Boucles et itérations",
+      "referenceBlock": "lecture-working-with-loops"
+    },
+    {
+      "id": "module-07",
+      "title": "Structures de données",
+      "referenceBlock": "lecture-working-with-common-data-structures"
+    },
+    {
+      "id": "module-08",
+      "title": "Algorithmes et entretiens",
+      "referenceBlock": "quiz-data-structures-js"
+    },
+    {
+      "id": "module-09",
+      "title": "Git et travail d'équipe",
+      "referenceBlock": "lecture-introduction-to-git-and-github"
+    },
+    {
+      "id": "module-10",
+      "title": "Web, HTTP et APIs",
+      "referenceBlock": "lecture-understanding-the-http-request-response-model"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "mvp-001",
+      "moduleId": "module-01",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-002",
+      "moduleId": "module-01",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-001"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-003",
+      "moduleId": "module-01",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-002"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-004",
+      "moduleId": "module-01",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-003"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-005",
+      "moduleId": "module-01",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-004"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-006",
+      "moduleId": "module-01",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-005"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-007",
+      "moduleId": "module-01",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-006"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-008",
+      "moduleId": "module-01",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "introduction-to-javascript"
+      ],
+      "prerequisites": [
+        "mvp-007"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-009",
+      "moduleId": "module-02",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-008"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-010",
+      "moduleId": "module-02",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-009"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-011",
+      "moduleId": "module-02",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-010"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-012",
+      "moduleId": "module-02",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-011"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-013",
+      "moduleId": "module-02",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-012"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-014",
+      "moduleId": "module-02",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-013"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-015",
+      "moduleId": "module-02",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-014"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-016",
+      "moduleId": "module-02",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-strings-in-javascript"
+      ],
+      "prerequisites": [
+        "mvp-015"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-strings-in-javascript",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-strings-in-javascript",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-017",
+      "moduleId": "module-03",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-016"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-018",
+      "moduleId": "module-03",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-017"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-019",
+      "moduleId": "module-03",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-018"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-020",
+      "moduleId": "module-03",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-019"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-021",
+      "moduleId": "module-03",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-020"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-022",
+      "moduleId": "module-03",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-021"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-023",
+      "moduleId": "module-03",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-022"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-024",
+      "moduleId": "module-03",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-comparison-and-boolean-operators"
+      ],
+      "prerequisites": [
+        "mvp-023"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-comparison-and-boolean-operators",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-comparison-and-boolean-operators",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-025",
+      "moduleId": "module-04",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-024"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-026",
+      "moduleId": "module-04",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-025"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-027",
+      "moduleId": "module-04",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-026"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-028",
+      "moduleId": "module-04",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-027"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-029",
+      "moduleId": "module-04",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-028"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-030",
+      "moduleId": "module-04",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-029"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-031",
+      "moduleId": "module-04",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-030"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-032",
+      "moduleId": "module-04",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-functions"
+      ],
+      "prerequisites": [
+        "mvp-031"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-functions",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-functions",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-033",
+      "moduleId": "module-05",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-032"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-034",
+      "moduleId": "module-05",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-033"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-035",
+      "moduleId": "module-05",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-034"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-036",
+      "moduleId": "module-05",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-035"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-037",
+      "moduleId": "module-05",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-036"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-038",
+      "moduleId": "module-05",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-037"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-039",
+      "moduleId": "module-05",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-038"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-040",
+      "moduleId": "module-05",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-arrays"
+      ],
+      "prerequisites": [
+        "mvp-039"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-arrays",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-arrays",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-041",
+      "moduleId": "module-06",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-040"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-042",
+      "moduleId": "module-06",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-041"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-043",
+      "moduleId": "module-06",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-042"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-044",
+      "moduleId": "module-06",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-043"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-045",
+      "moduleId": "module-06",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-044"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-046",
+      "moduleId": "module-06",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-045"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-047",
+      "moduleId": "module-06",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-046"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-048",
+      "moduleId": "module-06",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-loops"
+      ],
+      "prerequisites": [
+        "mvp-047"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-loops",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-loops",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-049",
+      "moduleId": "module-07",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-048"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-050",
+      "moduleId": "module-07",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-049"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-051",
+      "moduleId": "module-07",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-050"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-052",
+      "moduleId": "module-07",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-051"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-053",
+      "moduleId": "module-07",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-052"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-054",
+      "moduleId": "module-07",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-053"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-055",
+      "moduleId": "module-07",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-054"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-056",
+      "moduleId": "module-07",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "working-with-common-data-structures"
+      ],
+      "prerequisites": [
+        "mvp-055"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-working-with-common-data-structures",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-working-with-common-data-structures",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-057",
+      "moduleId": "module-08",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-056"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-058",
+      "moduleId": "module-08",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-057"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-059",
+      "moduleId": "module-08",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-058"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-060",
+      "moduleId": "module-08",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-059"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-061",
+      "moduleId": "module-08",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-060"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-062",
+      "moduleId": "module-08",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-061"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-063",
+      "moduleId": "module-08",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-062"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-064",
+      "moduleId": "module-08",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "javascript",
+        "quiz-data-structures-js"
+      ],
+      "prerequisites": [
+        "mvp-063"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "quiz-data-structures-js",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/quiz-data-structures-js",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-065",
+      "moduleId": "module-09",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-064"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-066",
+      "moduleId": "module-09",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-065"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-067",
+      "moduleId": "module-09",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-066"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-068",
+      "moduleId": "module-09",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-067"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-069",
+      "moduleId": "module-09",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-068"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-070",
+      "moduleId": "module-09",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-069"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-071",
+      "moduleId": "module-09",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-070"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-072",
+      "moduleId": "module-09",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "beginner",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "introduction-to-git-and-github"
+      ],
+      "prerequisites": [
+        "mvp-071"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-introduction-to-git-and-github",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-introduction-to-git-and-github",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-073",
+      "moduleId": "module-10",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-072"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-074",
+      "moduleId": "module-10",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-073"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-075",
+      "moduleId": "module-10",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-074"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-076",
+      "moduleId": "module-10",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-075"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-077",
+      "moduleId": "module-10",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-076"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-078",
+      "moduleId": "module-10",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 8,
+      "xp": 20,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-077"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-079",
+      "moduleId": "module-10",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 5,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-078"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    },
+    {
+      "id": "mvp-080",
+      "moduleId": "module-10",
+      "course": "programmation-mobile-mvp",
+      "difficulty": "intermediate",
+      "estimatedDurationMinutes": 15,
+      "xp": 10,
+      "tags": [
+        "programming",
+        "general",
+        "understanding-the-http-request-response-model"
+      ],
+      "prerequisites": [
+        "mvp-079"
+      ],
+      "sourceReference": {
+        "kind": "topic-reference-not-reused-content",
+        "block": "lecture-understanding-the-http-request-response-model",
+        "structureUrl": "https://github.com/freeCodeCamp/freeCodeCamp/tree/main/curriculum/challenges/english/blocks/lecture-understanding-the-http-request-response-model",
+        "exactLessonSource": null
+      },
+      "license": "LicenseRef-LiteCode-Original",
+      "attribution": "Contenu original LiteCode ; aucune affiliation avec freeCodeCamp.",
+      "modifications": [
+        "Explications, exercices, exemples et tests originaux en français ; référence thématique seulement."
+      ]
+    }
+  ]
+}

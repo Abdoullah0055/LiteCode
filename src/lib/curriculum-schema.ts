@@ -1,84 +1,73 @@
 import { z } from "zod";
-export const testCaseSchema = z.object({
-  label: z.string().min(1),
-  args: z.array(z.unknown()),
-  expected: z.unknown(),
-  preserve_inputs: z.boolean().optional(),
-  require_new_array: z.boolean().optional(),
-});
-export const authoredLessonSchema = z.object({
+import { authoredActivitySchema } from "./learning-model";
+
+const moduleSchema = z.object({
+  id: z.string().regex(/^module-\d{2}$/),
+  title: z.string().trim().min(3),
+  referenceBlock: z.string().min(1),
+}).strict();
+
+const lessonSchema = z.object({
   id: z.string().regex(/^mvp-\d{3}$/),
   position: z.number().int().positive(),
-  moduleId: z.string(),
-  title: z.string().min(3),
-  type: z.enum([
-    "lesson",
-    "multiple_choice",
-    "quiz",
-    "fill_in_the_blank",
-    "coding_challenge",
-    "debugging_exercise",
-    "project",
-  ]),
-  body: z.string().min(80),
-  example: z.string(),
-  prompt: z.string().min(10),
-  xp: z.number().int().min(0).max(100),
+  type: z.enum(["lesson", "exercise", "project"]),
+  title: z.string().trim().min(3),
+  course: z.string().min(1),
+  moduleId: z.string().regex(/^module-\d{2}$/),
+  module: z.string().min(1),
+  language: z.literal("javascript"),
+  difficulty: z.enum(["beginner", "intermediate", "advanced"]),
   estimatedDurationMinutes: z.number().int().positive(),
-  prerequisites: z.array(z.string()),
-  hints: z.array(z.string().min(8)).min(2),
-  explanation: z.string().min(10),
-  license: z.literal("LicenseRef-LiteCode-Original"),
-  attribution: z.string(),
-  modifications: z.array(z.string()).min(1),
+  xp: z.number().int().min(0).max(100),
+  tags: z.array(z.string().min(1)),
+  prerequisites: z.array(z.string().regex(/^mvp-\d{3}$/)),
+  hints: z.array(z.string().trim().min(12).max(500)).min(2),
   sourceReference: z.object({
     kind: z.literal("topic-reference-not-reused-content"),
+    block: z.string().min(1),
     structureUrl: z.url(),
-  }),
-  choices: z.array(z.string()).min(2).optional(),
-  answer: z.string().optional(),
-  starter: z.string().optional(),
-  solution: z.string().optional(),
-  cases: z.array(testCaseSchema).min(3).optional(),
-  steps: z.array(z.string()).optional(),
-});
-export type AuthoredLesson = z.infer<typeof authoredLessonSchema>;
+    exactLessonSource: z.null(),
+  }).strict(),
+  license: z.literal("LicenseRef-LiteCode-Original"),
+  attribution: z.string().min(1),
+  modifications: z.array(z.string().min(1)).min(1),
+  activity: authoredActivitySchema,
+}).strict();
+
+export const authoredCurriculumSchema = z.object({
+  schemaVersion: z.literal(2),
+  modules: z.array(moduleSchema).length(10),
+  lessons: z.array(lessonSchema).length(80),
+}).strict();
+export type AuthoredLesson = z.infer<typeof lessonSchema>;
+
+const requiredProjects = new Set([
+  "mvp-008", "mvp-016", "mvp-024", "mvp-032", "mvp-040",
+  "mvp-048", "mvp-056", "mvp-064", "mvp-072", "mvp-080",
+]);
+
 export function validateCurriculum(input: unknown) {
-  const data = z
-    .object({
-      modules: z
-        .array(z.object({ id: z.string(), title: z.string() }))
-        .length(10),
-      lessons: z.array(authoredLessonSchema).length(80),
-    })
-    .parse(input);
+  const data = authoredCurriculumSchema.parse(input);
   const seen = new Set<string>();
-  const modules = new Set(data.modules.map((m) => m.id));
-  data.lessons.forEach((l, index) => {
-    if (seen.has(l.id) || l.position !== index + 1 || !modules.has(l.moduleId))
-      throw new Error(`Invalid identity/order: ${l.id}`);
-    if (l.prerequisites.some((id) => !seen.has(id)))
-      throw new Error(`Forward or missing prerequisite: ${l.id}`);
-    const code = ["coding_challenge", "debugging_exercise", "project"].includes(
-      l.type,
-    );
-    if (code ? !l.cases || !l.solution || !l.starter : !l.choices || !l.answer)
-      throw new Error(`Missing validation: ${l.id}`);
-    if (
-      !code &&
-      l.type !== "fill_in_the_blank" &&
-      !l.choices?.[Number(l.answer)]
-    )
-      throw new Error(`Missing correct option: ${l.id}`);
-    if (l.type === "fill_in_the_blank" && !l.choices?.includes(l.answer!))
-      throw new Error(`Invalid blank: ${l.id}`);
-    seen.add(l.id);
+  const modules = new Set(data.modules.map((module) => module.id));
+  const seenProjects = new Set<string>();
+  data.lessons.forEach((lesson, index) => {
+    if (lesson.id !== `mvp-${String(index + 1).padStart(3, "0")}` || lesson.position !== index + 1 || !modules.has(lesson.moduleId))
+      throw new Error(`Invalid curriculum identity/order: ${lesson.id}`);
+    if (lesson.activity.public.id !== lesson.id || lesson.activity.public.version !== 2 || lesson.activity.xp !== lesson.xp)
+      throw new Error(`Activity metadata mismatch: ${lesson.id}`);
+    if (lesson.prerequisites.some((id) => !seen.has(id)))
+      throw new Error(`Forward or missing prerequisite: ${lesson.id}`);
+    if (requiredProjects.has(lesson.id) !== (lesson.type === "project") || Boolean(lesson.activity.public.project) !== requiredProjects.has(lesson.id))
+      throw new Error(`Project identity mismatch: ${lesson.id}`);
+    if (lesson.activity.public.project) seenProjects.add(lesson.id);
+    seen.add(lesson.id);
   });
-  if (
-    data.modules.some(
-      (m) => data.lessons.filter((l) => l.moduleId === m.id).length !== 8,
-    )
-  )
-    throw new Error("Each module must contain 8 lessons");
+  if (new Set(data.modules.map(({ id }) => id)).size !== data.modules.length)
+    throw new Error("Module IDs must be unique");
+  if (data.modules.some((module) => data.lessons.filter((lesson) => lesson.moduleId === module.id).length !== 8))
+    throw new Error("Each module must contain 8 activities");
+  if (seenProjects.size !== requiredProjects.size)
+    throw new Error("The curriculum must contain exactly the ten guided projects");
   return data;
 }

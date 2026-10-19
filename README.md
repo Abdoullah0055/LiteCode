@@ -96,7 +96,7 @@ Voir [docs/EXECUTION.md](docs/EXECUTION.md) pour l’isolation, les limites et l
 corrigés originaux. Les corrigés ne sont pas chargés dans l’interface. Pour régénérer :
 
 ```powershell
-python scripts/author-curriculum.py
+npm run curriculum:author
 npm run curriculum:build
 ```
 
