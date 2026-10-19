@@ -7,7 +7,7 @@ test("real Supabase account, progress, duplicate XP and server verification", as
 }) => {
   test.skip(
     process.env.LITECODE_E2E_LIVE !== "1",
-    "Requires explicitly enabled dedicated hosted Supabase test project and runner.",
+    "Requires explicitly enabled dedicated hosted Supabase test project.",
   );
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   // Never write to a hosted project without matching its explicitly confirmed ref.
@@ -41,35 +41,47 @@ test("real Supabase account, progress, duplicate XP and server verification", as
     await expect(
       page.getByText("0 XP", { exact: false }).first(),
     ).toBeVisible();
-    const locked = await page.request.post("/api/lessons/mvp-004/attempt", {
-      data: { code: "function solve(n){return n+1}" },
+    const locked = await page.request.post("/api/learning/mvp-004/attempt", {
+      data: { version: 2, answers: {} },
     });
     expect(locked.status()).toBe(403);
-    for (const [lesson, answer] of [
-      ["mvp-001", "1"],
-      ["mvp-002", "1"],
-      ["mvp-003", "let"],
-    ]) {
+    const progressAnswers = [
+      ["mvp-001", { roles: { kind: "matching", pairs: [
+        { leftId: "structure", rightId: "html" },
+        { leftId: "appearance", rightId: "css" },
+        { leftId: "behavior", rightId: "js" },
+      ] } }],
+      ["mvp-002", { types: { kind: "classify", assignments: {
+        score: "number", code: "string", actif: "boolean", pseudo: "string",
+      } } }],
+      ["mvp-003", { declaration: { kind: "blanks", values: { points: "let", date: "const" } } }],
+    ] as const;
+    for (const [lesson, answers] of progressAnswers) {
       await page.goto(`/lesson/${lesson}`);
       await page
         .getByRole("link", {
-          name: /Vérifier ma compréhension|Passer à la pratique/,
+          name: /Commencer l’exercice interactif/,
         })
         .click();
-      const r = await page.request.post(`/api/lessons/${lesson}/attempt`, {
-        data: { answers: { [`${lesson}-q1`]: answer } },
+      const r = await page.request.post(`/api/learning/${lesson}/attempt`, {
+        data: { version: 2, answers },
       });
       expect(r.ok()).toBe(true);
       expect((await r.json()).passed).toBe(true);
     }
-    const first = await page.request.post("/api/lessons/mvp-004/attempt", {
-      data: { code: "function solve(n){return n+1}" },
+    const submission = { version: 2, answers: {
+      "variable-roles": { kind: "classify", assignments: { prenom: "fixed", score: "changes" } },
+      "score-trace": { kind: "trace", values: { start: "2", bonus: "5" } },
+      "const-intention": { kind: "choice", selected: ["const"] },
+    } };
+    const first = await page.request.post("/api/learning/mvp-004/attempt", {
+      data: submission,
     });
     expect(first.ok()).toBe(true);
     const result = await first.json();
     expect(result.xp).toBe(20);
-    const second = await page.request.post("/api/lessons/mvp-004/attempt", {
-      data: { code: "function solve(n){return n+1}" },
+    const second = await page.request.post("/api/learning/mvp-004/attempt", {
+      data: submission,
     });
     expect((await second.json()).xp).toBe(0);
     await page.goto(`/result/${result.attemptId}`);
@@ -78,7 +90,7 @@ test("real Supabase account, progress, duplicate XP and server verification", as
     ).toBeVisible();
     await page.goto("/profile");
     await expect(page.getByText("50", { exact: true })).toBeVisible();
-    const hidden = await request.get(`${url}/rest/v1/question_keys`, {
+    const hidden = await request.get(`${url}/rest/v1/interaction_keys`, {
       headers: { apikey: process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY! },
     });
     expect(hidden.ok()).toBe(false);

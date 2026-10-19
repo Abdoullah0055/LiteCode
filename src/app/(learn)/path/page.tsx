@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Lock, Check, Play } from "lucide-react";
 import { learningData } from "@/lib/data";
 import { isUnlocked } from "@/lib/domain";
-import { Back, Empty } from "@/components/ui";
+import { ActivityTypeIcon, Back, Empty } from "@/components/ui";
 import { Navigation } from "@/components/navigation";
 export default async function Path() {
   const data = await learningData();
@@ -62,8 +62,9 @@ export default async function Path() {
                         )}
                       </span>
                       <span>
-                        <span className="step-label">{l.title}</span>
+                        <span className="step-label"><ActivityTypeIcon type={l.type} /> {l.title}</span>
                         <span className="step-desc">
+                          {l.type === "project" ? "Projet guidé · " : "Exercice interactif · "}
                           {l.duration_minutes} min · {l.xp} XP
                         </span>
                         {current && (

@@ -9,8 +9,7 @@ Voir [IMPLEMENTATION_REPORT.md](IMPLEMENTATION_REPORT.md) pour la portée des pr
 
 ## Démarrer
 
-Prérequis : Node.js 22.12+ (Node 24 recommandé), npm et un projet Supabase.
-Le runner se lance directement avec Node.js. La base et l’authentification utilisent Supabase hébergé.
+Prérequis : Node.js 22.12+ (Node 24 recommandé), npm et un projet Supabase hébergé.
 
 ```powershell
 npm ci
@@ -31,8 +30,6 @@ Renseigner `.env.local` :
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Clé publique/publishable du projet |
 | `NEXT_PUBLIC_SITE_URL` | Origine canonique de l’application pour les courriels Auth (facultatif en développement) |
 | `SUPABASE_SERVICE_ROLE_KEY` | Clé service role, exclusivement serveur |
-| `RUNNER_URL` | URL privée du service de code ; en local `http://127.0.0.1:4001` |
-| `RUNNER_API_KEY` | Secret aléatoire de 32 caractères minimum, identique sur Next.js et le runner |
 
 Ne jamais préfixer les deux secrets serveur avec `NEXT_PUBLIC_`. Redémarrer le serveur
 après modification. En production, **reconstruire** l’application après configuration
@@ -81,22 +78,12 @@ la production. Les tests authentifiés créent leur compte de test déjà confir
 décochée, ses cookies expirent à la fermeture du navigateur. Les navigateurs peuvent restaurer
 des sessions après fermeture, donc cette option ne force pas une déconnexion.
 
-## Exécution JavaScript
+## Activités structurées
 
-Dans un **deuxième terminal**, définir `RUNNER_API_KEY` avec la même valeur que dans
-`.env.local`, puis lancer :
-
-```powershell
-# Définir $env:RUNNER_API_KEY dans ce terminal, puis :
-npm run runner
-```
-
-Le runner ne lit volontairement pas les secrets Supabase et n’a pas besoin de `.env.local`.
-Il écoute sur `127.0.0.1:4001`. Next.js lui envoie le code et les tests privés via une
-requête authentifiée. Sans runner configuré, les défis signalent l’indisponibilité et
-n’attribuent aucun XP. Les QCM et textes à trous restent évalués côté serveur.
-
-Voir [docs/EXECUTION.md](docs/EXECUTION.md) pour l’isolation, les limites et le lancement Node.js.
+Les exercices et projets utilisent des interactions structurées. Le serveur valide
+les réponses avec leurs définitions et clés privées; aucun code de l’apprenant n’est
+exécuté. Voir [docs/EXECUTION.md](docs/EXECUTION.md) pour les règles de correction,
+les limites, les tentatives, les XP et la reprise des brouillons.
 
 ## Programme et droits
 
@@ -128,14 +115,15 @@ npm audit
 
 `test:db` exécute la migration et le seed dans PostgreSQL embarqué PGlite : les RLS,
 permissions, prérequis et récompenses sont réellement exercés. Il n’émule pas Supabase Auth.
-Vitest exécute aussi les solutions de tous les défis dans QuickJS et teste le service HTTP.
+Vitest vérifie les 80 activités et les interactions structurées, y compris les réponses
+correctes et incorrectes, sans exécuter de code fourni par l’apprenant.
 
 Les tests navigateur construisent la production et la démarrent sur le port dédié **3107**.
 Ils vérifient 375, 390 et 430 px, les écrans publics, les erreurs de configuration et les
 protections. Les captures restent dans `test-results/` (ignoré par Git).
 
-Pour la recette authentifiée sur un **projet Supabase hébergé réservé aux tests** et un runner
-actif, injecter les cinq variables de `.env.example` dans le processus de test, puis :
+Pour la recette authentifiée sur un **projet Supabase hébergé réservé aux tests**, injecter
+les variables requises de `.env.example` dans le processus de test, puis :
 
 ```powershell
 $env:LITECODE_E2E_LIVE = '1'
@@ -151,11 +139,10 @@ Ces tests live n’ont pas été exécutés lors de la livraison, faute d’inst
 ## Architecture et règles
 
 - `src/app/` : pages serveur, actions de compte et routes API.
-- `src/components/` : composants visuels, navigation, éditeur et indices.
-- `src/lib/` : accès aux données, validations, règles et adaptateur d’exécution.
+- `src/components/` : composants visuels, navigation, interactions et indices.
+- `src/lib/` : accès aux données, validations et règles de correction.
 - `supabase/` : schéma normalisé, permissions et contenu de départ.
-- `runner/` : service isolé, déployé séparément de Next.js.
-- `tests/` : règles, contenu, limites, protocole et parcours navigateur.
+- `tests/` : règles, contenu, contrats de correction et parcours navigateur.
 
 La base reste la source de vérité. Le navigateur n’envoie ni XP ni état de réussite.
 Les réponses correctes et tests sont invisibles au rôle utilisateur. Seul le backend,
@@ -171,11 +158,7 @@ L’objectif quotidien est une préférence de durée, pas un faux chronomètre 
 ## Déploiement
 
 Next.js est déployé sur Vercel : https://litecode-mu.vercel.app.
-Le runner se déploie séparément comme processus Node.js sur un hôte compatible :
-commande de lancement `node runner/server.mjs`, variable `RUNNER_API_KEY`,
-`RUNNER_HOST=0.0.0.0` si l’hôte exige une écoute réseau et `PORT` selon son attribution.
-Configurer une entrée HTTPS vers le runner et renseigner cette URL dans `RUNNER_URL` sur Vercel.
-Configurer Supabase et les cinq variables avant `npm run build`, puis `npm run start`.
+Configurer Supabase et `NEXT_PUBLIC_SITE_URL` avant `npm run build`, puis `npm run start`.
 Configurer les URLs Auth et les modèles de courriel pour le domaine HTTPS final.
 Le manifeste, les icônes iOS et les zones de sécurité sont fournis pour l’ajout à l’écran
 d’accueil ; l’application nécessite une connexion pour les comptes et les leçons.

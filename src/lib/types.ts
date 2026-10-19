@@ -1,10 +1,6 @@
 export type ActivityType =
   | "lesson"
-  | "multiple_choice"
-  | "quiz"
-  | "fill_in_the_blank"
-  | "coding_challenge"
-  | "debugging_exercise"
+  | "exercise"
   | "project";
 export type Lesson = {
   id: string;
@@ -36,22 +32,6 @@ export type TestResult = {
   error?: string;
   actual?: unknown;
 };
-export type Question = {
-  id: string;
-  prompt: string;
-  kind: "choice" | "blank";
-  answer_options: {
-    id: string;
-    label: string;
-    value: string;
-    position: number;
-  }[];
-};
-export type Challenge = {
-  starter_code: string;
-  steps: string[];
-  language: string;
-};
 export type Settings = {
   goal: string;
   languages: string[];
@@ -66,7 +46,7 @@ export type Attempt = {
   status: string;
   results: TestResult[];
   created_at: string;
-  submission: { code?: string };
+  submission: unknown;
 };
 export type LearningData = {
   lessons: Lesson[];

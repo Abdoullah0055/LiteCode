@@ -53,17 +53,27 @@ test("protected data and mutations require configuration and a signed-in account
       name: configured ? "Heureux de te revoir !" : /Le parcours attend/,
     })).toBeVisible();
   }
-  for (const endpoint of ["attempt", "hint"]) {
-    const result = await request.post(`/api/lessons/mvp-001/${endpoint}`, {
-      data: { answers: { "mvp-001-q1": "1" } },
-    });
-    expect([401, 503]).toContain(result.status());
-  }
-  const forged = await request.post("/api/lessons/mvp-001/attempt", {
+  const legacyAttempt = await request.post("/api/lessons/mvp-001/attempt", {
+    data: { code: "function solve() {}" },
+  });
+  expect(legacyAttempt.status()).toBe(404);
+  const protectedAttempt = await request.post("/api/learning/mvp-001/attempt", {
+    data: { version: 2, answers: {} },
+  });
+  expect([401, 503]).toContain(protectedAttempt.status());
+  const protectedHint = await request.post("/api/lessons/mvp-001/hint", { data: {} });
+  expect([401, 503]).toContain(protectedHint.status());
+  const forged = await request.post("/api/learning/mvp-001/attempt", {
     headers: { Origin: "https://attacker.invalid" },
-    data: { passed: true, xp: 1000 },
+    data: { version: 2, answers: {} },
   });
   expect(forged.status()).toBe(403);
+});
+test("onboarding setup errors identify a missing migration", async ({ page }) => {
+  await page.goto("/setup?error=onboarding");
+  await expect(page.getByRole("heading", { name: "Une migration est nécessaire" })).toBeVisible();
+  await expect(page.locator(".error-notice")).toContainText("Ta session est active");
+  await expect(page.getByText(/variables sont volontairement vides|service JavaScript/i)).toHaveCount(0);
 });
 test("authentication forms, recovery and install manifest work", async ({
   page,

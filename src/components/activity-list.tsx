@@ -22,7 +22,7 @@ export async function ActivityList({
         <p className="intro">
           {projects
             ? "Assemble tes nouvelles compétences, une étape à la fois."
-            : "Du code, des questions et des petits déclics."}
+            : "Des interactions variées et des petits déclics."}
         </p>
         {!projects && (
           <Link href="/leaderboard" className="inline-link">
@@ -42,9 +42,7 @@ export async function ActivityList({
               <span className="eyebrow">
                 {projects
                   ? "🗂️ Projet guidé"
-                  : l.type === "debugging_exercise"
-                    ? "🐞 Debugging"
-                    : "⚡ Pratique"}
+                  : "🧩 Exercice interactif"}
               </span>
               <h2>{l.title}</h2>
               <p>

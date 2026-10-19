@@ -66,8 +66,8 @@ Checklist des huit étapes, actualisée après revue du contrôleur; les preuves
 
 ### Étape 6 — retrait du runner
 
-- [ ] Retirer des pages et routes d’apprentissage éditeurs libres, exécution et parcours de shell.
-- [ ] Garder les exercices structurés corrigés côté serveur et la lecture des anciennes tentatives.
+- [x] Retirer des pages et routes d’apprentissage éditeurs libres, exécution et parcours de shell.
+- [x] Garder les exercices structurés corrigés côté serveur et la lecture des anciennes tentatives.
 
 ### Étape 7 — revue
 

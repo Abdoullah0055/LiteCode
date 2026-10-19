@@ -8,18 +8,18 @@ test("same-origin browser submissions reach authentication while foreign origins
   const status = await page.evaluate(async () => {
     // A real browser supplies Origin, unlike APIRequestContext by default.
     // No session is sent, so this cannot write a learning attempt or grant XP.
-    const response = await fetch("/api/lessons/mvp-001/attempt", {
+    const response = await fetch("/api/learning/mvp-001/attempt", {
       method: "POST",
       credentials: "omit",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ answers: {} }),
+      body: JSON.stringify({ version: 2, answers: {} }),
     });
     return response.status;
   });
   expect([401, 503]).toContain(status);
-  const foreign = await request.post("/api/lessons/mvp-001/attempt", {
+  const foreign = await request.post("/api/learning/mvp-001/attempt", {
     headers: { Origin: "https://attacker.invalid" },
-    data: { answers: {} },
+    data: { version: 2, answers: {} },
   });
   expect(foreign.status()).toBe(403);
 });

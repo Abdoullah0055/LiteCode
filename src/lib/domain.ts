@@ -2,15 +2,6 @@ export function isUnlocked(prerequisites: string[], completed: string[]) {
   const done = new Set(completed);
   return prerequisites.every((id) => done.has(id));
 }
-export function gradeAnswers(
-  questions: { id: string; answer: string }[],
-  answers: Record<string, string>,
-) {
-  return (
-    questions.length > 0 &&
-    questions.every((q) => answers[q.id]?.trim() === q.answer)
-  );
-}
 export function streakAfter(
   last: string | null,
   current: number,

@@ -18,7 +18,7 @@ function request(
 describe("API origin protection", () => {
   it("accepts the actual loopback host even when Next.js normalizes its URL", () => {
     const r = request(
-      "http://127.0.0.1:3108/api/lessons/mvp-001/attempt",
+      "http://127.0.0.1:3108/api/learning/mvp-001/attempt",
       "http://127.0.0.1:3108",
     );
     expect(r.nextUrl.hostname).toBe("localhost");

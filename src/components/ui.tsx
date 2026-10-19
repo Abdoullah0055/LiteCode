@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Heart, X } from "lucide-react";
+import { ArrowLeft, BriefcaseBusiness, Heart, Puzzle, X } from "lucide-react";
 import type { ReactNode } from "react";
 export function ButtonLink({
   href,
@@ -108,4 +108,9 @@ export function ModuleIcon({ position }: { position: number }) {
       {marks[position - 1]}
     </span>
   );
+}
+
+export function ActivityTypeIcon({ type }: { type: "lesson" | "exercise" | "project" }) {
+  const Icon = type === "project" ? BriefcaseBusiness : Puzzle;
+  return <Icon size={16} aria-hidden="true" />;
 }
