@@ -1,15 +1,12 @@
 # LiteCode
 
-Application d’apprentissage JavaScript, en français, construite avec Next.js App Router,
-TypeScript strict, Tailwind et Supabase. 80 activités originales, 10 modules, 16 écrans.
+LiteCode est une application web en français pour apprendre JavaScript par étapes. Le parcours comprend 10 modules et 80 activités : des leçons, des exercices structurés et 10 projets guidés. Next.js fournit l’interface et les routes serveur; Supabase hébergé stocke les comptes et la progression. Les réponses structurées sont corrigées de façon déterministe côté serveur; aucun code de l’apprenant n’est exécuté.
 
-**État : implémentation livrée et vérifications locales effectuées. La recette intégrée
-avec Supabase reste à exécuter après configuration.** Les variables sont laissées vides.
-Voir [IMPLEMENTATION_REPORT.md](IMPLEMENTATION_REPORT.md) pour la portée des preuves.
+L’implémentation locale et ses contrôles sont décrits dans [IMPLEMENTATION_REPORT.md](IMPLEMENTATION_REPORT.md). La connexion à un projet Supabase, la livraison réelle des courriels et le déploiement de production restent à préparer.
 
-## Démarrer
+## Prérequis et démarrage
 
-Prérequis : Node.js 22.12+ (Node 24 recommandé), npm et un projet Supabase hébergé.
+Utiliser Node.js 22.12 ou plus récent (Node 24 recommandé), npm et un projet Supabase hébergé. Dans PowerShell :
 
 ```powershell
 npm ci
@@ -17,91 +14,69 @@ Copy-Item .env.example .env.local
 npm run dev
 ```
 
-Ouvrir http://127.0.0.1:3000. Si ce port est occupé : `npm run dev -- --port 3108`.
-L’accueil est public ; la création de compte précède l’onboarding, puis l’accueil reprend
-la dernière étape enregistrée. Les pages privées affichent la configuration requise si
-Supabase est absent. Aucun compte, XP ou classement fictif n’est créé.
+Ouvrir <http://127.0.0.1:3000>. Si ce port est occupé, démarrer avec `npm run dev -- --port 3108` et autoriser aussi ce callback local dans Supabase. L’accueil public ne nécessite pas de compte; les pages privées demandent une configuration Supabase. Aucun compte, XP ou classement fictif n’est créé.
 
-Renseigner `.env.local` :
+Renseigner les quatre variables de `.env.local` avec les valeurs du projet :
 
-| Variable | Valeur à fournir |
+| Variable | Usage |
 |---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | URL du projet Supabase |
-| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Clé publique/publishable du projet |
-| `NEXT_PUBLIC_SITE_URL` | Origine canonique de l’application pour les courriels Auth (facultatif en développement) |
-| `SUPABASE_SERVICE_ROLE_KEY` | Clé service role, exclusivement serveur |
+| `NEXT_PUBLIC_SUPABASE_URL` | URL de l’instance Supabase |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Clé publishable, utilisée par le client |
+| `NEXT_PUBLIC_SITE_URL` | Origine canonique de l’application pour les courriels Auth; facultative en développement, requise en production |
+| `SUPABASE_SERVICE_ROLE_KEY` | Clé serveur réservée aux opérations privilégiées; ne jamais l’exposer au navigateur |
 
-Ne jamais préfixer les deux secrets serveur avec `NEXT_PUBLIC_`. Redémarrer le serveur
-après modification. En production, **reconstruire** l’application après configuration
-des variables publiques, qui sont intégrées au build Next.js.
+Ne jamais placer la clé service role dans une variable `NEXT_PUBLIC_*`. Redémarrer le serveur après un changement local. Pour une mise en service, définir les variables publiques avant `npm run build`, car Next.js les intègre au build; `NEXT_PUBLIC_SITE_URL` doit être l’origine HTTPS canonique, sans chemin.
 
-## Base de données
+## Base Supabase
 
-Depuis le projet, connecter le CLI au projet Supabase hébergé puis appliquer le schéma
-et le contenu initial :
+Le projet suit des migrations versionnées dans `supabase/migrations/`. Une base existante conserve ses données : le CLI applique les migrations manquantes dans l’ordre et la migration du curriculum ajoute la version 2 des activités. Pour une base neuve, le même historique construit le schéma complet depuis la première migration. Les deux procédures commencent par une liaison explicite au projet voulu et une simulation :
 
 ```powershell
 npx supabase login
 npx supabase projects list
 npx supabase link --project-ref TON_PROJECT_REF
 npx supabase db push --linked --dry-run --skip-vault
-npx supabase db push --linked --include-seed --skip-vault
 ```
 
-Alternative pour un projet neuf : exécuter tous les fichiers `supabase/migrations/*.sql`
-par ordre de nom, puis `supabase/seed.sql`.
+Examiner la liste des migrations qui seraient appliquées et confirmer que la référence liée est celle attendue. Après cette revue, appliquer les migrations :
 
-Le seed est reproductible et utilise des upserts. La migration initiale ne doit être
-appliquée qu’une fois. Activer le fournisseur Email/Password dans Supabase Auth.
-Vérifier que le schéma `public` est exposé au Data API ; les grants et RLS sont fournis.
-Appliquer la migration avant de créer les comptes : le trigger crée leurs profils.
+```powershell
+npx supabase db push --linked --skip-vault
+```
 
-### Courriels et sessions
+Le dry-run affiche les migrations prévues; la seconde commande les applique au projet lié. Ces opérations n’ont pas été exécutées pendant le rework. `--skip-vault` évite toute synchronisation des secrets Vault, inutile ici. Le CLI applique les migrations manquantes dans l’ordre, aussi bien à une base existante qu’à une base neuve. La migration `20261019022914_learning_curriculum_v2.sql` contient le corpus nécessaire aux 80 activités; le seed généré à côté est reproductible et rejouable lorsque le contenu est identique. Si un environnement **de développement ou de staging** doit aussi exécuter le seed après ses migrations, utiliser `--include-seed` après avoir vérifié le dry-run. Le seed séparé est inutile pour cette mise à jour en production; ne pas utiliser `db reset` sur une base hébergée. Voir la [référence CLI Supabase pour db push](https://supabase.com/docs/reference/cli/supabase-db-push).
 
-Dans Auth → URL Configuration, définir le Site URL et ajouter à Redirect URLs les origines
-locale et de production suivies de `/auth/confirm` (par exemple
-`http://127.0.0.1:3000/auth/confirm` et `https://ton-domaine/auth/confirm`). En production,
-`NEXT_PUBLIC_SITE_URL` doit être l’origine HTTPS canonique, sans chemin. Le callback choisit
-la suite depuis l’état enregistré du compte; le paramètre `next` n’accepte que la destination
-interne de récupération de mot de passe.
-
-Conserver les modèles de courriel Supabase qui respectent `RedirectTo`, ou les adapter au SSR :
-
-- Confirmation : `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email`
-- Récupération : `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=recovery`
-
-Après récupération, la page Paramètres permet de modifier le mot de passe. Le handler
-accepte aussi un `code` PKCE. Les sessions utilisent des cookies ; le proxy les rafraîchit
-et les accès serveur vérifient `auth.getUser()`. Activer la confirmation de courriel pour
-la production. Les tests authentifiés créent leur compte de test déjà confirmé. La préférence
-« Se souvenir de cet appareil » est propre au navigateur et prolonge sa session jusqu’à 30 jours;
-décochée, ses cookies expirent à la fermeture du navigateur. Les navigateurs peuvent restaurer
-des sessions après fermeture, donc cette option ne force pas une déconnexion.
-
-## Activités structurées
-
-Les exercices et projets utilisent des interactions structurées. Le serveur valide
-les réponses avec leurs définitions et clés privées; aucun code de l’apprenant n’est
-exécuté. Voir [docs/EXECUTION.md](docs/EXECUTION.md) pour les règles de correction,
-les limites, les tentatives, les XP et la reprise des brouillons.
-
-## Programme et droits
-
-`curriculum/original.fr.json` contient les textes, exercices, questions, indices et
-corrigés originaux. Les corrigés ne sont pas chargés dans l’interface. Pour régénérer :
+Pour modifier le curriculum, éditer les sources dans `curriculum/authoring/`, puis produire les fichiers dérivés :
 
 ```powershell
 npm run curriculum:author
 npm run curriculum:build
 ```
 
-Les 80 IDs du plan fourni sont conservés. Deux titres ambigus de projets ont été clarifiés.
-Les références freeCodeCamp servent au classement thématique ; aucun corps de leçon,
-assertion, vidéo ou solution freeCodeCamp n’a été importé. Les originaux fournis restent
-dans `references/`. Le script fourni n’est pas exécuté pour télécharger du contenu.
-Voir [docs/CONTENT.md](docs/CONTENT.md).
+`npm run curriculum:author` compile les sources auteur et écrit `curriculum/original.fr.json`. Ensuite, `npm run curriculum:build` lit ce JSON et produit `supabase/seed.sql` et la migration de contenu. Revoir ces diff ensemble avant de proposer une migration. Les commandes n’appliquent rien à Supabase.
 
-## Tests
+## Authentification et courriels
+
+Dans **Supabase → Authentication → URL Configuration**, définir le Site URL au domaine HTTPS canonique de production et autoriser les callbacks de l’application. Les URL demandées par le code sont :
+
+- confirmation après inscription : `https://TON_DOMAINE/auth/confirm?next=onboarding`;
+- récupération de mot de passe : `https://TON_DOMAINE/auth/confirm?next=settings`.
+
+Pour le développement, autoriser les mêmes chemins sur `http://127.0.0.1:3000`; ajouter le port choisi, notamment `3107` pour la suite E2E publique ou `3108` si le serveur de développement a été déplacé. En production, autoriser les deux callbacks HTTPS sur le domaine exact. Supabase doit accepter ces URL de redirection; voir la [documentation des URL de redirection Supabase](https://supabase.com/docs/guides/auth/redirect-urls).
+
+Les modèles de courriel doivent préserver l’URL `RedirectTo` générée par l’application et y ajouter les paramètres de vérification. Comme `RedirectTo` contient déjà `?next=onboarding` ou `?next=settings`, les modèles token hash ajoutent `&token_hash={{ .TokenHash }}&type=email` pour une confirmation et `&token_hash={{ .TokenHash }}&type=recovery` pour une récupération. Supabase doit rediriger vers `/auth/confirm` avec ces paramètres. Pour PKCE, le callback accepte `code` et l’échange contre une session. Les paramètres de requête peuvent être dans un ordre différent. Configurer un SMTP de production et vérifier les modèles dans le tableau de bord; les tests locaux ne prouvent pas que les courriels hébergés sont effectivement livrés.
+
+L’inscription mène à l’onboarding seulement après la création du compte et la confirmation si Supabase l’exige. Une connexion reprend l’étape non terminée; les comptes présents avant la migration d’onboarding sont marqués comme déjà terminés. « Se souvenir de cet appareil » est sélectionné par défaut : les cookies de session sont prolongés jusqu’à 30 jours, sinon ce sont des cookies de session. La déconnexion locale supprime les cookies d’authentification de LiteCode et la préférence de cet appareil. Certains navigateurs peuvent restaurer les cookies de session après fermeture; cette préférence ne force donc pas une déconnexion.
+
+## Activités et provenance
+
+Les interactions évaluées sont le choix, l’association, le classement, l’ordre, les textes à trous, la trace de valeurs et le débogage guidé. Les projets composent ces interactions en étapes sauvegardées. Le serveur garde les clés, vérifie les prérequis et la version du contenu, et calcule les XP. Les corrections ne lancent jamais JavaScript ou des commandes shell. Les règles et limites figurent dans [docs/EXECUTION.md](docs/EXECUTION.md).
+
+Les XP sont uniques par compte et activité. Une activité réussie chaque jour UTC entretient la série; une reprise réussie peut compter pour la série sans rapporter de XP additionnel. Les badges suivent les seuils de 1, 8, 20 et 80 activités distinctes terminées.
+
+Le curriculum est original et conservé dans `curriculum/`; les fichiers fournis à l’origine restent dans `references/`. Les sources thématiques, crédits, attribution et modifications sont suivis dans les données et regroupés dans « Sources et crédits » des paramètres. Aucun corps de leçon, test ou solution freeCodeCamp n’a été repris. Voir [docs/CONTENT.md](docs/CONTENT.md).
+
+## Vérifications locales
 
 ```powershell
 npm run typecheck
@@ -109,59 +84,28 @@ npm run lint
 npm test
 npm run test:db
 npx playwright install chromium
+npm run test:e2e:mobile
 npm run test:e2e
-npm audit
+npm run build
 ```
 
-`test:db` exécute la migration et le seed dans PostgreSQL embarqué PGlite : les RLS,
-permissions, prérequis et récompenses sont réellement exercés. Il n’émule pas Supabase Auth.
-Vitest vérifie les 80 activités et les interactions structurées, y compris les réponses
-correctes et incorrectes, sans exécuter de code fourni par l’apprenant.
+`npm run test:db` utilise PostgreSQL embarqué PGlite pour exécuter les migrations et vérifier notamment le schéma, les droits, les prérequis et les récompenses. Cela ne teste pas Supabase Auth hébergé. `npm run test:e2e:mobile` utilise les vrais composants avec des fixtures de réponses locales aux largeurs 375, 390, 430 et 1440 px. `npm run test:e2e` construit la production avec les variables Supabase explicitement vides puis lance les E2E publics; ce script désactive toujours les tests live.
 
-Les tests navigateur construisent la production et la démarrent sur le port dédié **3107**.
-Ils vérifient 375, 390 et 430 px, les écrans publics, les erreurs de configuration et les
-protections. Les captures restent dans `test-results/` (ignoré par Git).
-
-Pour la recette authentifiée sur un **projet Supabase hébergé réservé aux tests**, injecter
-les variables requises de `.env.example` dans le processus de test, puis :
+Une recette Supabase live n’est permise que sur un projet de test dédié et explicitement identifié. Dans PowerShell, fournir les variables de ce projet puis construire et lancer uniquement le test live :
 
 ```powershell
+$env:NEXT_PUBLIC_SUPABASE_URL = 'URL_HTTPS_DU_PROJET_DE_TEST'
+$env:NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY = 'CLE_PUBLISHABLE_DU_PROJET_DE_TEST'
+$env:SUPABASE_SERVICE_ROLE_KEY = 'CLE_SERVICE_ROLE_DU_PROJET_DE_TEST'
+$env:NEXT_PUBLIC_SITE_URL = 'http://127.0.0.1:3107'
 $env:LITECODE_E2E_LIVE = '1'
-$env:LITECODE_E2E_TEST_PROJECT_REF = 'REFERENCE_DU_PROJET_DE_TEST'
-npm run test:e2e
+$env:LITECODE_E2E_TEST_PROJECT_REF = 'REFERENCE_EXACTE_DU_PROJET_DE_TEST'
+npm run build
+npx playwright test tests/e2e/live.spec.ts
 ```
 
-Le test exige une URL HTTPS correspondant exactement à la référence de test confirmée,
-puis crée/supprime uniquement son propre utilisateur. Ne pas viser le projet de production.
-Laisser `LITECODE_E2E_LIVE` absent pour la recette publique sans configuration.
-Ces tests live n’ont pas été exécutés lors de la livraison, faute d’instance configurée.
+Le garde exige `LITECODE_E2E_LIVE=1` et vérifie que l’URL correspond exactement à la référence du projet de test. Cette recette crée puis supprime son propre compte de test; ne pas la lancer contre la production. Le script `npm run test:e2e` vide toujours ces variables et ne peut pas servir à la recette live. Celle-ci n’a pas été exécutée pour ce rework.
 
-## Architecture et règles
+## Préparation de production
 
-- `src/app/` : pages serveur, actions de compte et routes API.
-- `src/components/` : composants visuels, navigation, interactions et indices.
-- `src/lib/` : accès aux données, validations et règles de correction.
-- `supabase/` : schéma normalisé, permissions et contenu de départ.
-- `tests/` : règles, contenu, contrats de correction et parcours navigateur.
-
-La base reste la source de vérité. Le navigateur n’envoie ni XP ni état de réussite.
-Les réponses correctes et tests sont invisibles au rôle utilisateur. Seul le backend,
-après vérification, peut appeler les RPC de tentative et de récompense. Une transaction
-verrouille le profil et garantit un événement XP unique par activité et utilisateur.
-
-Une réussite par jour **UTC** entretient la série ; une journée sans réussite la casse.
-Les reprises entretiennent la série mais ne redonnent pas de XP. Cinq cœurs représentent
-le budget d’erreurs du jour UTC ; à zéro, la pratique reste possible. Les badges récompensent
-1, 8, 20 et 80 activités terminées. Le classement hebdomadaire commence lundi à 00:00 UTC.
-L’objectif quotidien est une préférence de durée, pas un faux chronomètre d’apprentissage.
-
-## Déploiement
-
-Next.js est déployé sur Vercel : https://litecode-mu.vercel.app.
-Configurer Supabase et `NEXT_PUBLIC_SITE_URL` avant `npm run build`, puis `npm run start`.
-Configurer les URLs Auth et les modèles de courriel pour le domaine HTTPS final.
-Le manifeste, les icônes iOS et les zones de sécurité sont fournis pour l’ajout à l’écran
-d’accueil ; l’application nécessite une connexion pour les comptes et les leçons.
-Les données privées ne sont pas mises en cache hors ligne.
-
-Les variables Vercel restent à renseigner par le propriétaire, puis le déploiement à reconstruire.
+Avant la mise en service, préparer le projet Supabase, appliquer les migrations revues, configurer le fournisseur Email/Password, les URL et modèles Auth, un SMTP de production, puis les variables de déploiement. Après leur configuration, reconstruire l’application et vérifier le parcours avec un compte de test dédié. La présence d’un build réussi ne signifie pas que l’application est déployée ou opérationnelle. Le déploiement et toute mutation de la base hébergée sont hors du périmètre du présent rework.

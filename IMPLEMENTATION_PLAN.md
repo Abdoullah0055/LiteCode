@@ -1,8 +1,10 @@
 # LiteCode — Implementation plan
 
 > Archive du plan initial, rédigé avant la refonte pédagogique et le retrait du runner
-> (étape 6, 2026-10-19). Ses phases et preuves décrivent l’état antérieur. Pour le
-> fonctionnement actuel, voir `docs/EXECUTION.md` et les rapports `docs/plans/step-*.md`.
+> (étape 6, 2026-10-19). Ses phases, cases cochées et preuves sont historiques et ne
+> constituent pas la checklist active du rework. Pour l’état courant et ses limites,
+> voir `IMPLEMENTATION_REPORT.md`, `docs/EXECUTION.md` et le ledger
+> `docs/plans/learning-rework-progress.md`.
 
 ## Architecture and decisions
 Next.js App Router / strict TypeScript / Tailwind. Supabase cookie authentication,

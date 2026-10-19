@@ -1,111 +1,39 @@
-# LiteCode — Rapport de livraison
+# Rapport d’implémentation LiteCode
 
-## Statut
+Date : 19 octobre 2026. Ce rapport décrit le rework pédagogique et l’application dans son état local à la fin des huit étapes, après revue du contrôleur. Le build et les contrôles locaux ne signifient pas que Supabase, les courriels ou l’application ont été mis en service.
 
-**Implémentation locale livrée ; recette Supabase de bout en bout non validée.**
-Le MVP ne peut pas être déclaré entièrement terminé au sens de la Definition of Done
-tant que les comptes et parcours authentifiés n’ont pas été exécutés sur Supabase.
-Les variables de `.env.local` et `.env.example` restent vides, comme demandé.
-Aucun projet distant ni dépôt freeCodeCamp n’a été modifié.
+## Livré
 
-## Ce qui est implémenté
+- Parcours en français de 10 modules et 80 activités; IDs, XP historiques, prérequis et données de progression conservés.
+- Théorie réorganisée avec titres, exemples lisibles et résultats affichés. Les mentions de provenance répétées au bas des activités ont été retirées; les crédits et URL sources restent dans les données et la page « Sources et crédits ».
+- Sept interactions structurées et 10 projets guidés à étapes. Les clés restent privées; le serveur corrige les réponses et calcule les récompenses. Le code de l’apprenant n’est jamais exécuté.
+- Sauvegarde et reprise des brouillons versionnés. Une version périmée est rejetée avec HTTP 409. La finalisation d’un projet revalide toutes les étapes; les sauvegardes intermédiaires ne donnent pas de XP et une activité réussie ne récompense qu’une fois.
+- Inscription avec confirmation du mot de passe, confirmation par courriel lorsque Supabase l’exige, onboarding persistant et finish illustré. Reprise des étapes incomplètes, migration de complétion des comptes existants, préférence de cookies de session jusqu’à 30 jours et déconnexion locale.
+- Retrait du runner et des anciens éditeurs d’apprentissage. Les résultats historiques restent lisibles depuis leur instantané.
+- Corpus source, génération de migration additive et seed reproductible; documentation des interactions, provenance, Auth et préparation de la base.
 
-| Écran | Route / interaction |
-|---|---|
-| Bienvenue | `/` |
-| Objectifs | `/onboarding/objectives` |
-| Langages | `/onboarding/languages` ; JavaScript disponible, autres explicitement à venir |
-| Accueil | `/home`, reprise du premier exercice incomplet, XP et série stockés |
-| Parcours | `/path`, 10 modules, 80 étapes et prérequis |
-| Explication | `/lesson/[id]`, texte original, exemple et consigne |
-| Éditeur | `/exercise/[id]`, coloration, brouillon persistant, exécution réelle |
-| Résultat | `/result/[id]`, tentative appartenant à l’utilisateur et XP effectivement attribué |
-| QCM / quiz | `/exercise/[id]`, questions et options dynamiques, correction serveur |
-| Texte à trous | `/exercise/[id]`, sélection et validation côté serveur |
-| Debugging | `/exercise/[id]`, code erroné à réparer, tests exécutés |
-| Indices | dialogue accessible et `/hints/[id]`, révélation et restauration persistantes |
-| Projet guidé | `/projects` puis `/exercise/[id]`, étapes vérifiées par les cas de test |
-| Profil | `/profile`, statistiques et badges issus de la base |
-| Classement | `/leaderboard`, agrégat SQL réel, semaine UTC ou global, participation facultative |
-| Paramètres | `/settings`, objectif, durée cible, thème, son, classement, nom, mot de passe, déconnexion |
+## Vérifications locales consignées à l’étape 7
 
-Composants React séparés, pages serveur, cookies SSR Supabase, Zod, états vides/erreurs,
-zones de sécurité iPhone, actions tactiles et manifeste d’installation avec icônes.
-Le style et la mascotte proviennent du prototype fourni ; les valeurs et interactions
-simulées du prototype ne servent jamais de données utilisateur.
+- `npm test` : **64 tests dans 16 fichiers réussis**.
+- `npm run test:db` : **45 contrôles PostgreSQL réussis avec PGlite**; les scripts exécutent réellement les migrations et le seed dans PostgreSQL embarqué.
+- Harness UI : **20/20 réussis** sous Chromium, avec les vrais composants, des réponses de fixture et les largeurs 375, 390, 430 et 1440 px.
+- `npm run test:e2e` : build réussi, **19 E2E publics réussis et 5 ignorés**. Les cinq ignorés sont les trois tests Auth/Supabase live et deux captures du prototype à 375 et 430 px; la capture à 390 px a réussi.
+- `npm run typecheck`, `npm run lint` et `npm run build` : réussis.
+- Les captures accueil/prototype, interactions, théorie 004 et finish à 390 px ont été ouvertes et inspectées.
 
-Les 80 activités ont des explications, consignes, exemples et indices originaux en
-français. Les lectures imposent une question de compréhension. Les 30 défis de code,
-debugging et projets possèdent des corrigés de référence et au moins trois tests chacun.
-Les tests et bonnes réponses sont dans des tables sans accès utilisateur.
-Les références thématiques et adaptations sont suivies ; aucun corps freeCodeCamp importé.
+Le harness UI répond à des endpoints fictifs locaux : il vérifie les interactions du navigateur, pas Auth ni la persistance Supabase. Les contrôles PGlite portent sur PostgreSQL et les migrations locales, pas sur une instance distante. La recette mobile utilise Chromium avec émulation tactile; elle ne remplace pas Safari sur appareil physique. Les résultats détaillés et correctifs sont consignés dans [les rapports d’étape 2 à 7](docs/plans/).
 
-Le schéma contient toutes les tables demandées, plus `question_keys` pour séparer les
-corrections. Toutes les tables publiques ont RLS. Les RPC de tentative, récompense et
-classement sont réservées au service role. Les clés serveur n’entrent pas dans les
-composants client. Les écritures sensibles vérifient la session et les prérequis.
+## Non exécuté et dépendances de mise en service
 
-L’exécution utilise un service séparé avec QuickJS WASM, sans APIs hôte, et des limites
-de heap, pile, temps, taille et concurrence. L’apprenant ne décide jamais de la réussite.
-Les XP, progression, série et badges sont traités transactionnellement en PostgreSQL.
+- Aucun test Supabase hébergé ni compte distant n’a été utilisé; les tests live ont été ignorés par leur garde.
+- La livraison effective des courriels, SMTP, Site URL, URL de redirection et modèles de confirmation/récupération n’a pas été testée.
+- Les nouvelles migrations, y compris la migration du curriculum et celle d’onboarding, n’ont pas été appliquées au projet Supabase hébergé.
+- Aucun déploiement ni contrôle de l’application en production n’a été effectué.
+- Safari/iPhone physique n’a pas été testé.
+- `.env.local` n’a pas été lu ni modifié. Les quatre valeurs de `.env.example` sont vides; ce fait ne permet pas de conclure sur le contenu d’un fichier local ignoré.
 
-## Vérifié localement
+Avant la mise en service, le propriétaire doit sélectionner et lier le bon projet Supabase, examiner le dry-run documenté dans le README, appliquer les migrations revues qui contiennent déjà le curriculum, configurer le fournisseur Email/Password, les callbacks autorisés, les modèles qui préservent `RedirectTo`, le SMTP et les quatre variables documentées dans `.env.example`. Il faut ensuite reconstruire après configuration des variables publiques, déployer par le processus du projet et valider Auth avec un compte de test dédié. Ces opérations distantes restent hors de ce rework.
 
-| Vérification | Résultat |
-|---|---|
-| TypeScript strict | Passe |
-| ESLint | Passe, sans avertissement de code |
-| Vitest | **14 tests passent** |
-| PostgreSQL PGlite | **27 vérifications passent**, migration et seed réels |
-| Playwright, 375 / 390 / 430 px | **12 passent ; 3 live non exécutés**, configuration requise |
-| Build Next.js production | Passe |
-| Audit npm | **0 vulnérabilité** au contrôle de livraison |
+## Historique
 
-Les tests Vitest exécutent réellement les solutions de référence contre les tests
-des 30 activités de code, puis vérifient qu’une solution vide échoue. Ils couvrent aussi
-les types de résultats, les limites, l’absence de réseau/Node, l’authentification HTTP
-du service, les prérequis, la correction de réponses et la sérialisation des brouillons.
-
-PostgreSQL vérifie les autorisations anon/authenticated/service_role, l’isolation entre
-comptes, l’inaccessibilité des corrections, les refus d’écriture directe, les activités
-verrouillées, les reprises sans double XP, la progression persistante, les badges,
-les séries UTC, le classement et le maintien des données après réapplication du seed.
-PGlite n’est pas un test du service Supabase Auth ou du transport PostgREST.
-
-Les tests navigateur couvrent l’accueil, les deux étapes d’onboarding, les formulaires
-d’authentification, la récupération, le manifeste, les icônes, les routes protégées sans
-configuration et le refus d’origine étrangère. Les captures accueil/objectifs/langages
-ont été inspectées et comparées au HTML fourni. La comparaison des pages authentifiées
-avec leurs données réelles reste à faire après configuration.
-
-La revue indépendante a identifié deux défauts corrigés et couverts par régression :
-ordre des sauvegardes de code et contrôle de non-mutation des entrées de `mvp-036`.
-
-## Non vérifié / blocages externes
-
-1. **Supabase non configuré** : pas de validation réelle de l’inscription, du courriel,
-   de la récupération, du rafraîchissement de session ou de PostgREST. Les tests live
-   sont fournis, mais leurs trois déclinaisons iPhone sont explicitement désactivées
-   tant que `LITECODE_E2E_LIVE=1`, la référence du projet de test hébergé et les
-   variables de connexion ne sont pas configurés.
-2. **Runner distant non configuré** : le moteur et le service HTTP ont été exécutés
-   et testés en processus séparés sous Node. Le processus Node.js de production et
-   les restrictions système restent à vérifier sur l’hôte choisi.
-3. **Appareil iOS physique et déploiement** : clavier natif, installation PWA, zones
-   de sécurité matérielles et réseau de production non testés. Les tests réalisés
-   utilisent Chromium avec dimensions et interactions tactiles mobiles.
-
-Pour lever ces blocages : suivre README.md, appliquer migration et seed sur Supabase,
-configurer les cinq variables, lancer le runner, reconstruire Next.js, puis exécuter
-la suite live sur un projet Supabase hébergé dédié aux tests. Aucun secret n’est requis dans Git.
-
-## Limites explicites du MVP
-
-- JavaScript synchrone seulement ; aucun environnement Python, SQL, Node ou DOM.
-- Projets guidés de fonctions et de données, pas d’application navigateur multi-fichier.
-- Pas de notifications push ni de cache hors ligne des données privées.
-- Objectif quotidien exprimé en minutes préférées ; pas de faux suivi de temps effectif.
-- Les tests établissent une réussite sur leurs cas ; pas de certification formelle ou
-  d’anti-triche avancée. Voir docs/EXECUTION.md pour la frontière de sécurité.
-- Les droits des contenus freeCodeCamp restent non vérifiés, mais leur republication
-  n’est pas nécessaire au fonctionnement : le programme livré est original.
+`IMPLEMENTATION_PLAN.md` est conservé comme archive du plan initial de l’application; ses cases et preuves ne décrivent pas le rework courant. Le plan, la checklist active et les preuves par étape se trouvent dans [`docs/plans/2026-10-18-learning-rework.md`](docs/plans/2026-10-18-learning-rework.md), le ledger et les rapports datés. L’étape 8 consigne la mise à jour documentaire relue par le contrôleur.

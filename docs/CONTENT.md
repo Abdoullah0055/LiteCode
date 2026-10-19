@@ -1,49 +1,38 @@
-# Provenance du programme
+# Contenu et provenance
 
-Les sept fichiers fournis ont été préservés dans `references/`. Ils constituent des
-données et références de travail, pas des instructions qui remplacent la mission.
-Le rapport suggérait Expo ; la demande explicite impose Next.js, utilisé ici.
+## Corpus actif
 
-Le catalogue est `metadata-only` : 80 enregistrements sans corps de leçon, instructions,
-starter code ni tests portables. Les chemins du manifeste correspondent aux sources
-du catalogue. Le programme distinct propose 10 modules de 8 activités et des prérequis
-séquentiels. Son champ `rights` demande de rédiger des explications et exercices neufs.
+Le curriculum actif est la version 2 de `curriculum/original.fr.json` : 80 activités en français, réparties en 10 modules de 8. Les IDs `mvp-001` à `mvp-080`, l’ordre, les prérequis et les XP historiques sont conservés. Le corpus comprend 70 exercices et 10 projets guidés : `mvp-008`, `016`, `024`, `032`, `040`, `048`, `056`, `064`, `072` et `080`.
 
-## Contenu livré
+Les leçons présentent une notion, un exemple et son résultat. Les exercices font reconnaître, appliquer ou tracer une règle. Les projets réutilisent plusieurs interactions sans demander un programme complet. Les sept interactions évaluées sont :
 
-Les 80 activités de `curriculum/original.fr.json` contiennent du matériel original en
-français : explication, exemple, consigne, validation, feedback et deux indices. Les
-lectures comprennent une question de compréhension avant validation. Les défis et projets
-comportent au moins trois cas exécutables, dont des limites appropriées au sujet.
+| Interaction | Travail demandé |
+|---|---|
+| Choix simple ou multiple | Sélectionner une ou plusieurs réponses |
+| Association | Relier des éléments de deux listes |
+| Classement | Répartir les éléments dans des catégories |
+| Ordre | Remettre des étapes dans l’ordre |
+| Texte à trous | Compléter des valeurs ou extraits balisés |
+| Trace | Suivre les valeurs d’un exemple étape par étape |
+| Débogage guidé | Choisir une ligne et un remplacement proposés |
 
-Les types du plan sont conservés. Deux intitulés ont été clarifiés, car leur type était
-`project` alors que leur titre indiquait un quiz :
+Un projet guidé combine ces interactions en étapes, dans un ordre déterminé. Il ne s’agit pas d’une huitième famille de saisie indépendante. Aucune activité ne demande d’écrire ou lancer du code libre. Les extraits JavaScript sont affichés comme texte. Les notions de Git et HTTP s’étudient par interprétation; aucune commande shell ni requête réseau arbitraire n’est exécutée.
 
-- `mvp-008` : « Mini-quiz : premiers concepts » → « Projet : profil de joueur ».
-- `mvp-056` : « Quiz : choisir la bonne structure » → « Projet : compteur de fréquences ».
+Chaque activité possède deux indices progressifs. Ses définitions publiques sont séparées des clés de correction privées. La version du contenu accompagne les réponses et les brouillons; après publication d’une nouvelle version, une réponse basée sur une ancienne version doit être rechargée. L’historique garde les résultats enregistrés tels quels et ne regrade pas les anciennes tentatives.
 
-L’infrastructure accepte aussi plusieurs questions pour une activité `quiz`. Le plan
-fourni ne contient pas d’activité portant littéralement ce type ; les contrôles de
-compréhension et QCM sont évalués par le même système de questions normalisé.
+Les sources d’auteur vivent sous `curriculum/authoring/`. `curriculum/original.fr.json` est la sortie canonique utilisée pour bâtir `supabase/seed.sql` et `supabase/migrations/20261019022914_learning_curriculum_v2.sql` :
 
-Les activités Git codent des commandes et des règles sous forme de données JavaScript,
-avec un contrat explicite ; elles n’affirment pas exécuter un shell. Les activités API
-traitent des objets et du JSON ; elles n’envoient pas de requêtes arbitraires depuis la VM.
+```powershell
+npm run curriculum:author
+npm run curriculum:build
+```
 
-## Droits
+La compilation est déterministe. La migration de contenu est additive et garde les anciennes tentatives, complétions et XP. Pour le déploiement, appliquer d’abord les migrations du schéma dans l’ordre, puis la migration v2; le seed reproductible est appliqué après les migrations. Les validations PGlite locales ne prouvent pas que ces fichiers ont été appliqués à une base hébergée.
 
-`LicenseRef-LiteCode-Original` est un identifiant de provenance interne pour le matériel
-créé spécifiquement pour ce projet. Il ne prétend pas appliquer une licence freeCodeCamp
-ni attribuer au projet un statut open source. Le propriétaire du projet peut choisir sa
-politique de publication pour ce nouveau contenu.
+## Crédits et changements
 
-Aucun corps Markdown, média, test ou solution freeCodeCamp n’a été téléchargé ou repris.
-Les URLs conservées sont des références thématiques, sans correspondance prétendue
-avec un exercice source précis. Les textes affichés indiquent l’absence d’affiliation.
-Le statut `UNVERIFIED_CURRICULUM_RIGHTS` reste intact dans les références fournies.
-L’application fonctionne avec son propre contenu et ne dépend pas de la clarification
-de ces droits tiers. Une réutilisation future du corpus source nécessitera son audit.
+Les fichiers transmis comme références initiales sont préservés dans `references/`. Le catalogue fourni sert de repère thématique; il ne fournit pas de corps de leçon, de tests portables ou de solutions à réutiliser. Le code fourni demande un matériel original. Aucun corps de leçon, assertion, vidéo ou solution de freeCodeCamp n’a été importé.
 
-La mascotte vectorielle, les couleurs et les styles visuels sont adaptés du prototype
-fourni par l’utilisateur. Les comportements simulés, valeurs XP et classements du
-prototype n’ont pas été réutilisés comme données d’application.
+Pour chaque activité, les métadonnées de source et de droits sont conservées dans le curriculum canonique et sa projection en base : licence interne, attribution, URL de référence, prérequis et modifications apportées. Les URL de référence restent aussi dans les données qui soutiennent le classement thématique. Cette licence interne décrit la provenance du contenu écrit pour LiteCode; elle n’accorde pas de licence sur les sources tierces et ne déclare pas le projet open source. Les crédits consultables sont regroupés dans « Sources et crédits » dans les paramètres.
+
+Les modifications au contenu doivent être faites dans les sources d’auteur, pas directement dans le seed généré. Avant de publier un changement, revoir le JSON canonique, le seed et la migration générés, vérifier la version du curriculum et conserver les données historiques. Les versions déjà publiées sont immuables : une évolution du contenu s’enregistre sous une nouvelle version. Le rapport [IMPLEMENTATION_REPORT.md](../IMPLEMENTATION_REPORT.md) distingue les contrôles locaux effectués des opérations de mise en service restantes.

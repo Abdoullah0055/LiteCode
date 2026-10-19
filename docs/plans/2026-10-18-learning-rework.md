@@ -77,9 +77,9 @@ Checklist des huit étapes, actualisée après revue du contrôleur; les preuves
 
 ### Étape 8 — documentation et rapport
 
-- [ ] Documenter modèle, interactions, onboarding, migration et XP.
-- [ ] Produire rapport des changements et limites.
-- [ ] Mentionner uniquement les contrôles réellement exécutés et leurs résultats.
+- [x] Documenter modèle, interactions, onboarding, migration et XP.
+- [x] Produire rapport des changements et limites.
+- [x] Mentionner uniquement les contrôles réellement exécutés et leurs résultats.
 
 ## Matrice des 80 activités
 
