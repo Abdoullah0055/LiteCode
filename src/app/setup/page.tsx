@@ -1,5 +1,13 @@
 import { Back, ButtonLink } from "@/components/ui";
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const params = await searchParams;
+  const error = params.error === "onboarding"
+    ? "La progression d’accueil ne peut pas être chargée. Vérifie que toutes les migrations locales sont appliquées."
+    : null;
   return (
     <div className="app-shell">
       <main className="page-content">
@@ -10,6 +18,7 @@ export default function Page() {
           Les variables sont volontairement vides. Pour utiliser les comptes, le
           programme et la progression :
         </p>
+        {error && <p className="error-notice" role="alert">{error}</p>}
         <ol className="lesson-copy" style={{ paddingLeft: 20 }}>
           <li>Copie .env.example vers .env.local.</li>
           <li>Renseigne l’URL, la clé publique et la clé serveur Supabase.</li>

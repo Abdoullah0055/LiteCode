@@ -57,12 +57,12 @@ Checklist des huit étapes, actualisée après revue du contrôleur; les preuves
 
 ### Étape 5 — inscription, onboarding et finish
 
-- [ ] Inscription avec confirmation de mot de passe et confirmation par courriel si Supabase la demande.
-- [ ] Ordre : signup, confirmation si requise, objectifs, langues, finish.
-- [ ] Stocker étape d’onboarding et completed en base; backfill completed pour les comptes existants.
-- [ ] Connexion habituelle directe à l’accueil; nouvel inscrit reprend l’étape incomplète.
-- [ ] « Mémoriser cet appareil » coché par défaut : cookie glissant 30 jours; sinon cookie de session. Cohérence avec proxy, callback et déconnexion. Aucun stockage de mot de passe.
-- [ ] Finish soigné dans le style du robot existant, avec un CTA unique.
+- [x] Inscription avec confirmation de mot de passe et confirmation par courriel si Supabase la demande.
+- [x] Ordre : signup, confirmation si requise, objectifs, langues, finish.
+- [x] Stocker étape d’onboarding et completed en base; backfill completed pour les comptes existants.
+- [x] Connexion habituelle directe à l’accueil; nouvel inscrit reprend l’étape incomplète.
+- [x] « Mémoriser cet appareil » coché par défaut : cookie glissant 30 jours; sinon cookie de session. Cohérence avec proxy, callback et déconnexion. Aucun stockage de mot de passe.
+- [x] Finish soigné dans le style du robot existant, avec un CTA unique. Recette visuelle complète à l'étape7.
 
 ### Étape 6 — retrait du runner
 

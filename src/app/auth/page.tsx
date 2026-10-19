@@ -1,12 +1,20 @@
 import { AuthForm } from "@/components/auth-form";
 import { Back } from "@/components/ui";
 import { configured } from "@/lib/supabase/server";
+import { redirect } from "next/navigation";
+import { supabase } from "@/lib/supabase/server";
+import { postAuthDestination } from "@/lib/data";
 export default async function Page({
   searchParams,
 }: {
   searchParams: Promise<{ mode?: string; error?: string }>;
 }) {
   const p = await searchParams;
+  if (configured()) {
+    const db = await supabase();
+    const { data: { user } } = await db.auth.getUser();
+    if (user) redirect(await postAuthDestination(db, user.id));
+  }
   const mode =
     p.mode === "signup" ? "signup" : p.mode === "reset" ? "reset" : "login";
   return (

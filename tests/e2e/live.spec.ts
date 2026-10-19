@@ -31,7 +31,12 @@ test("real Supabase account, progress, duplicate XP and server verification", as
     await page
       .getByRole("button", { name: "Se connecter", exact: true })
       .click();
-    await page.getByRole("button", { name: "Allons-y" }).click();
+    await expect(page.getByRole("heading", { name: "Quel est ton objectif ?" })).toBeVisible();
+    await page.getByRole("button", { name: "Continuer", exact: true }).click();
+    await expect(page.getByRole("heading", { name: /Quel langage/ })).toBeVisible();
+    await page.getByRole("button", { name: "Continuer", exact: true }).click();
+    await expect(page.getByRole("button", { name: "Commencer mon parcours" })).toBeVisible();
+    await page.getByRole("button", { name: "Commencer mon parcours" }).click();
     await expect(page).toHaveURL(/\/home$/);
     await expect(
       page.getByText("0 XP", { exact: false }).first(),

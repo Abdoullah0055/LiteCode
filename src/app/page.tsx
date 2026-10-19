@@ -1,7 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui";
-export default function Welcome() {
+import { configured, supabase } from "@/lib/supabase/server";
+import { postAuthDestination } from "@/lib/data";
+import { redirect } from "next/navigation";
+export default async function Welcome() {
+  if (configured()) {
+    const db = await supabase();
+    const { data: { user } } = await db.auth.getUser();
+    if (user) redirect(await postAuthDestination(db, user.id));
+  }
   return (
     <div className="app-shell">
       <main className="welcome screen-page">
@@ -40,7 +48,7 @@ export default function Welcome() {
           <span className="spark s3">✷</span>
         </div>
         <div className="bottom">
-          <ButtonLink href="/onboarding/objectives">Commencer</ButtonLink>
+          <ButtonLink href="/auth?mode=signup">Commencer</ButtonLink>
           <p className="login-note">
             Déjà un compte ? <Link href="/auth">Se connecter</Link>
           </p>

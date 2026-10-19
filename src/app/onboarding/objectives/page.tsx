@@ -1,4 +1,6 @@
 import { Objectives } from "@/components/onboarding";
-export default function Page() {
-  return <Objectives />;
+import { requireOnboardingStep } from "@/lib/data";
+export default async function Page() {
+  const { settings } = await requireOnboardingStep("objectives");
+  return <Objectives initialGoal={settings.goal} />;
 }

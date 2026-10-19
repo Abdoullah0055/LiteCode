@@ -7,10 +7,12 @@ export function SettingsForm({
   name,
   settings,
   email,
+  rememberDevice,
 }: {
   name: string;
   settings: Settings;
   email: string;
+  rememberDevice: boolean;
 }) {
   const [state, action, pending] = useActionState(saveSettings, {
     message: "",
@@ -93,6 +95,10 @@ export function SettingsForm({
         <p className="form-help" style={{ marginTop: 12 }}>
           {email}
         </p>
+        <label className="setting-input-row">
+          <span>Se souvenir de cet appareil pendant 30 jours</span>
+          <input type="checkbox" name="remember_device" defaultChecked={rememberDevice} />
+        </label>
         <button className="primary settings-save" disabled={pending}>
           {pending ? "Enregistrement…" : "Enregistrer les préférences"}
         </button>

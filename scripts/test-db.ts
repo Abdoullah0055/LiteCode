@@ -1,5 +1,5 @@
 import { PGlite } from "@electric-sql/pglite";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import assert from "node:assert/strict";
 
 async function main() {
@@ -8,19 +8,39 @@ async function main() {
 create schema auth; create table auth.users(id uuid primary key);
 create function auth.uid() returns uuid language sql stable as $$ select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid $$;
 grant usage on schema public,auth to anon,authenticated,service_role; grant execute on function auth.uid() to authenticated;`);
-  const migrations = [
-    "20261018185124_litecode_core.sql",
-    "20261018193000_learning_versions.sql",
-    "20261019013608_learning_runtime.sql",
-    "20261019022914_learning_curriculum_v2.sql",
-  ];
-  for (const migration of migrations)
+  const migrations = readdirSync("supabase/migrations")
+    .filter((file) => file.endsWith(".sql"))
+    .sort();
+  const u1 = "00000000-0000-4000-8000-000000000001";
+  const u2 = "00000000-0000-4000-8000-000000000002";
+  const u3 = "00000000-0000-4000-8000-000000000003";
+  for (const migration of migrations) {
+    if (migration.includes("onboarding_progress"))
+      await db.query("insert into auth.users values ($1),($2)", [u1, u2]);
     await db.exec(readFileSync(`supabase/migrations/${migration}`, "utf8"));
+  }
   await db.exec(readFileSync("supabase/seed.sql", "utf8"));
-  const u1 = "00000000-0000-4000-8000-000000000001",
-    u2 = "00000000-0000-4000-8000-000000000002";
-  await db.query("insert into auth.users values ($1),($2)", [u1, u2]);
-  let checks = 0;
+  await db.query("insert into auth.users values ($1)", [u3]);
+  const onboarding = await db.query<{ onboarding_step: string; onboarding_completed_at: string | null }>(
+    "select onboarding_step,onboarding_completed_at from public.user_settings where user_id=$1",
+    [u1],
+  );
+  assert.equal(onboarding.rows[0].onboarding_step, "complete");
+  assert.ok(onboarding.rows[0].onboarding_completed_at);
+  const freshOnboarding = await db.query<{ onboarding_step: string; onboarding_completed_at: string | null }>(
+    "select onboarding_step,onboarding_completed_at from public.user_settings where user_id=$1",
+    [u3],
+  );
+  assert.equal(freshOnboarding.rows[0].onboarding_step, "objectives");
+  assert.equal(freshOnboarding.rows[0].onboarding_completed_at, null);
+  await db.query("update public.user_settings set goal='career',onboarding_step='languages' where user_id=$1 and onboarding_step='objectives' and onboarding_completed_at is null", [u3]);
+  assert.equal((await db.query<{ onboarding_step: string }>("select onboarding_step from public.user_settings where user_id=$1", [u3])).rows[0].onboarding_step, "languages");
+  await db.query("update public.user_settings set languages=array['JavaScript'],onboarding_step='finish' where user_id=$1 and onboarding_step='languages' and onboarding_completed_at is null", [u3]);
+  assert.equal((await db.query<{ onboarding_step: string }>("select onboarding_step from public.user_settings where user_id=$1", [u3])).rows[0].onboarding_step, "finish");
+  await db.query("update public.user_settings set onboarding_step='complete',onboarding_completed_at=now() where user_id=$1 and onboarding_step='finish' and onboarding_completed_at is null", [u3]);
+  assert.equal((await db.query<{ onboarding_step: string }>("select onboarding_step from public.user_settings where user_id=$1", [u3])).rows[0].onboarding_step, "complete");
+  assert.equal((await db.query("update public.user_settings set onboarding_step='objectives' where user_id=$1 and onboarding_completed_at is null returning user_id", [u3])).rows.length, 0);
+  let checks = 6;
   async function denied(sql: string) {
     let failed = false;
     try {

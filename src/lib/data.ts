@@ -3,6 +3,7 @@ import { cache } from "react";
 import { redirect } from "next/navigation";
 import { supabase, configured } from "./supabase/server";
 import type { LearningData, Settings } from "./types";
+import { onboardingDestination } from "./auth-policy";
 export const requireUser = cache(async () => {
   if (!configured()) redirect("/setup");
   const db = await supabase();
@@ -13,6 +14,37 @@ export const requireUser = cache(async () => {
   if (error || !user) redirect("/auth");
   return { db, user };
 });
+export async function postAuthDestination(
+  db: Awaited<ReturnType<typeof supabase>>,
+  userId: string,
+): Promise<string> {
+  const { data, error } = await db
+    .from("user_settings")
+    .select("onboarding_step,onboarding_completed_at")
+    .eq("user_id", userId)
+    .maybeSingle();
+  if (error || !data) return "/setup?error=onboarding";
+  return onboardingDestination(data.onboarding_step, data.onboarding_completed_at);
+}
+
+export async function requireOnboardingStep(
+  target: "objectives" | "languages" | "finish",
+) {
+  const { db, user } = await requireUser();
+  const { data, error } = await db
+    .from("user_settings")
+    .select("onboarding_step,onboarding_completed_at,goal")
+    .eq("user_id", user.id)
+    .maybeSingle();
+  if (error || !data) redirect("/setup?error=onboarding");
+  const destination = onboardingDestination(
+    data.onboarding_step,
+    data.onboarding_completed_at,
+  );
+  if (destination === "/home") redirect(destination);
+  if (data.onboarding_step !== target) redirect(destination);
+  return { db, user, settings: data };
+}
 export const learningData = cache(async (): Promise<LearningData> => {
   const { db, user } = await requireUser();
   const [l, m, p, r] = await Promise.all([

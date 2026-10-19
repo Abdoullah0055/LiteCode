@@ -19,8 +19,9 @@ npm run dev
 ```
 
 Ouvrir http://127.0.0.1:3000. Si ce port est occupé : `npm run dev -- --port 3108`.
-L’accueil et l’onboarding sont publics ; les pages de données affichent la configuration
-requise lorsque Supabase est absent. Aucun compte, XP ou classement fictif n’est créé.
+L’accueil est public ; la création de compte précède l’onboarding, puis l’accueil reprend
+la dernière étape enregistrée. Les pages privées affichent la configuration requise si
+Supabase est absent. Aucun compte, XP ou classement fictif n’est créé.
 
 Renseigner `.env.local` :
 
@@ -28,6 +29,7 @@ Renseigner `.env.local` :
 |---|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | URL du projet Supabase |
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Clé publique/publishable du projet |
+| `NEXT_PUBLIC_SITE_URL` | Origine canonique de l’application pour les courriels Auth (facultatif en développement) |
 | `SUPABASE_SERVICE_ROLE_KEY` | Clé service role, exclusivement serveur |
 | `RUNNER_URL` | URL privée du service de code ; en local `http://127.0.0.1:4001` |
 | `RUNNER_API_KEY` | Secret aléatoire de 32 caractères minimum, identique sur Next.js et le runner |
@@ -49,10 +51,8 @@ npx supabase db push --linked --dry-run --skip-vault
 npx supabase db push --linked --include-seed --skip-vault
 ```
 
-Alternative pour un projet neuf : exécuter dans l’éditeur SQL Supabase, dans cet ordre :
-
-1. `supabase/migrations/20261018185124_litecode_core.sql`
-2. `supabase/seed.sql`
+Alternative pour un projet neuf : exécuter tous les fichiers `supabase/migrations/*.sql`
+par ordre de nom, puis `supabase/seed.sql`.
 
 Le seed est reproductible et utilise des upserts. La migration initiale ne doit être
 appliquée qu’une fois. Activer le fournisseur Email/Password dans Supabase Auth.
@@ -61,9 +61,14 @@ Appliquer la migration avant de créer les comptes : le trigger crée leurs prof
 
 ### Courriels et sessions
 
-Dans Auth → URL Configuration, définir l’URL du site (locale ou HTTPS de production)
-et autoriser son chemin `/auth/confirm` dans les URLs de redirection.
-Adapter les liens des modèles de courriel pour le SSR :
+Dans Auth → URL Configuration, définir le Site URL et ajouter à Redirect URLs les origines
+locale et de production suivies de `/auth/confirm` (par exemple
+`http://127.0.0.1:3000/auth/confirm` et `https://ton-domaine/auth/confirm`). En production,
+`NEXT_PUBLIC_SITE_URL` doit être l’origine HTTPS canonique, sans chemin. Le callback choisit
+la suite depuis l’état enregistré du compte; le paramètre `next` n’accepte que la destination
+interne de récupération de mot de passe.
+
+Conserver les modèles de courriel Supabase qui respectent `RedirectTo`, ou les adapter au SSR :
 
 - Confirmation : `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=email`
 - Récupération : `{{ .SiteURL }}/auth/confirm?token_hash={{ .TokenHash }}&type=recovery`
@@ -71,7 +76,10 @@ Adapter les liens des modèles de courriel pour le SSR :
 Après récupération, la page Paramètres permet de modifier le mot de passe. Le handler
 accepte aussi un `code` PKCE. Les sessions utilisent des cookies ; le proxy les rafraîchit
 et les accès serveur vérifient `auth.getUser()`. Activer la confirmation de courriel pour
-la production. Les tests authentifiés créent leur compte de test déjà confirmé.
+la production. Les tests authentifiés créent leur compte de test déjà confirmé. La préférence
+« Se souvenir de cet appareil » est propre au navigateur et prolonge sa session jusqu’à 30 jours;
+décochée, ses cookies expirent à la fermeture du navigateur. Les navigateurs peuvent restaurer
+des sessions après fermeture, donc cette option ne force pas une déconnexion.
 
 ## Exécution JavaScript
 
