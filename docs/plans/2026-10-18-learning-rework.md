@@ -1,7 +1,7 @@
 # Rework pédagogique LiteCode — plan et matrice des 80 activités
 
 Date : 18 octobre 2026  
-Périmètre : plan documentaire uniquement. Aucune étape d’implémentation n’est déclarée terminée.
+Document de référence pour l’implémentation; preuves et état courant dans learning-rework-progress.md.
 
 ## Décision pédagogique
 
@@ -43,11 +43,11 @@ Checklist des huit étapes. À cette étape, seule la création du plan et du le
 
 ### Étape 3 — moteur et API
 
-- [ ] Rendre les huit familles de façon accessible et adaptée au mobile.
-- [ ] Ajouter soumission, grading côté serveur, brouillons de projet et conflit 409.
-- [ ] Déduire XP de la réussite côté serveur; ne jamais accepter les XP du client.
-- [ ] Verser les XP d’un projet guidé uniquement après revérification serveur de toutes ses étapes.
-- [ ] Ne jamais exécuter les extraits d’activité.
+- [x] Rendre les huit familles de façon accessible et adaptée au mobile.
+- [x] Ajouter soumission, grading côté serveur, brouillons de projet et conflit 409.
+- [x] Déduire XP de la réussite côté serveur; ne jamais accepter les XP du client.
+- [x] Verser les XP d’un projet guidé uniquement après revérification serveur de toutes ses étapes.
+- [x] Ne jamais exécuter les extraits d’activité.
 
 ### Étape 4 — contenu et migration
 
@@ -173,7 +173,7 @@ Les prérequis sont conceptuels, en plus de l’ordre séquentiel du module. Les
 | mvp-052 | Ordonner création d’un ensemble sans doublons. | Tableau et égalité. | ordering | Set→unicité→conversion; ordre d’apparition conservé. | Set ne trie pas. | Croire que l’ordre change. | Il enlève répétitions, sans tri. |
 | mvp-053 | Associer set/get/has à Map. | Clés et valeurs. | matching | set écrit; get lit; has vérifie présence. | Map élémentaire. | Utiliser get pour écrire. | Écrire, lire, vérifier. |
 | mvp-054 | Corriger test qui rejette index 0. | indexOf et sentinelle -1. | debug(selectline+replacement) | Remplacer >0 par >=0 ou !==-1. | Zéro valide; -1 absent. | Traiter zéro comme absence. | Seul -1 signifie absent. |
-| mvp-055 | Comparer visuellement croissance constante/linéaire. | Taille et parcours. | classify | Classer graphes selon croissance de travail. | O(1)/O(n), contraste visuel O(n²). | Lire Big O comme durée exacte. | Observe le changement quand liste double. |
+| mvp-055 | Comparer visuellement croissance constante/linéaire. | Taille et parcours. | classify | Classer accès direct et parcours selon croissance du travail. | O(1)/O(n), avec décompte concret des opérations. | Lire Big O comme durée exacte. | Observe le changement quand la liste double. |
 | mvp-056 | Assembler compteur de fréquences Map. | Map, valeur existante et incrément. | guided_project (matching → trace → ordering → choice) | Compter mots, garder ordre d’apparition et valider paires. | Fréquences sans code libre. | Réinitialiser compteur ou perdre ordre. | Lis compteur existant ou 0; ajoute 1. |
 
 ### Module 8 — Algorithmes

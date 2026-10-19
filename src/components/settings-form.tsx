@@ -1,6 +1,7 @@
 "use client";
 import { useActionState } from "react";
 import { saveSettings, signOut, updatePassword } from "@/app/auth/actions";
+import Link from "next/link";
 import type { Settings } from "@/lib/types";
 export function SettingsForm({
   name,
@@ -126,6 +127,7 @@ export function SettingsForm({
           ↪ Se déconnecter
         </button>
       </form>
+      <p className="settings-source-link"><Link href="/sources">Sources et crédits du parcours</Link></p>
     </>
   );
 }

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { requireUser, learningData } from "@/lib/data";
 import { ButtonLink } from "@/components/ui";
 import type { Attempt } from "@/lib/types";
+import { normalizeLearningResults } from "@/lib/learning-result";
 export default async function Result({
   params,
 }: {
@@ -27,6 +28,7 @@ export default async function Result({
     .eq("user_id", user.id)
     .maybeSingle();
   const passed = attempt.status === "passed";
+  const results = normalizeLearningResults(attempt.results);
   const next = data.lessons.find((x) => x.position === l.position + 1);
   return (
     <section className="screen-page">
@@ -63,7 +65,7 @@ export default async function Result({
               : "Aucune progression n’a été accordée."}
         </p>
         <div className="testlines">
-          {attempt.results.map((r, i) => (
+          {results.map((r, i) => (
             <div key={i}>
               <div className={`testline ${r.passed ? "" : "failed"}`}>
                 <span className={`okicon ${r.passed ? "" : "failicon"}`}>

@@ -21,6 +21,7 @@ Lire AGENTS.md, la matrice corrigée dans 2026-10-18-learning-rework.md et les r
 
 - Une nouvelle migration de CONTENU inclut les80activités, versions publiques et clés privées et active la version2 après insertions. Ajouter les cours/modules si base neuve et mettre à jour titres/concepts révisés. Ne pas modifier les migrations précédentes, ni les tables utilisateurs pour effacer/recalculer leurs acquis.
 - Génération déterministe de supabase/seed.sql pour installation neuve et réapplication idempotente. Le même artefact de données doit produire migration et seed cohérents; documenter la commande. Supprimer les anciennes définitions publiques actives ou les laisser archivées avec version explicite, jamais deux sources actives contradictoires.
+- Une version déjà publiée ne doit pas être remplacée silencieusement par un contenu ou des clés différents sous le même numéro : la réapplication identique passe, une modification requiert une nouvelle version. Prévoir cette garantie dans le générateur/SQL et un test, pour que409 et les tentatives épinglées gardent un sens.
 - Vérifier progression/prérequis, absence de cycle, 8activitésparmodule, unicité, types publics ne contenant pas de clés; validateurs couvrent toutes les données nécessaires au moteur. Anciennes tentatives conservées/lisibles; XP/completionsidentiques aprèsmigrationetreseed.
 
 ## Vérification

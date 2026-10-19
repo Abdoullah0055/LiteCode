@@ -63,6 +63,58 @@ export const interactionAnswerSchema = z.discriminatedUnion("kind", [
   z.object({ kind: z.literal("debug"), lineId: id, replacementId: id }).strict(),
 ]);
 export type InteractionAnswer = z.infer<typeof interactionAnswerSchema>;
+const draftAnswerSchema = z.discriminatedUnion("kind", [
+  z.object({ kind: z.literal("choice"), selected: z.array(id).max(12) }).strict(),
+  z.object({ kind: z.literal("matching"), pairs: z.array(z.object({ leftId: id, rightId: id }).strict()).max(12) }).strict(),
+  z.object({ kind: z.literal("classify"), assignments: z.record(id, id).refine((v) => Object.keys(v).length <= 20) }).strict(),
+  z.object({ kind: z.literal("ordering"), order: z.array(id).max(20) }).strict(),
+  z.object({ kind: z.literal("blanks"), values: z.record(id, z.string().max(120)).refine((v) => Object.keys(v).length <= 12) }).strict(),
+  z.object({ kind: z.literal("trace"), values: z.record(id, z.string().max(120)).refine((v) => Object.keys(v).length <= 20) }).strict(),
+  z.object({ kind: z.literal("debug"), lineId: id.optional(), replacementId: id.optional() }).strict(),
+]);
+export type DraftInteractionAnswer = z.infer<typeof draftAnswerSchema>;
+export const versionedDraftSchema = z.object({
+  version: z.number().int().positive(),
+  currentStep: id.optional(),
+  answers: z.record(id, draftAnswerSchema).refine((answers) => Object.keys(answers).length <= 20),
+}).strict();
+export type VersionedDraft = z.infer<typeof versionedDraftSchema>;
+export function validateVersionedDraft(activity: PublicActivity, input: unknown): VersionedDraft | null {
+  const parsed = versionedDraftSchema.safeParse(input);
+  if (!parsed.success || parsed.data.version !== activity.version) return null;
+  const definitions = new Map(activity.interactions.map((item) => [item.id, item.definition]));
+  if (parsed.data.currentStep && !(activity.project?.steps || activity.interactions.map(({ id }) => id)).includes(parsed.data.currentStep)) return null;
+  for (const [interactionId, answer] of Object.entries(parsed.data.answers)) {
+    const definition = definitions.get(interactionId);
+    if (!definition || definition.kind !== answer.kind) return null;
+    const has = (allowed: string[], value: string) => allowed.includes(value);
+    switch (definition.kind) {
+      case "choice": if (answer.kind !== "choice" || new Set(answer.selected).size !== answer.selected.length || answer.selected.some((item) => !has(definition.options.map(({ id }) => id), item))) return null; break;
+      case "matching": if (answer.kind !== "matching" || answer.pairs.some((pair) => !has(definition.left.map(({ id }) => id), pair.leftId) || !has(definition.right.map(({ id }) => id), pair.rightId))) return null; break;
+      case "classify": if (answer.kind !== "classify" || Object.entries(answer.assignments).some(([item, category]) => !has(definition.items.map(({ id }) => id), item) || !has(definition.categories.map(({ id }) => id), category))) return null; break;
+      case "ordering": if (answer.kind !== "ordering" || new Set(answer.order).size !== answer.order.length || answer.order.some((item) => !has(definition.items.map(({ id }) => id), item))) return null; break;
+      case "blanks": if (answer.kind !== "blanks" || Object.keys(answer.values).some((blankId) => !definition.blanks.some(({ id }) => id === blankId))) return null; else if (definition.blanks.some((blank) => blank.mode === "options" && answer.values[blank.id] !== undefined && !blank.options.some((option) => option.id === answer.values[blank.id]))) return null; break;
+      case "trace": if (answer.kind !== "trace" || Object.keys(answer.values).some((cellId) => !definition.cells.some(({ id }) => id === cellId))) return null; break;
+      case "debug": if (answer.kind !== "debug" || (answer.lineId && !definition.lines.some(({ id }) => id === answer.lineId)) || (answer.replacementId && !definition.replacements.some(({ id }) => id === answer.replacementId))) return null; break;
+    }
+  }
+  return parsed.data;
+}
+export function interactionAnswerComplete(definition: Interaction, answer: InteractionAnswer | DraftInteractionAnswer | undefined): boolean {
+  if (!answer || answer.kind !== definition.kind) return false;
+  switch (definition.kind) {
+    case "choice": return answer.kind === "choice" && answer.selected.length > 0 && (definition.mode !== "single" || answer.selected.length === 1);
+    case "matching": return answer.kind === "matching" && answer.pairs.length === definition.left.length && new Set(answer.pairs.map(({ leftId }) => leftId)).size === definition.left.length;
+    case "classify": return answer.kind === "classify" && definition.items.every(({ id }) => Boolean(answer.assignments[id]));
+    case "ordering": return answer.kind === "ordering" && answer.order.length === definition.items.length && new Set(answer.order).size === definition.items.length;
+    case "blanks": return answer.kind === "blanks" && definition.blanks.every((blank) => {
+      const value = answer.values[blank.id];
+      return typeof value === "string" && (blank.mode === "options" ? blank.options.some((option) => option.id === value) : value.trim().length > 0);
+    });
+    case "trace": return answer.kind === "trace" && definition.cells.every(({ id }) => Boolean(answer.values[id]?.trim()));
+    case "debug": return answer.kind === "debug" && Boolean(answer.lineId && answer.replacementId);
+  }
+}
 export const versionedSubmissionSchema = z.object({
   version: z.number().int().positive(),
   answers: z.record(id, interactionAnswerSchema).refine((answers) => Object.keys(answers).length <= 20),

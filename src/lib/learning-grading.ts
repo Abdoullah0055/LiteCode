@@ -88,7 +88,7 @@ export function gradeInteraction(definitionInput: unknown, keyInput: unknown, an
 
 export type ActivityGradeResult = {
   passed: boolean;
-  results: { interactionId: string; passed: boolean; explanation?: string; feedback?: string }[];
+  results: { interactionId: string; label: string; passed: boolean; explanation?: string; feedback?: string }[];
   error?: "invalid_definition" | "invalid_submission" | "version_mismatch" | "unknown_answer_id";
 };
 
@@ -104,13 +104,16 @@ export function gradeActivitySubmission(activityInput: unknown, submissionInput:
   const expectedIds = activity.public.interactions.map(({ id }) => id);
   if (Object.keys(parsedSubmission.data.answers).some((id) => !expectedIds.includes(id))) return { passed: false, results: [], error: "unknown_answer_id" };
   const keys = new Map(activity.grading.map((entry) => [entry.interactionId, entry]));
+  let invalidAnswer = false;
   const results = activity.public.interactions.map((item) => {
     const entry = keys.get(item.id)!;
     const answer = parsedSubmission.data.answers[item.id];
-    if (!answer) return { interactionId: item.id, passed: false, feedback: "Réponse manquante." };
+    if (!answer) { invalidAnswer = true; return { interactionId: item.id, label: item.prompt, passed: false, feedback: "Réponse manquante." }; }
     const grade = gradeInteraction(item.definition, entry.key, answer);
+    if (grade.error) invalidAnswer = true;
     const feedback = grade.passed ? entry.feedback?.correct : entry.feedback?.incorrect;
-    return { interactionId: item.id, passed: grade.passed, explanation: entry.explanation, ...(feedback ? { feedback } : {}) };
+    return { interactionId: item.id, label: item.prompt, passed: grade.passed, explanation: entry.explanation, ...(feedback ? { feedback } : {}) };
   });
+  if (invalidAnswer) return { passed: false, results, error: "invalid_submission" };
   return { passed: results.every((item) => item.passed), results };
 }

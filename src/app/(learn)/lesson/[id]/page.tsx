@@ -1,15 +1,18 @@
 import { notFound } from "next/navigation";
-import { accountData, learningData } from "@/lib/data";
+import { accountData, learningData, requireUser } from "@/lib/data";
 import { isUnlocked } from "@/lib/domain";
 import { ButtonLink, Taskbar, Empty } from "@/components/ui";
 import { CodeBlock } from "@/components/code-block";
+import { TheoryContent } from "@/components/theory-content";
+import { admin } from "@/lib/supabase/server";
+import { loadAuthoredActivity } from "@/lib/learning-runtime";
 export default async function LessonPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const [data, a] = await Promise.all([learningData(), accountData()]);
+  const [data, a, session] = await Promise.all([learningData(), accountData(), requireUser()]);
   const l = data.lessons.find((x) => x.id === id);
   if (!l) notFound();
   const completed = data.progress
@@ -21,6 +24,10 @@ export default async function LessonPage({
       .map((p) => p.required_lesson_id),
     completed,
   );
+  const { data: activeVersion, error: versionError } = await session.db.from("lesson_versions")
+    .select("id").eq("lesson_id", id).eq("is_active", true).maybeSingle();
+  if (versionError) throw new Error("Version de leçon indisponible.");
+  const authored = activeVersion ? await loadAuthoredActivity(admin(), id) : null;
   return (
     <section className="screen-page">
       <div className="page-content">
@@ -43,13 +50,13 @@ export default async function LessonPage({
                 supplémentaires.
               </div>
             )}
-            <p className="lesson-copy">{l.body}</p>
+            {authored ? <TheoryContent blocks={authored.activity.public.theory} /> : <><p className="lesson-copy">{l.body}</p>
             <CodeBlock code={l.example} />
             <div className="tipbox">
               <h2 className="sec-title">🌟 À toi de jouer</h2>
               <p>{l.instructions}</p>
-            </div>
-            <div className="lesson-footer">
+            </div></>}
+            {authored ? null : <div className="lesson-footer">
               {l.attribution}
               <br />
               Contenu rédigé en français pour LiteCode.{" "}
@@ -57,7 +64,7 @@ export default async function LessonPage({
                 Référence thématique
               </a>{" "}
               ; texte source non reproduit.
-            </div>
+            </div>}
           </>
         )}
       </div>

@@ -15,7 +15,7 @@ Lire AGENTS.md, le plan/ledger et le code actuel avant modification. Next16 : co
 - Checkbox login/signup cochéepardéfaut : 'Se souvenir de cet appareil pendant 30 jours'. Préférence par navigateur, pasun paramètre partagé entre appareils dans la DB.
 - Une fonction commune applique politique aux cookiesSupabase dans actions, callback et proxy : coché→maxAge30joursglissant; décoché→session sans maxAge/expires. La préférence est un cookieHttpOnly; tokenscookiesHttpOnly possibles car appserveronly (vérifier usages actuels). SameSiteLax, path/, SecureenHTTPS.
 - Attention @supabase/ssr réécrit maxAgepardéfaut400jours : réappliquerpolitique dans setAll APRÈS optionslibrairie. Conserver maxAge0 pour suppressions/chunksPKCE; ne pas convertir suppressionen30jours. Aucunpassword/token localStorage.
-- Déconnexion efface sessions et préférence. Callbacksanspréférence sur unautrenavigateur utilise cookie session (l’option est propre à l’appareil); ne pascopierunepréférencedepuisusermetadata.
+- Déconnexion de cet appareil : signOut({ scope: 'local' }), puis effacer session locale et préférence. Ne pas révoquer les autres appareils. Callback sans préférence sur un autre navigateur : cookie de session; ne pas copier une préférence depuis user_metadata.
 - Tests purs depolitique : persistant, session, suppression, chunks, Secure; testsactions/routing avecmocks ciblés et callbacks sanssuccèssimuléprésentécommelive. Browserrestore peut restaurer sessioncookie : documenterlimite sanspromettredéconnexionforcéeàfermeture.
 
 ## Finish illustré
@@ -26,5 +26,7 @@ Lire AGENTS.md, le plan/ledger et le code actuel avant modification. Next16 : co
 - Forme visuelledepagepasrépétéelorsconnexionshabituelles. Préférences restentéditablesdanssettings.
 
 ## Preuves
+
+Documentation vérifiée par le contrôleur : https://supabase.com/docs/guides/auth/server-side/advanced-guide . L'application a @supabase/ssr0.8.0 : conserver explicitement Cache-Control private,no-store (les mécanismes supplémentaires décrits pour0.10 ne sont pas disponibles ici). Les cookies HttpOnly conviennent seulement tant qu'aucun client Supabase navigateur n'a besoin d'accéder aux tokens. Aucun changement de version de dépendance n'est demandé.
 
 Testsunitaires+DB couvrantpasswordconfirm, destinationpostauth, onboardingpersistance/backfill, cookiesrefresh/logout. Lint,typecheck,tests pertinents. Les E2E publics doivent désormais attendre signup AVANTobjectives; adaptertestsdebase, les screenshots/authliveglobauxserontrevusétape7. Pas de testcloud sans gardeprojettestdédié. Rapport docs/plans/step-05-report.md aveccontrats, migrations, testsréellementlancés et limites.

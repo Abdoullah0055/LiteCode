@@ -6,8 +6,8 @@ Suivi des huit étapes du plan [2026-10-18-learning-rework.md](2026-10-18-learni
 |---|---|---|---|
 | 1. Plan pédagogique | Plan, checklist, matrice 80 activités et revue | Terminée | Revue contrôleur : 80 fiches/IDs uniques, corrections 004/040/050/051/063/070. Produit non encore modifié. |
 | 2. Modèle versionné et activité de référence | Modèle, grading privé, mvp-004 de référence, conflits 409 | Terminée | Modèle, grading, pilote, migrationRLS; revue contrôleur corrigée; 35tests, lint et build validés. Voir step-02-report.md. |
-| 3. Moteur et API | Huit interactions, soumission serveur, brouillons, XP serveur, 409 | En cours | Nouveau sous-agent dédié au moteur/API; brief step-03-brief.md. |
-| 4. Contenu et migration | 80 activités, seed/migration additive, état existant conservé | En attente | À compléter après revue. |
+| 3. Moteur et API | Huit interactions, soumission serveur, brouillons, XP serveur, 409 | Terminée | Revue contrôleur +2régressions corrigées;45tests, typecheck, lint, build. Voir step-03-report.md. |
+| 4. Contenu et migration | 80 activités, seed/migration additive, état existant conservé | En cours | Nouveau sous-agent auteur des80activités; brief step-04-brief.md. |
 | 5. Auth et onboarding | Signup/confirmation, objectifs, langues, finish, appareil mémorisé | En attente | À compléter après revue. |
 | 6. Retrait du runner | Retrait des éditeurs libres et parcours d’exécution | En attente | À compléter après revue. |
 | 7. Revue | Sécurité, comportement, accessibilité, rendu mobile | En attente | À compléter après revue. |

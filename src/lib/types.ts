@@ -20,6 +20,7 @@ export type Lesson = {
   license: string;
   attribution: string;
   source_url: string;
+  modifications?: string[];
 };
 export type Module = { id: string; title: string; position: number };
 export type Progress = {

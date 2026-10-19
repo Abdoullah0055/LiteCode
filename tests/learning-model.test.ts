@@ -2,10 +2,12 @@ import { expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import {
   authoredActivitySchema,
+  versionedDraftSchema,
   publicActivitySchema,
   versionedSubmissionSchema,
 } from "../src/lib/learning-model";
 import { gradeActivitySubmission, gradeInteraction } from "../src/lib/learning-grading";
+import { gradeProjectCompletion, gradeProjectStep } from "../src/lib/learning-workflow";
 
 const pilot = JSON.parse(
   readFileSync("curriculum/pilot-mvp-004.json", "utf8"),
@@ -105,4 +107,46 @@ it("returns private explanations per submitted interaction and identifies stale 
   expect(JSON.stringify(result)).not.toContain("accepted");
   expect(gradeActivitySubmission(pilot, { version: 2, answers: {} }).error).toBe("version_mismatch");
   expect(gradeActivitySubmission(pilot, { version: 1, answers: { "variable-roles": { kind: "classify", assignments: { prenom: "fixed", score: "changes" } } } }).passed).toBe(false);
+});
+
+it("accepts bounded incomplete versioned drafts without accepting incomplete submissions", () => {
+  const draft = versionedDraftSchema.parse({
+    version: 1,
+    currentStep: "variable-roles",
+    answers: {
+      "variable-roles": { kind: "classify", assignments: { prenom: "fixed" } },
+      "score-trace": { kind: "trace", values: { start: "" } },
+      "const-intention": { kind: "choice", selected: [] },
+    },
+  });
+  expect(draft.currentStep).toBe("variable-roles");
+  expect(gradeActivitySubmission(pilot, {
+    version: 1,
+    answers: { "variable-roles": { kind: "classify", assignments: { prenom: "fixed" } } },
+  }).error).toBe("invalid_submission");
+  expect(() => versionedDraftSchema.parse({ version: 1, answers: {}, passed: true })).toThrow();
+});
+
+it("grades one project step without an activity pass or reward and rechecks all saved steps", () => {
+  const activity = structuredClone(pilot);
+  activity.public.project = { steps: ["variable-roles", "score-trace", "const-intention"] };
+  const first = { version: 1, answers: {
+    "variable-roles": { kind: "classify", assignments: { prenom: "fixed", score: "changes" } },
+  } };
+  const second = { version: 1, answers: {
+    "score-trace": { kind: "trace", values: { start: "2", bonus: "5" } },
+  } };
+  const third = { version: 1, answers: {
+    "const-intention": { kind: "choice", selected: ["const"] },
+  } };
+  const step = gradeProjectStep(activity, "variable-roles", first);
+  expect(step).toMatchObject({ passed: true, stepId: "variable-roles" });
+  expect(step).not.toHaveProperty("xp");
+  expect(gradeProjectStep(activity, "unknown-step", first).error).toBe("invalid_step");
+  expect(gradeProjectCompletion(activity, [first, second, third])).toMatchObject({ passed: true });
+  expect(gradeProjectCompletion(activity, [first, second])).toMatchObject({ passed: false, error: "incomplete_project" });
+  expect(gradeProjectCompletion(activity, [first, { ...second, version: 2 }, third])).toMatchObject({ passed: false, error: "invalid_submission" });
+  expect(gradeProjectCompletion(activity, [first, second, { version: 1, answers: {
+    "const-intention": { kind: "choice", selected: ["let"] },
+  } }])).toMatchObject({ passed: false });
 });

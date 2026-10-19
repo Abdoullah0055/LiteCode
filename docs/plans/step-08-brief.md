@@ -1,0 +1,11 @@
+# Étape 8 — Documentation et rapport final
+
+Lire AGENTS.md, rapports2à7, ledger, README et état Git réel. Ne pas déléguer, committer, pousser, déployer ou appliquer de migration distante. Aucun secret ni Docker. Le contrôleur vérifie puis fait le commit final.
+
+- Mettre README à jour : description actuelle, trois variables Supabase requises sans valeurs, Node/installation/dev, génération curriculum, tests, build et préparation au déploiement. Aucun runner, aucune procédure Docker.
+- Décrire la mise à niveau d’une base existante et une installation neuve. Vérifier les syntaxes CLI avec --help, ne pas exécuter de push réel. Les migrations de contenu doivent suffire à peupler les80activités, seed reproductible à côté. Donner commande dry-run puis application, sans dbreset destructif. Ne pas prétendre migrations appliquées à distance.
+- Mettre docs/CONTENT.md et docs/EXECUTION.md en cohérence : corpus original, théorie structurée, sept interactions + projet composé, correction serveur sans exécution, versions, brouillons, prérequis, XP unique, étapes sans récompense, limites de l’évaluation. Sources/crédits et modifications suivies.
+- Décrire inscription/onboarding après compte seulement, reprise d’inscription interrompue, migration des comptes existants, cookies30jours/sessions et déconnexion locale. Signaler la limite de restauration des cookies de session par certains navigateurs, sans ajouter de warning parasite dans le produit.
+- Mettre IMPLEMENTATION_PLAN.md/checklists en cohérence avec le rework réel et produire IMPLEMENTATION_REPORT.md (ou rapportrework explicitementlié) listant implémenté, vérifié, non exécuté et dépendances de mise en service. Les anciens rapports peuvent rester datés et explicitement historiques, pas des instructions actives contradictoires.
+- Reprendre exactement les résultats du rapport7, ne pas inventer ni arrondir les comptes. Préciser les tests UI avec données de fixture, SQL PGlite réel, auth hébergée opt-in skipped si indisponible, et captures inspectées. Le build n’est pas un déploiement.
+- Vérifier cohérence des liens/fichiers/commandes et absence de secrets dans les modifications; pas besoin de réexécuter les suites lourdes si seul Markdown change. Rapport docs/plans/step-08-report.md succinct avec changements et limites.
