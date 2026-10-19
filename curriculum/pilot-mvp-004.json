@@ -1,0 +1,257 @@
+{
+  "public": {
+    "id": "mvp-004",
+    "version": 1,
+    "title": "Comprendre let et const",
+    "theory": [
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "Une variable donne un nom à une valeur"
+      },
+      {
+        "type": "paragraph",
+        "segments": [
+          {
+            "type": "text",
+            "text": "Dans un jeu, tu dois garder le prénom du joueur et son score. Une "
+          },
+          {
+            "type": "strong",
+            "text": "variable"
+          },
+          {
+            "type": "text",
+            "text": " permet de retrouver une valeur grâce à un nom. Ici, prenom est le nom ; Lina est la valeur."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "const : empêcher une nouvelle affectation"
+      },
+      {
+        "type": "paragraph",
+        "segments": [
+          {
+            "type": "text",
+            "text": "Le prénom restera le même pendant cette partie. On choisit "
+          },
+          {
+            "type": "code",
+            "text": "const"
+          },
+          {
+            "type": "text",
+            "text": " pour empêcher de lui attribuer une autre valeur par erreur. Le mot const est suivi du nom, puis de = et de la valeur."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "const prenom = \"Lina\";\nconsole.log(prenom);",
+        "output": "Lina"
+      },
+      {
+        "type": "paragraph",
+        "segments": [
+          {
+            "type": "text",
+            "text": "Le signe "
+          },
+          {
+            "type": "code",
+            "text": "="
+          },
+          {
+            "type": "text",
+            "text": " signifie ici « attribuer la valeur située à droite au nom situé à gauche ». On appelle cette action une "
+          },
+          {
+            "type": "strong",
+            "text": "affectation"
+          },
+          {
+            "type": "text",
+            "text": ". Ce signe ne pose pas une question d’égalité comme en mathématiques."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "text": "let : autoriser une nouvelle valeur"
+      },
+      {
+        "type": "paragraph",
+        "segments": [
+          {
+            "type": "text",
+            "text": "Le score doit évoluer quand le joueur gagne des points. On utilise "
+          },
+          {
+            "type": "code",
+            "text": "let"
+          },
+          {
+            "type": "text",
+            "text": " parce que ce nom recevra une nouvelle valeur."
+          }
+        ]
+      },
+      {
+        "type": "code",
+        "language": "javascript",
+        "code": "let score = 2;\nscore = score + 3;\nconsole.log(score);",
+        "output": "5"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          [
+            {
+              "type": "text",
+              "text": "Au départ, score contient 2."
+            }
+          ],
+          [
+            {
+              "type": "text",
+              "text": "La deuxième ligne calcule d’abord la partie droite : 2 + 3 donne 5."
+            }
+          ],
+          [
+            {
+              "type": "text",
+              "text": "Le résultat 5 devient la nouvelle valeur de score. On ne réécrit pas let : la variable existe déjà."
+            }
+          ]
+        ]
+      },
+      {
+        "type": "note",
+        "tone": "tip",
+        "segments": [
+          {
+            "type": "strong",
+            "text": "À retenir : "
+          },
+          {
+            "type": "text",
+            "text": "choisis const pour empêcher une réaffectation et let lorsque le programme doit attribuer une nouvelle valeur. Ce choix dépend de ce qui doit changer dans le programme, pas du nom de la variable."
+          }
+        ]
+      }
+    ],
+    "interactions": [
+      {
+        "id": "variable-roles",
+        "prompt": "Classe chaque nom selon ce qui se passe dans l’exemple.",
+        "definition": {
+          "kind": "classify",
+          "items": [
+            {
+              "id": "prenom",
+              "label": "prenom : reçoit Lina et garde cette valeur"
+            },
+            {
+              "id": "score",
+              "label": "score : commence à 2 puis reçoit 5"
+            }
+          ],
+          "categories": [
+            {
+              "id": "fixed",
+              "label": "Aucune nouvelle valeur prévue"
+            },
+            {
+              "id": "changes",
+              "label": "Une nouvelle valeur est prévue"
+            }
+          ]
+        }
+      },
+      {
+        "id": "score-trace",
+        "prompt": "Le score commence à 2. On lui ajoute ensuite 3. Indique sa valeur après chaque ligne.",
+        "definition": {
+          "kind": "trace",
+          "cells": [
+            {
+              "id": "start",
+              "label": "Après let score = 2"
+            },
+            {
+              "id": "bonus",
+              "label": "Après score = score + 3"
+            }
+          ]
+        }
+      },
+      {
+        "id": "const-intention",
+        "prompt": "Tu enregistres le prénom Lina et tu veux empêcher sa réaffectation. Quel mot protège ce prénom contre une nouvelle affectation ?",
+        "definition": {
+          "kind": "choice",
+          "mode": "single",
+          "options": [
+            {
+              "id": "const",
+              "label": "const"
+            },
+            {
+              "id": "let",
+              "label": "let"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "grading": [
+    {
+      "interactionId": "variable-roles",
+      "key": {
+        "kind": "classify",
+        "accepted": [
+          {
+            "prenom": "fixed",
+            "score": "changes"
+          }
+        ]
+      },
+      "explanation": "Le prénom garde la valeur Lina. Le score reçoit d’abord 2, puis 5."
+    },
+    {
+      "interactionId": "score-trace",
+      "key": {
+        "kind": "trace",
+        "accepted": {
+          "start": [
+            "2"
+          ],
+          "bonus": [
+            "5"
+          ]
+        }
+      },
+      "explanation": "Le score vaut 2 au départ. Ajouter 3 donne 5."
+    },
+    {
+      "interactionId": "const-intention",
+      "key": {
+        "kind": "choice",
+        "accepted": [
+          [
+            "const"
+          ]
+        ]
+      },
+      "explanation": "Le scénario dit qu’aucune nouvelle valeur n’est prévue pour le prénom."
+    }
+  ],
+  "xp": 20
+}

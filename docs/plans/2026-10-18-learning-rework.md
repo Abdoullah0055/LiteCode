@@ -36,10 +36,10 @@ Checklist des huit étapes. À cette étape, seule la création du plan et du le
 
 ### Étape 2 — modèle versionné et activité de référence
 
-- [ ] Examiner modèles/routes/schémas actuels avant modification.
-- [ ] Définir le modèle versionné des lectures, huit interactions, projets multi-étapes et réponses de grading.
-- [ ] Faire de mvp-004 la référence complète : prénom fixe, valeur initiale explicite, score modifié, explication et trace pas à pas, correction privée. Ne pas demander const ou let comme choix unique lorsque les deux seraient valides.
-- [ ] Valider avec Zod et TypeScript strict; garder la clé côté serveur et traiter les versions périmées par 409.
+- [x] Examiner modèles/routes/schémas actuels avant modification.
+- [x] Définir le modèle versionné des lectures, huit interactions, projets multi-étapes et réponses de grading.
+- [x] Faire de mvp-004 la référence complète : prénom fixe, valeur initiale explicite, score modifié, explication et trace pas à pas, correction privée. Ne pas demander const ou let comme choix unique lorsque les deux seraient valides.
+- [x] Valider avec Zod et TypeScript strict; garder la clé côté serveur; détection de version périmée testée. Traduction HTTP409 à l’étape3.
 
 ### Étape 3 — moteur et API
 
