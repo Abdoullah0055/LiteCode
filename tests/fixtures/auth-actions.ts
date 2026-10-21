@@ -1,3 +1,6 @@
+export async function authenticate() {
+  return { message: "", confirmationRequired: true };
+}
 export async function finishOnboarding() { return { ok: true }; }
 export async function goToOnboardingStep() { return { ok: true }; }
 export async function saveOnboardingGoal() { return { ok: true }; }

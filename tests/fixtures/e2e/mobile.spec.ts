@@ -83,6 +83,43 @@ test("real activity mvp-004 renders its theory instructions on mobile", async ({
   }
 });
 
+test("signup confirmation is prominent, focused, and readable on narrow screens", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.addInitScript(() => {
+    const originalScrollIntoView = Element.prototype.scrollIntoView;
+    Element.prototype.scrollIntoView = function (options) {
+      (window as Window & { __scrollBehavior?: boolean | ScrollIntoViewOptions }).__scrollBehavior = options;
+      originalScrollIntoView.call(this, options);
+    };
+  });
+  await page.goto("/mobile-harness.html");
+  await page.getByRole("button", { name: "Voir confirmation courriel" }).click();
+  await page.getByLabel("Courriel").fill("learner@example.test");
+  await page.getByLabel("Mot de passe", { exact: true }).fill("Learning-123");
+  await page.getByLabel("Confirmer le mot de passe").fill("Learning-123");
+  await page.getByRole("button", { name: "Créer mon compte" }).click();
+
+  const notice = page.getByRole("status");
+  await expect(notice).toContainText("Vérifie ton courriel");
+  await expect(notice).toContainText("Ouvre le lien reçu pour confirmer ton compte, puis connecte-toi.");
+  await expect(notice).toBeFocused();
+  await expect(notice).toBeInViewport();
+  expect(await notice.evaluate((element) => {
+    const box = element.getBoundingClientRect();
+    return box.top >= 0 && box.bottom <= window.innerHeight;
+  })).toBe(true);
+  expect(await page.evaluate(() => (window as Window & { __scrollBehavior?: boolean | ScrollIntoViewOptions }).__scrollBehavior)).toEqual({ behavior: "auto", block: "start" });
+  await expect(page.locator(".form-message")).toHaveCount(0);
+  expect(await notice.evaluate((element) => Boolean(element.compareDocumentPosition(element.parentElement!.querySelector(".segment-control")!) & Node.DOCUMENT_POSITION_FOLLOWING))).toBe(true);
+  const dimensions = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+  expect(dimensions.scroll).toBeLessThanOrEqual(dimensions.client);
+  if (page.viewportSize()?.width === 390)
+    await page.screenshot({ path: "test-results/auth-confirmation-390.png", fullPage: true });
+
+  await page.getByRole("button", { name: "Basculer le thème" }).click();
+  await expect(page.locator(".auth-confirmation")).toHaveCSS("background-color", "rgb(27, 60, 57)");
+});
+
 test("ordering supports real touch drags in both directions and leaves page scrolling available elsewhere", async ({ page, context }) => {
   await page.goto("/mobile-harness.html");
   const cards = page.locator(".order-card");

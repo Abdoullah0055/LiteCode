@@ -628,6 +628,52 @@ button {
   color: #1c7253;
   line-height: 1.5;
 }
+.auth-confirmation {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 22px 0 18px;
+  padding: 18px;
+  border: 2px solid #72c99b;
+  border-radius: 16px;
+  background: #e6f8ed;
+  color: #174e37;
+  scroll-margin-top: 16px;
+}
+.auth-confirmation:focus {
+  outline: 3px solid #16834f;
+  outline-offset: 3px;
+}
+.auth-confirmation-icon {
+  flex: 0 0 auto;
+  width: 25px;
+  height: 25px;
+  margin-top: 2px;
+  color: #167246;
+}
+.auth-confirmation h2 {
+  margin: 0 0 5px;
+  color: #174e37;
+  font-size: 17px;
+  line-height: 1.35;
+}
+.auth-confirmation p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.dark-app .auth-confirmation {
+  border-color: #65c596;
+  background: #1b3c39;
+  color: #d4eee2;
+}
+.dark-app .auth-confirmation h2,
+.dark-app .auth-confirmation-icon {
+  color: #a8efd0;
+}
+.dark-app .auth-confirmation:focus {
+  outline-color: #83ddb0;
+}
 .segment-control {
   display: flex;
   padding: 5px;

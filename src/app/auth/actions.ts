@@ -25,7 +25,11 @@ const authSchema = z.discriminatedUnion("mode", [
   z.object({ mode: z.literal("login"), email, password, rememberDevice: z.boolean() }),
   z.object({ mode: z.literal("reset"), email }),
 ]);
-type AuthState = { message: string; fieldErrors?: Record<string, string> };
+type AuthState = {
+  message: string;
+  fieldErrors?: Record<string, string>;
+  confirmationRequired?: boolean;
+};
 
 export async function persistDevicePreference(remember: boolean) {
   const jar = await cookies();
@@ -115,8 +119,8 @@ export async function authenticate(
       };
     if (!data.session)
       return {
-        message:
-          "Vérifie ton courriel pour confirmer ton compte, puis connecte-toi.",
+        message: "",
+        confirmationRequired: true,
       };
     redirect(await postAuthDestination(db, data.user!.id));
   } else {

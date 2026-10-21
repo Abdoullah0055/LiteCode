@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useActionState, useRef } from "react";
+import { Mail } from "lucide-react";
+import { useActionState, useEffect, useRef } from "react";
 import { authenticate } from "@/app/auth/actions";
 export function AuthForm({
   mode = "login",
@@ -15,6 +16,20 @@ export function AuthForm({
   });
   const passwordRef = useRef<HTMLInputElement>(null);
   const passwordConfirmRef = useRef<HTMLInputElement>(null);
+  const confirmationRef = useRef<HTMLElement>(null);
+  const showConfirmation = mode === "signup" && state.confirmationRequired === true;
+  useEffect(() => {
+    if (!showConfirmation) return;
+    const confirmation = confirmationRef.current;
+    if (!confirmation) return;
+    confirmation.focus({ preventScroll: true });
+    confirmation.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+      block: "start",
+    });
+  }, [showConfirmation]);
   const fieldError = (name: string) => state.fieldErrors?.[name];
   function validateConfirmation() {
     const password = passwordRef.current?.value ?? "";
@@ -28,6 +43,22 @@ export function AuthForm({
   }
   return (
     <>
+      {showConfirmation && (
+        <section
+          ref={confirmationRef}
+          className="auth-confirmation"
+          tabIndex={-1}
+          role="status"
+          aria-live="polite"
+          aria-labelledby="auth-confirmation-title"
+        >
+          <Mail aria-hidden="true" className="auth-confirmation-icon" />
+          <div>
+            <h2 id="auth-confirmation-title">Vérifie ton courriel</h2>
+            <p>Ouvre le lien reçu pour confirmer ton compte, puis connecte-toi.</p>
+          </div>
+        </section>
+      )}
       <div className="segment-control">
         <Link href="/auth" className={mode === "login" ? "selected" : ""}>
           Se connecter
@@ -131,9 +162,11 @@ export function AuthForm({
                 ? "Recevoir un lien"
                 : "Se connecter"}
         </button>
-        <p role="status" className="form-message">
-          {state.message}
-        </p>
+        {!showConfirmation && (
+          <p role="status" className="form-message">
+            {state.message}
+          </p>
+        )}
       </form>
       {mode !== "reset" && (
         <Link className="inline-link" href="/auth?mode=reset">

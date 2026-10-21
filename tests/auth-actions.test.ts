@@ -90,6 +90,16 @@ describe("authentication and onboarding server actions", () => {
     expect(mocks.cookieValues.get("litecode-remember-device")?.options).toMatchObject({ secure: true, httpOnly: true, sameSite: "lax", path: "/" });
   });
 
+  it("returns an explicit confirmation state when signup has no session", async () => {
+    mocks.db.auth.signUp.mockResolvedValue({ data: { session: null, user: { id: "user-1" } }, error: null });
+    const form = new FormData();
+    for (const [key, value] of Object.entries({ mode: "signup", email: "learner@example.test", password: "Learning-123", passwordConfirm: "Learning-123", rememberDevice: "on" })) form.set(key, value);
+    await expect(authenticate({ message: "" }, form)).resolves.toEqual({
+      message: "",
+      confirmationRequired: true,
+    });
+  });
+
   it("saves an objective before advancing and refuses completion from an earlier step", async () => {
     const saved = await saveOnboardingGoal("projects");
     expect(saved).toEqual({ ok: true });
