@@ -110,14 +110,93 @@ test("signup confirmation is prominent, focused, and readable on narrow screens"
   })).toBe(true);
   expect(await page.evaluate(() => (window as Window & { __scrollBehavior?: boolean | ScrollIntoViewOptions }).__scrollBehavior)).toEqual({ behavior: "auto", block: "start" });
   await expect(page.locator(".form-message")).toHaveCount(0);
-  expect(await notice.evaluate((element) => Boolean(element.compareDocumentPosition(element.parentElement!.querySelector(".segment-control")!) & Node.DOCUMENT_POSITION_FOLLOWING))).toBe(true);
+  expect(await notice.evaluate((element) => Boolean(element.parentElement!.querySelector(".segment-control")!.compareDocumentPosition(element) & Node.DOCUMENT_POSITION_FOLLOWING))).toBe(true);
+  expect(await notice.evaluate((element) => Boolean(element.compareDocumentPosition(element.parentElement!.querySelector("form")!) & Node.DOCUMENT_POSITION_FOLLOWING))).toBe(true);
   const dimensions = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
   expect(dimensions.scroll).toBeLessThanOrEqual(dimensions.client);
-  if (page.viewportSize()?.width === 390)
-    await page.screenshot({ path: "test-results/auth-confirmation-390.png", fullPage: true });
-
   await page.getByRole("button", { name: "Basculer le thème" }).click();
-  await expect(page.locator(".auth-confirmation")).toHaveCSS("background-color", "rgb(27, 60, 57)");
+  await expect(page.locator(".auth-feedback")).toHaveCSS("background-color", "rgb(27, 60, 57)");
+  await page.getByRole("button", { name: "Basculer le thème" }).click();
+  if (page.viewportSize()?.width === 390) {
+    await page.addStyleTag({ content: ".harness-controls { display: none !important; }" });
+    await page.screenshot({ path: "test-results/auth-confirmation-390.png", fullPage: true });
+  }
+});
+
+test("auth responses share one feedback zone for login, signup, and reset", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/mobile-harness.html");
+  const scenarios = [
+    { mode: "login", button: "Auth connexion", success: "Session ouverte.", error: "Connexion impossible." },
+    { mode: "signup", button: "Auth inscription", success: "Compte créé.", error: "Inscription impossible." },
+    { mode: "reset", button: "Auth récupération", success: "Courriel envoyé.", error: "Envoi impossible." },
+  ] as const;
+  async function fillMode(mode: "login" | "signup" | "reset") {
+    await page.getByLabel("Courriel").fill("learner@example.test");
+    if (mode !== "reset") await page.getByLabel("Mot de passe", { exact: true }).fill("Learning-123");
+    if (mode === "signup") await page.getByLabel("Confirmer le mot de passe").fill("Learning-123");
+  }
+  for (const scenario of scenarios) {
+    await page.getByRole("button", { name: scenario.button }).click();
+    await page.evaluate((message) => {
+      (window as Window & { __authActionResult?: { status: "success" | "error"; message: string } }).__authActionResult = { status: "success", message };
+    }, scenario.success);
+    await fillMode(scenario.mode);
+    await page.getByRole("button", { name: scenario.mode === "login" ? "Se connecter" : scenario.mode === "signup" ? "Créer mon compte" : "Recevoir un lien" }).click();
+    const success = page.getByRole("status");
+    await expect(success).toContainText(scenario.success);
+    await expect(success).toBeFocused();
+    await expect(page.locator("form .form-message")).toHaveCount(0);
+    await page.evaluate((message) => {
+      (window as Window & { __authActionResult?: { status: "success" | "error"; message: string } }).__authActionResult = { status: "error", message };
+    }, scenario.error);
+    await fillMode(scenario.mode);
+    await page.getByRole("button", { name: scenario.mode === "login" ? "Se connecter" : scenario.mode === "signup" ? "Créer mon compte" : "Recevoir un lien" }).click();
+    const error = page.getByRole("alert");
+    await expect(error).toContainText(scenario.error);
+    await expect(error).toBeFocused();
+    await expect(error).toHaveCSS("color", "rgb(142, 35, 59)");
+    await page.getByRole("button", { name: "Basculer le thème" }).click();
+    await expect(error).toHaveCSS("background-color", "rgb(73, 43, 53)");
+    await page.getByRole("button", { name: "Basculer le thème" }).click();
+    expect(await page.locator(".segment-control").evaluate((tabs) => Boolean(tabs.compareDocumentPosition(tabs.parentElement!.querySelector(".auth-feedback")!) & Node.DOCUMENT_POSITION_FOLLOWING))).toBe(true);
+    expect(await page.locator(".auth-feedback").evaluate((box) => Boolean(box.compareDocumentPosition(box.parentElement!.querySelector("form")!) & Node.DOCUMENT_POSITION_FOLLOWING))).toBe(true);
+  }
+});
+
+test("repeated auth errors refocus the same notice, pending hides it, and mode changes clear it", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto("/mobile-harness.html");
+  await page.getByRole("button", { name: "Auth connexion" }).click();
+  await page.getByLabel("Courriel").fill("learner@example.test");
+  await page.getByLabel("Mot de passe", { exact: true }).fill("Learning-123");
+  await page.evaluate(() => {
+    (window as Window & { __authActionResult?: { status: "success" | "error"; message: string }; __authActionHold?: boolean }).__authActionResult = { status: "error", message: "Réessaie." };
+  });
+  await page.getByRole("button", { name: "Se connecter" }).click();
+  const notice = page.getByRole("alert");
+  await expect(notice).toBeFocused();
+  await page.getByLabel("Courriel").fill("learner@example.test");
+  await page.getByLabel("Mot de passe", { exact: true }).fill("Learning-123");
+  await page.getByLabel("Courriel").focus();
+  await page.getByRole("button", { name: "Se connecter" }).click();
+  await expect(notice).toBeFocused();
+
+  await page.evaluate(() => {
+    (window as Window & { __authActionHold?: boolean }).__authActionHold = true;
+  });
+  await page.getByLabel("Courriel").fill("learner@example.test");
+  await page.getByLabel("Mot de passe", { exact: true }).fill("Learning-123");
+  await page.getByLabel("Courriel").focus();
+  await page.getByRole("button", { name: "Se connecter" }).click();
+  await expect(page.getByRole("alert")).toHaveCount(0);
+  await expect(page.getByRole("button", { name: "Un instant…" })).toBeDisabled();
+  await expect.poll(() => page.evaluate(() => (window as Window & { __authActionPending?: boolean }).__authActionPending)).toBe(true);
+  await page.evaluate(() => (window as Window & { __authActionRelease?: () => void }).__authActionRelease?.());
+  await expect(page.getByRole("alert")).toBeVisible();
+  await page.getByRole("button", { name: "Auth récupération" }).click();
+  await expect(page.locator(".auth-feedback")).toHaveCount(0);
+  await expect(page.getByLabel("Courriel")).toBeVisible();
 });
 
 test("ordering supports real touch drags in both directions and leaves page scrolling available elsewhere", async ({ page, context }) => {

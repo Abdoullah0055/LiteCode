@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Mail } from "lucide-react";
+import { AlertCircle, CheckCircle2, Mail } from "lucide-react";
 import { useActionState, useEffect, useRef } from "react";
 import { authenticate } from "@/app/auth/actions";
 export function AuthForm({
@@ -16,20 +16,25 @@ export function AuthForm({
   });
   const passwordRef = useRef<HTMLInputElement>(null);
   const passwordConfirmRef = useRef<HTMLInputElement>(null);
-  const confirmationRef = useRef<HTMLElement>(null);
+  const feedbackRef = useRef<HTMLElement>(null);
   const showConfirmation = mode === "signup" && state.confirmationRequired === true;
+  const feedbackMessage = !configured && !state.message
+    ? "Supabase n’est pas configuré. Renseigne les variables indiquées dans README.md pour activer les comptes."
+    : state.message;
+  const feedbackStatus = !configured && !state.message ? "error" : state.status;
+  const showFeedback = showConfirmation || Boolean(feedbackMessage);
   useEffect(() => {
-    if (!showConfirmation) return;
-    const confirmation = confirmationRef.current;
-    if (!confirmation) return;
-    confirmation.focus({ preventScroll: true });
-    confirmation.scrollIntoView({
+    if (pending || !showFeedback) return;
+    const feedback = feedbackRef.current;
+    if (!feedback) return;
+    feedback.focus({ preventScroll: true });
+    feedback.scrollIntoView({
       behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ? "auto"
         : "smooth",
       block: "start",
     });
-  }, [showConfirmation]);
+  }, [pending, state, showFeedback]);
   const fieldError = (name: string) => state.fieldErrors?.[name];
   function validateConfirmation() {
     const password = passwordRef.current?.value ?? "";
@@ -43,22 +48,6 @@ export function AuthForm({
   }
   return (
     <>
-      {showConfirmation && (
-        <section
-          ref={confirmationRef}
-          className="auth-confirmation"
-          tabIndex={-1}
-          role="status"
-          aria-live="polite"
-          aria-labelledby="auth-confirmation-title"
-        >
-          <Mail aria-hidden="true" className="auth-confirmation-icon" />
-          <div>
-            <h2 id="auth-confirmation-title">Vérifie ton courriel</h2>
-            <p>Ouvre le lien reçu pour confirmer ton compte, puis connecte-toi.</p>
-          </div>
-        </section>
-      )}
       <div className="segment-control">
         <Link href="/auth" className={mode === "login" ? "selected" : ""}>
           Se connecter
@@ -70,6 +59,32 @@ export function AuthForm({
           Créer un compte
         </Link>
       </div>
+      {showFeedback && !pending && (
+        <section
+          ref={feedbackRef}
+          className={`auth-feedback ${feedbackStatus === "error" ? "is-error" : "is-success"}`}
+          tabIndex={-1}
+          role={feedbackStatus === "error" ? "alert" : "status"}
+          aria-live={feedbackStatus === "error" ? "assertive" : "polite"}
+        >
+          {showConfirmation ? (
+            <>
+              <Mail aria-hidden="true" className="auth-feedback-icon" />
+              <div>
+                <h2>Vérifie ton courriel</h2>
+                <p>Ouvre le lien reçu pour confirmer ton compte, puis connecte-toi.</p>
+              </div>
+            </>
+          ) : (
+            <>
+              {feedbackStatus === "error"
+                ? <AlertCircle aria-hidden="true" className="auth-feedback-icon" />
+                : <CheckCircle2 aria-hidden="true" className="auth-feedback-icon" />}
+              <p>{feedbackMessage}</p>
+            </>
+          )}
+        </section>
+      )}
       <form
         action={action}
         className="form-stack"
@@ -143,12 +158,6 @@ export function AuthForm({
             <span>Se souvenir de cet appareil pendant 30 jours</span>
           </label>
         )}
-        {!configured && (
-          <p className="error-notice">
-            Supabase n’est pas configuré. Renseigne les variables indiquées dans
-            README.md pour activer les comptes.
-          </p>
-        )}
         <button
           type="submit"
           className="primary"
@@ -162,11 +171,6 @@ export function AuthForm({
                 ? "Recevoir un lien"
                 : "Se connecter"}
         </button>
-        {!showConfirmation && (
-          <p role="status" className="form-message">
-            {state.message}
-          </p>
-        )}
       </form>
       {mode !== "reset" && (
         <Link className="inline-link" href="/auth?mode=reset">

@@ -35,7 +35,7 @@ export default async function Page({
             Le lien de confirmation est invalide ou a expiré.
           </p>
         )}
-        <AuthForm mode={mode} configured={configured()} />
+        <AuthForm key={mode} mode={mode} configured={configured()} />
       </main>
     </div>
   );

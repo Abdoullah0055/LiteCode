@@ -63,6 +63,7 @@ const theory004 = source.find((activity) => activity.id === "mvp-004")!;
 function Harness() {
   const [dark, setDark] = useState(false);
   const [screen, setScreen] = useState<"exercise" | "theory" | "project" | "resume" | "resume-edited" | "finish" | "auth">("exercise");
+  const [authMode, setAuthMode] = useState<"login" | "signup" | "reset">("signup");
   return <div className="app-shell"><main className={dark ? "dark-app" : ""}>
     <nav className="harness-controls" aria-label="Contrôles de recette">
       <button type="button" onClick={() => setDark((value) => !value)}>Basculer le thème</button>
@@ -73,8 +74,11 @@ function Harness() {
       <button type="button" onClick={() => setScreen("resume-edited")}>Reprendre après modification</button>
       <button type="button" onClick={() => setScreen("finish")}>Voir l’accueil final</button>
       <button type="button" onClick={() => setScreen("auth")}>Voir confirmation courriel</button>
+      <button type="button" onClick={() => { setAuthMode("login"); setScreen("auth"); }}>Auth connexion</button>
+      <button type="button" onClick={() => { setAuthMode("signup"); setScreen("auth"); }}>Auth inscription</button>
+      <button type="button" onClick={() => { setAuthMode("reset"); setScreen("auth"); }}>Auth récupération</button>
     </nav>
-    {screen === "exercise" ? <LearningExercise key={screen} activity={testActivity} position={1} hearts={5} sound={false} draft={null} /> : screen === "theory" ? <LearningExercise key={screen} activity={theory004} position={4} hearts={5} sound={false} draft={null} /> : screen === "project" ? <LearningExercise key={screen} activity={projectActivity} position={8} hearts={5} sound={false} draft={null} /> : screen === "resume" ? <LearningExercise key={screen} activity={projectActivity} position={8} hearts={5} sound={false} draft={resumedDraft} savedSteps={resumedSteps} /> : screen === "resume-edited" ? <LearningExercise key={screen} activity={projectActivity} position={8} hearts={5} sound={false} draft={editedDraft} savedSteps={editedSteps} /> : screen === "finish" ? <FinishOnboarding key={screen} goal="basics" firstModule={{ title: "Premiers pas" }} firstLesson={{ id: "mvp-001", title: "Découvrir une variable", duration_minutes: 5 }} /> : <div className="page-content"><Back href="/" /><p className="eyebrow">{"{ }"} LiteCode</p><h1 className="page-title">Ta prochaine aventure commence ici.</h1><p className="intro">Un petit pas de code, chaque jour.</p><AuthForm key={screen} mode="signup" configured /></div>}
+    {screen === "exercise" ? <LearningExercise key={screen} activity={testActivity} position={1} hearts={5} sound={false} draft={null} /> : screen === "theory" ? <LearningExercise key={screen} activity={theory004} position={4} hearts={5} sound={false} draft={null} /> : screen === "project" ? <LearningExercise key={screen} activity={projectActivity} position={8} hearts={5} sound={false} draft={null} /> : screen === "resume" ? <LearningExercise key={screen} activity={projectActivity} position={8} hearts={5} sound={false} draft={resumedDraft} savedSteps={resumedSteps} /> : screen === "resume-edited" ? <LearningExercise key={screen} activity={projectActivity} position={8} hearts={5} sound={false} draft={editedDraft} savedSteps={editedSteps} /> : screen === "finish" ? <FinishOnboarding key={screen} goal="basics" firstModule={{ title: "Premiers pas" }} firstLesson={{ id: "mvp-001", title: "Découvrir une variable", duration_minutes: 5 }} /> : <div className="page-content"><Back href="/" /><p className="eyebrow">{"{ }"} LiteCode</p><h1 className="page-title">Ta prochaine aventure commence ici.</h1><p className="intro">Un petit pas de code, chaque jour.</p><AuthForm key={authMode} mode={authMode} configured /></div>}
   </main></div>;
 }
 

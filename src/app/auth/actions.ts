@@ -27,6 +27,7 @@ const authSchema = z.discriminatedUnion("mode", [
 ]);
 type AuthState = {
   message: string;
+  status?: "success" | "error";
   fieldErrors?: Record<string, string>;
   confirmationRequired?: boolean;
 };
@@ -64,6 +65,7 @@ export async function authenticate(
 ): Promise<AuthState> {
   if (!configured())
     return {
+      status: "error",
       message:
         "Supabase n’est pas encore configuré. Les variables sont volontairement vides.",
     };
@@ -77,6 +79,7 @@ export async function authenticate(
   });
   if (!parsed.success)
     return {
+      status: "error",
       message: requestedMode === "signup"
         ? "Vérifie les champs indiqués."
         : requestedMode === "reset"
@@ -99,6 +102,7 @@ export async function authenticate(
       redirectTo: await authCallbackUrl("settings"),
     });
     return {
+      status: error ? "error" : "success",
       message: error
         ? "Impossible d’envoyer le courriel. Réessaie plus tard."
         : "Si ce compte existe, un courriel de récupération a été envoyé.",
@@ -114,12 +118,14 @@ export async function authenticate(
     });
     if (error)
       return {
+        status: "error",
         message: error.code === "over_email_send_rate_limit"
           ? "La limite d’envoi des courriels de confirmation est atteinte. Réessaie plus tard."
           : "Inscription impossible. Vérifie les informations et réessaie.",
       };
     if (!data.session)
       return {
+        status: "success",
         message: "",
         confirmationRequired: true,
       };
@@ -132,6 +138,7 @@ export async function authenticate(
     });
     if (error)
       return {
+        status: "error",
         message: "Courriel ou mot de passe incorrect, ou compte non confirmé.",
       };
     redirect(await postAuthDestination(db, data.user.id));

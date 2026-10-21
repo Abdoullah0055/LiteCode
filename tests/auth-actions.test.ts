@@ -64,6 +64,7 @@ describe("authentication and onboarding server actions", () => {
     form.set("password", "Learning-123"); form.set("passwordConfirm", "Different-123");
     form.set("rememberDevice", "on");
     const result = await authenticate({ message: "" }, form);
+    expect(result.status).toBe("error");
     expect(result.fieldErrors?.passwordConfirm).toContain("ne correspondent pas");
     expect(mocks.db.auth.signUp).not.toHaveBeenCalled();
   });
@@ -72,9 +73,25 @@ describe("authentication and onboarding server actions", () => {
     mocks.db.auth.resetPasswordForEmail.mockResolvedValue({ error: null });
     const form = new FormData(); form.set("mode", "reset"); form.set("email", "learner@example.test");
     const result = await authenticate({ message: "" }, form);
+    expect(result.status).toBe("success");
     expect(result.message).toContain("Si ce compte existe");
     expect(mocks.db.auth.resetPasswordForEmail).toHaveBeenCalledWith("learner@example.test", {
       redirectTo: "https://litecode.test/auth/confirm?next=settings",
+    });
+  });
+
+  it("returns explicit reset and login response statuses", async () => {
+    const resetForm = new FormData();
+    resetForm.set("mode", "reset"); resetForm.set("email", "learner@example.test");
+    mocks.db.auth.resetPasswordForEmail.mockResolvedValue({ error: { code: "unexpected_failure" } });
+    await expect(authenticate({ message: "" }, resetForm)).resolves.toMatchObject({ status: "error" });
+
+    const loginForm = new FormData();
+    for (const [key, value] of Object.entries({ mode: "login", email: "learner@example.test", password: "Learning-123", rememberDevice: "on" })) loginForm.set(key, value);
+    mocks.db.auth.signInWithPassword.mockResolvedValue({ error: { code: "invalid_credentials" } });
+    await expect(authenticate({ message: "" }, loginForm)).resolves.toMatchObject({
+      status: "error",
+      message: "Courriel ou mot de passe incorrect, ou compte non confirmé.",
     });
   });
 
@@ -95,6 +112,7 @@ describe("authentication and onboarding server actions", () => {
     const form = new FormData();
     for (const [key, value] of Object.entries({ mode: "signup", email: "learner@example.test", password: "Learning-123", passwordConfirm: "Learning-123", rememberDevice: "on" })) form.set(key, value);
     await expect(authenticate({ message: "" }, form)).resolves.toEqual({
+      status: "success",
       message: "",
       confirmationRequired: true,
     });
@@ -108,6 +126,7 @@ describe("authentication and onboarding server actions", () => {
     const form = new FormData();
     for (const [key, value] of Object.entries({ mode: "signup", email: "learner@example.test", password: "Learning-123", passwordConfirm: "Learning-123", rememberDevice: "on" })) form.set(key, value);
     await expect(authenticate({ message: "", confirmationRequired: true }, form)).resolves.toEqual({
+      status: "error",
       message: "La limite d’envoi des courriels de confirmation est atteinte. Réessaie plus tard.",
     });
   });
@@ -120,6 +139,7 @@ describe("authentication and onboarding server actions", () => {
     const form = new FormData();
     for (const [key, value] of Object.entries({ mode: "signup", email: "learner@example.test", password: "Learning-123", passwordConfirm: "Learning-123", rememberDevice: "on" })) form.set(key, value);
     await expect(authenticate({ message: "" }, form)).resolves.toEqual({
+      status: "error",
       message: "Inscription impossible. Vérifie les informations et réessaie.",
     });
   });

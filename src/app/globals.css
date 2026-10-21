@@ -628,51 +628,73 @@ button {
   color: #1c7253;
   line-height: 1.5;
 }
-.auth-confirmation {
+.auth-feedback {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  margin: 22px 0 18px;
+  margin: -8px 0 18px;
   padding: 18px;
-  border: 2px solid #72c99b;
+  border: 1.5px solid #72c99b;
   border-radius: 16px;
   background: #e6f8ed;
   color: #174e37;
   scroll-margin-top: 16px;
 }
-.auth-confirmation:focus {
+.auth-feedback.is-error {
+  border-color: #e49aa8;
+  background: #fff0f2;
+  color: #8e233b;
+}
+.auth-feedback:focus {
   outline: 3px solid #16834f;
   outline-offset: 3px;
 }
-.auth-confirmation-icon {
+.auth-feedback.is-error:focus {
+  outline-color: #b83350;
+}
+.auth-feedback-icon {
   flex: 0 0 auto;
   width: 25px;
   height: 25px;
   margin-top: 2px;
   color: #167246;
 }
-.auth-confirmation h2 {
+.auth-feedback.is-error .auth-feedback-icon {
+  color: #b83350;
+}
+.auth-feedback h2 {
   margin: 0 0 5px;
   color: #174e37;
   font-size: 17px;
   line-height: 1.35;
 }
-.auth-confirmation p {
+.auth-feedback p {
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
 }
-.dark-app .auth-confirmation {
+.dark-app .auth-feedback {
   border-color: #65c596;
   background: #1b3c39;
   color: #d4eee2;
 }
-.dark-app .auth-confirmation h2,
-.dark-app .auth-confirmation-icon {
+.dark-app .auth-feedback.is-error {
+  border-color: #d9798d;
+  background: #492b35;
+  color: #ffe0e5;
+}
+.dark-app .auth-feedback h2,
+.dark-app .auth-feedback-icon {
   color: #a8efd0;
 }
-.dark-app .auth-confirmation:focus {
+.dark-app .auth-feedback.is-error .auth-feedback-icon {
+  color: #ff9bad;
+}
+.dark-app .auth-feedback:focus {
   outline-color: #83ddb0;
+}
+.dark-app .auth-feedback.is-error:focus {
+  outline-color: #ff9bad;
 }
 .segment-control {
   display: flex;
