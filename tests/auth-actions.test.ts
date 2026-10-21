@@ -100,6 +100,30 @@ describe("authentication and onboarding server actions", () => {
     });
   });
 
+  it("explains the email quota without reporting a successful signup", async () => {
+    mocks.db.auth.signUp.mockResolvedValue({
+      data: { session: null, user: null },
+      error: { code: "over_email_send_rate_limit", status: 429 },
+    });
+    const form = new FormData();
+    for (const [key, value] of Object.entries({ mode: "signup", email: "learner@example.test", password: "Learning-123", passwordConfirm: "Learning-123", rememberDevice: "on" })) form.set(key, value);
+    await expect(authenticate({ message: "", confirmationRequired: true }, form)).resolves.toEqual({
+      message: "La limite d’envoi des courriels de confirmation est atteinte. Réessaie plus tard.",
+    });
+  });
+
+  it("keeps other signup errors generic without exposing provider details", async () => {
+    mocks.db.auth.signUp.mockResolvedValue({
+      data: { session: null, user: null },
+      error: { code: "unexpected_failure", message: "private provider details" },
+    });
+    const form = new FormData();
+    for (const [key, value] of Object.entries({ mode: "signup", email: "learner@example.test", password: "Learning-123", passwordConfirm: "Learning-123", rememberDevice: "on" })) form.set(key, value);
+    await expect(authenticate({ message: "" }, form)).resolves.toEqual({
+      message: "Inscription impossible. Vérifie les informations et réessaie.",
+    });
+  });
+
   it("saves an objective before advancing and refuses completion from an earlier step", async () => {
     const saved = await saveOnboardingGoal("projects");
     expect(saved).toEqual({ ok: true });

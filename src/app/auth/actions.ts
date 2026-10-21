@@ -114,8 +114,9 @@ export async function authenticate(
     });
     if (error)
       return {
-        message:
-          "Inscription impossible. Vérifie les informations et réessaie.",
+        message: error.code === "over_email_send_rate_limit"
+          ? "La limite d’envoi des courriels de confirmation est atteinte. Réessaie plus tard."
+          : "Inscription impossible. Vérifie les informations et réessaie.",
       };
     if (!data.session)
       return {
