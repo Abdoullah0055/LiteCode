@@ -30,7 +30,29 @@ type AuthState = {
   status?: "success" | "error";
   fieldErrors?: Record<string, string>;
   confirmationRequired?: boolean;
+  email?: string;
 };
+
+function signupErrorMessage(code: string | undefined): string {
+  switch (code) {
+    case "over_email_send_rate_limit":
+    case "over_request_rate_limit":
+      return "La limite d’envoi des courriels de confirmation est atteinte. Réessaie plus tard.";
+    case "email_address_invalid":
+      return "Cette adresse courriel n’est pas acceptée. Utilise une adresse valide.";
+    case "email_provider_disabled":
+      return "L’inscription par courriel est désactivée sur ce projet.";
+    case "signup_disabled":
+      return "Les inscriptions sont temporairement fermées.";
+    case "weak_password":
+      return "Choisis un mot de passe plus robuste.";
+    case "email_exists":
+    case "user_already_exists":
+      return "Un compte existe déjà avec ce courriel. Connecte-toi, confirme ton adresse si nécessaire, ou réinitialise ton mot de passe.";
+    default:
+      return "Inscription impossible. Vérifie les informations et réessaie.";
+  }
+}
 
 export async function persistDevicePreference(remember: boolean) {
   const jar = await cookies();
@@ -119,15 +141,23 @@ export async function authenticate(
     if (error)
       return {
         status: "error",
-        message: error.code === "over_email_send_rate_limit"
-          ? "La limite d’envoi des courriels de confirmation est atteinte. Réessaie plus tard."
-          : "Inscription impossible. Vérifie les informations et réessaie.",
+        message: signupErrorMessage(error.code),
+        email,
+      };
+    // Supabase intentionally returns a user without identities when the email
+    // already belongs to a confirmed account, and sends no confirmation email.
+    if (data.user && data.user.identities?.length === 0)
+      return {
+        status: "error",
+        message: signupErrorMessage("email_exists"),
+        email,
       };
     if (!data.session)
       return {
         status: "success",
         message: "",
         confirmationRequired: true,
+        email,
       };
     redirect(await postAuthDestination(db, data.user!.id));
   } else {
@@ -144,6 +174,45 @@ export async function authenticate(
     redirect(await postAuthDestination(db, data.user.id));
   }
 }
+export async function resendConfirmation(
+  _prev: AuthState,
+  form: FormData,
+): Promise<AuthState> {
+  if (!configured())
+    return {
+      status: "error",
+      message:
+        "Supabase n’est pas encore configuré. Les variables sont volontairement vides.",
+    };
+  const parsed = z.object({ email }).safeParse({ email: form.get("email") });
+  if (!parsed.success)
+    return { status: "error", message: "Entre un courriel valide." };
+  const db = await supabase();
+  const { error } = await db.auth.resend({
+    type: "signup",
+    email: parsed.data.email,
+    options: { emailRedirectTo: await authCallbackUrl("onboarding") },
+  });
+  if (error) {
+    const rateLimited =
+      error.code === "over_email_send_rate_limit" ||
+      error.code === "over_request_rate_limit" ||
+      error.status === 429;
+    return {
+      status: "error",
+      message: rateLimited
+        ? "La limite d’envoi des courriels est atteinte. Réessaie dans une heure."
+        : "Impossible de renvoyer le courriel. Vérifie l’adresse et réessaie.",
+      email: parsed.data.email,
+    };
+  }
+  return {
+    status: "success",
+    message: "Un nouveau courriel de confirmation vient d’être envoyé.",
+    email: parsed.data.email,
+  };
+}
+
 export async function signOut() {
   const db = await supabase();
   await db.auth.signOut({ scope: "local" });

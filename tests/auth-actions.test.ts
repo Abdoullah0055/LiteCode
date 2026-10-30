@@ -9,7 +9,7 @@ const mocks = vi.hoisted(() => {
   };
   const auth = {
     signUp: vi.fn(), signInWithPassword: vi.fn(), resetPasswordForEmail: vi.fn(),
-    signOut: vi.fn(), updateUser: vi.fn(), refreshSession: vi.fn(),
+    signOut: vi.fn(), updateUser: vi.fn(), refreshSession: vi.fn(), resend: vi.fn(),
   };
   const chain = {
     select: vi.fn(), eq: vi.fn(), is: vi.fn(), update: vi.fn(), maybeSingle: vi.fn(),
@@ -43,7 +43,7 @@ vi.mock("@/lib/data", () => ({
 }));
 vi.mock("@/lib/auth-callback-url", () => ({ authCallbackUrl: async (next: string) => `https://litecode.test/auth/confirm?next=${next}` }));
 
-import { authenticate, finishOnboarding, saveOnboardingGoal, signOut } from "../src/app/auth/actions";
+import { authenticate, finishOnboarding, resendConfirmation, saveOnboardingGoal, signOut } from "../src/app/auth/actions";
 
 describe("authentication and onboarding server actions", () => {
   beforeEach(() => {
@@ -115,6 +115,49 @@ describe("authentication and onboarding server actions", () => {
       status: "success",
       message: "",
       confirmationRequired: true,
+      email: "learner@example.test",
+    });
+  });
+
+  it("detects an existing confirmed account instead of promising an email", async () => {
+    mocks.db.auth.signUp.mockResolvedValue({
+      data: { session: null, user: { id: "user-1", identities: [] } },
+      error: null,
+    });
+    const form = new FormData();
+    for (const [key, value] of Object.entries({ mode: "signup", email: "learner@example.test", password: "Learning-123", passwordConfirm: "Learning-123", rememberDevice: "on" })) form.set(key, value);
+    await expect(authenticate({ message: "" }, form)).resolves.toMatchObject({
+      status: "error",
+      email: "learner@example.test",
+      message: "Un compte existe déjà avec ce courriel. Connecte-toi, confirme ton adresse si nécessaire, ou réinitialise ton mot de passe.",
+    });
+  });
+
+  it("resends a confirmation email to the onboarding callback", async () => {
+    mocks.db.auth.resend.mockResolvedValue({ error: null });
+    const form = new FormData();
+    form.set("email", "learner@example.test");
+    await expect(resendConfirmation({ message: "" }, form)).resolves.toEqual({
+      status: "success",
+      message: "Un nouveau courriel de confirmation vient d’être envoyé.",
+      email: "learner@example.test",
+    });
+    expect(mocks.db.auth.resend).toHaveBeenCalledWith({
+      type: "signup",
+      email: "learner@example.test",
+      options: { emailRedirectTo: "https://litecode.test/auth/confirm?next=onboarding" },
+    });
+  });
+
+  it("reports the resend quota without claiming success", async () => {
+    mocks.db.auth.resend.mockResolvedValue({
+      error: { code: "over_email_send_rate_limit", status: 429 },
+    });
+    const form = new FormData();
+    form.set("email", "learner@example.test");
+    await expect(resendConfirmation({ message: "" }, form)).resolves.toMatchObject({
+      status: "error",
+      message: "La limite d’envoi des courriels est atteinte. Réessaie dans une heure.",
     });
   });
 
@@ -128,6 +171,7 @@ describe("authentication and onboarding server actions", () => {
     await expect(authenticate({ message: "", confirmationRequired: true }, form)).resolves.toEqual({
       status: "error",
       message: "La limite d’envoi des courriels de confirmation est atteinte. Réessaie plus tard.",
+      email: "learner@example.test",
     });
   });
 
@@ -141,6 +185,7 @@ describe("authentication and onboarding server actions", () => {
     await expect(authenticate({ message: "" }, form)).resolves.toEqual({
       status: "error",
       message: "Inscription impossible. Vérifie les informations et réessaie.",
+      email: "learner@example.test",
     });
   });
 

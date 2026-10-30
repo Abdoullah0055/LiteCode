@@ -4,7 +4,28 @@ import { ButtonLink } from "@/components/ui";
 import { configured, supabase } from "@/lib/supabase/server";
 import { postAuthDestination } from "@/lib/data";
 import { redirect } from "next/navigation";
-export default async function Welcome() {
+export default async function Welcome({
+  searchParams,
+}: {
+  searchParams: Promise<{
+    code?: string;
+    token_hash?: string;
+    type?: string;
+    next?: string;
+  }>;
+}) {
+  const params = await searchParams;
+  // When the requested redirect URL is not allow-listed in Supabase, the
+  // confirmation link falls back to the Site URL root with `?code=` or
+  // `?token_hash=` parameters. Forward them to the real callback route.
+  if (configured() && (params.code || (params.token_hash && params.type))) {
+    const query = new URLSearchParams();
+    for (const key of ["code", "token_hash", "type", "next"] as const) {
+      const value = params[key];
+      if (value) query.set(key, value);
+    }
+    redirect(`/auth/confirm?${query.toString()}`);
+  }
   if (configured()) {
     const db = await supabase();
     const { data: { user } } = await db.auth.getUser();

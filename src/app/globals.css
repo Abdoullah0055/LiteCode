@@ -673,6 +673,22 @@ button {
   font-size: 14px;
   line-height: 1.5;
 }
+.auth-resend {
+  margin-top: 6px;
+}
+.auth-resend .inline-link {
+  padding: 4px 0;
+  font-size: 12px;
+}
+.auth-resend-status {
+  margin-top: 4px !important;
+  color: #1c7253;
+  font-size: 12px !important;
+}
+.auth-resend .field-error {
+  display: block;
+  margin-top: 4px;
+}
 .dark-app .auth-feedback {
   border-color: #65c596;
   background: #1b3c39;

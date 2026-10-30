@@ -66,6 +66,18 @@ Pour le développement, autoriser les mêmes chemins sur `http://127.0.0.1:3000`
 
 Les modèles de courriel doivent préserver l’URL `RedirectTo` générée par l’application et y ajouter les paramètres de vérification. Comme `RedirectTo` contient déjà `?next=onboarding` ou `?next=settings`, les modèles token hash ajoutent `&token_hash={{ .TokenHash }}&type=email` pour une confirmation et `&token_hash={{ .TokenHash }}&type=recovery` pour une récupération. Supabase doit rediriger vers `/auth/confirm` avec ces paramètres. Pour PKCE, le callback accepte `code` et l’échange contre une session. Les paramètres de requête peuvent être dans un ordre différent. Configurer un SMTP de production et vérifier les modèles dans le tableau de bord; les tests locaux ne prouvent pas que les courriels hébergés sont effectivement livrés.
 
+### Dépannage : le lien de confirmation ne connecte pas
+
+Symptôme : le compte est créé et le courriel arrive, mais le lien ramène à l’accueil sans session. Supabase remplace l’URL demandée par le **Site URL** lorsque `/auth/confirm` n’est pas dans les Redirect URLs autorisées. Les jetons arrivent alors dans le fragment `#access_token=...&refresh_token=...`, que le serveur ne peut pas lire. LiteCode récupère désormais ces jetons via `/api/auth/session` et accepte aussi `?code=` ou `?token_hash=` arrivés à la racine; la configuration ci-dessous reste néanmoins la solution recommandée.
+
+1. Dans **Authentication → URL Configuration**, garder un Site URL canonique sans chemin, puis ajouter exactement ces Redirect URLs : `https://TON_DOMAINE/auth/confirm`, `http://127.0.0.1:3000/auth/confirm`, `http://127.0.0.1:3107/auth/confirm` et, si utilisé, `http://127.0.0.1:3108/auth/confirm`.
+2. Vérifier que les modèles de confirmation et de récupération pointent vers `/auth/confirm` et conservent `token_hash` et `type`. Un modèle qui utilise seulement `{{ .ConfirmationURL }}` retombe sur le Site URL et le fragment.
+3. Pour un environnement local, le Site URL du projet hébergé reste le domaine de production. Sans Redirect URL locale autorisée, le lien d’un compte créé sur `127.0.0.1` renvoie donc vers la production.
+4. Le SMTP intégré de Supabase est limité (environ deux courriels par heure) et ne convient pas à la production. Configurer un fournisseur (Resend, Brevo, Postmark, etc.), vérifier le domaine expéditeur, SPF et DKIM, puis tester la réception réelle.
+5. En cas de courriel perdu, l’écran « Vérifie ton courriel » propose désormais **Renvoyer le courriel de confirmation**. Si l’adresse appartient déjà à un compte confirmé, le formulaire l’indique au lieu d’annoncer un envoi qui n’a pas eu lieu.
+
+Ces symptômes et leurs causes sont aussi suivis dans [TODO.md](TODO.md).
+
 L’inscription mène à l’onboarding seulement après la création du compte et la confirmation si Supabase l’exige. Une connexion reprend l’étape non terminée; les comptes présents avant la migration d’onboarding sont marqués comme déjà terminés. « Se souvenir de cet appareil » est sélectionné par défaut : les cookies de session sont prolongés jusqu’à 30 jours, sinon ce sont des cookies de session. La déconnexion locale supprime les cookies d’authentification de LiteCode et la préférence de cet appareil. Certains navigateurs peuvent restaurer les cookies de session après fermeture; cette préférence ne force donc pas une déconnexion.
 
 ## Activités et provenance

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { AuthHashSession } from "@/components/auth-hash-session";
 import "./globals.css";
 export const metadata: Metadata = {
   title: {
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
+        <AuthHashSession />
         <div className="brand-strip" aria-hidden="true">
           <span>{"{ }"}</span>LiteCode
         </div>

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { AlertCircle, CheckCircle2, Mail } from "lucide-react";
 import { useActionState, useEffect, useRef } from "react";
-import { authenticate } from "@/app/auth/actions";
+import { authenticate, resendConfirmation } from "@/app/auth/actions";
 export function AuthForm({
   mode = "login",
   configured,
@@ -14,6 +14,10 @@ export function AuthForm({
     message: "",
     fieldErrors: undefined,
   });
+  const [resendState, resendAction, resendPending] = useActionState(
+    resendConfirmation,
+    { message: "" },
+  );
   const passwordRef = useRef<HTMLInputElement>(null);
   const passwordConfirmRef = useRef<HTMLInputElement>(null);
   const feedbackRef = useRef<HTMLElement>(null);
@@ -73,6 +77,24 @@ export function AuthForm({
               <div>
                 <h2>Vérifie ton courriel</h2>
                 <p>Ouvre le lien reçu pour confirmer ton compte, puis connecte-toi.</p>
+                <form action={resendAction} className="auth-resend">
+                  <input type="hidden" name="email" defaultValue={state.email ?? ""} />
+                  <button
+                    type="submit"
+                    className="inline-link"
+                    disabled={resendPending || !state.email}
+                  >
+                    {resendPending ? "Envoi…" : "Renvoyer le courriel de confirmation"}
+                  </button>
+                </form>
+                {resendState.message && (
+                  <p
+                    className={resendState.status === "error" ? "field-error" : "auth-resend-status"}
+                    role={resendState.status === "error" ? "alert" : "status"}
+                  >
+                    {resendState.message}
+                  </p>
+                )}
               </div>
             </>
           ) : (
